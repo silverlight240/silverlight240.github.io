@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwjfipyiys77i"
-path="res://.godot/imported/FlyCatcher.icon.png-1eb553e067f676937ac75986963d642f.ctex"
+uid="uid://g2fpnsslyhfc"
+path="res://.godot/imported/FlyCatcher.icon.png-fa0729d732fab533f431a9ab30160434.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://index.html/FlyCatcher.icon.png"
-dest_files=["res://.godot/imported/FlyCatcher.icon.png-1eb553e067f676937ac75986963d642f.ctex"]
+source_file="res://FlyCatcher.icon.png"
+dest_files=["res://.godot/imported/FlyCatcher.icon.png-fa0729d732fab533f431a9ab30160434.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qhkedciwqpr"
-path="res://.godot/imported/FlyCatcher.apple-touch-icon.png-da4047f1706856d7ba4becc4eac0f146.ctex"
+uid="uid://chc7o4cof2yc2"
+path="res://.godot/imported/FlyCatcher.png-7dae558f52ec000d2f7d1137f37ccb3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://index.html/FlyCatcher.apple-touch-icon.png"
-dest_files=["res://.godot/imported/FlyCatcher.apple-touch-icon.png-da4047f1706856d7ba4becc4eac0f146.ctex"]
+source_file="res://FlyCatcher.png"
+dest_files=["res://.godot/imported/FlyCatcher.png-7dae558f52ec000d2f7d1137f37ccb3b.ctex"]
 
 [params]
 
