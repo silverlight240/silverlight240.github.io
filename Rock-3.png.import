@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj8gnga234rj"
-path="res://.godot/imported/icon.svg-79b43ac07c86a43cdd858b3f04c42626.ctex"
+uid="uid://c6nencrwx4mko"
+path="res://.godot/imported/Rock-3.png-7c8c16ef9f0ac62e7991b3294ccb7d4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-79b43ac07c86a43cdd858b3f04c42626.ctex"]
+source_file="res://everything else/Rock-3.png"
+dest_files=["res://.godot/imported/Rock-3.png-7c8c16ef9f0ac62e7991b3294ccb7d4c.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
