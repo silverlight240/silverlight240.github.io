@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dfms8tsfu2mxw"]
+
+[ext_resource type="Texture2D" uid="uid://kxxo1gjw8ljk" path="res://tadpole.png" id="1_rhntw"]
+[ext_resource type="Script" uid="uid://brxkd2jw4udb0" path="res://tadpole.gd" id="1_t2rg3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2rg3"]
+atlas = ExtResource("1_rhntw")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7qmf"]
+atlas = ExtResource("1_rhntw")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tebxm"]
+atlas = ExtResource("1_rhntw")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xplsf"]
+atlas = ExtResource("1_rhntw")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_002if"]
+atlas = ExtResource("1_rhntw")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xul4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2rg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7qmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tebxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xplsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_002if")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1888463211]
+z_index = -1
+script = ExtResource("1_t2rg3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=330093726]
+sprite_frames = SubResource("SpriteFrames_4xul4")
+autoplay = "default"
+frame_progress = 0.2450211
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2105429480]
+modulate = Color(0, 1, 1, 1)
+offset_left = -74.0
+offset_top = -60.0
+offset_right = 75.0
+offset_bottom = -28.0
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="." unique_id=656246208]
+z_index = -5
+offset_left = -74.0
+offset_top = -59.0
+offset_right = 75.0
+offset_bottom = -28.0
+text = "Give Flies"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

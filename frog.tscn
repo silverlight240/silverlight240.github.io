@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bdy7tph57iefd"]
+
+[ext_resource type="Script" uid="uid://cmllk5wneiav7" path="res://frog.gd" id="1_6ekd3"]
+[ext_resource type="Texture2D" uid="uid://cw7qv043s8w0w" path="res://frogg.png" id="1_whe2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ekd3"]
+atlas = ExtResource("1_whe2r")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slgur"]
+atlas = ExtResource("1_whe2r")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byod8"]
+atlas = ExtResource("1_whe2r")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j38ec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ekd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slgur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byod8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6ekd3"]
+
+[node name="Node2D" type="Node2D" unique_id=432296078]
+z_index = -1
+script = ExtResource("1_6ekd3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1617713786]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_j38ec")
+autoplay = "default"
+frame_progress = 0.3160628
+
+[node name="Button" type="Button" parent="." unique_id=1456556662]
+z_index = -1
+offset_left = -136.0
+offset_top = -220.0
+offset_right = 123.0
+offset_bottom = -189.0
+text = "Give Flies
+"
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=510577989]
+modulate = Color(0, 1, 0.40392157, 1)
+z_index = 1
+offset_left = -136.0
+offset_top = -220.0
+offset_right = 121.0
+offset_bottom = -188.0
+mouse_filter = 2
+max_value = 10.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="." unique_id=1397979236]
+offset_left = -136.0
+offset_top = -217.0
+offset_right = 124.0
+offset_bottom = -194.0
+label_settings = SubResource("LabelSettings_6ekd3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dsknp7xnp5dtp"]
+
+[ext_resource type="Texture2D" uid="uid://cmu1jtkxvtxke" path="res://egg.png" id="1_6upkn"]
+[ext_resource type="Script" uid="uid://bpfto6pblxdi3" path="res://egg.gd" id="1_60cwx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60cwx"]
+atlas = ExtResource("1_6upkn")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s80rl"]
+atlas = ExtResource("1_6upkn")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7piv4"]
+atlas = ExtResource("1_6upkn")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtrp8"]
+atlas = ExtResource("1_6upkn")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lxc0"]
+atlas = ExtResource("1_6upkn")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdad3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60cwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s80rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7piv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtrp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lxc0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1207945888]
+z_index = -5
+script = ExtResource("1_60cwx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1200747220]
+sprite_frames = SubResource("SpriteFrames_wdad3")
+autoplay = "default"
+frame_progress = 0.7388379
+
+[node name="Button" type="Button" parent="." unique_id=137545110]
+offset_left = -106.0
+offset_top = -86.0
+offset_right = 97.0
+offset_bottom = -57.0
+text = "give "
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1615623366]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+offset_left = -107.0
+offset_top = -86.0
+offset_right = 97.0
+offset_bottom = -55.0
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

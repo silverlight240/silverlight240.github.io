@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://btl081k5to7s7"]
+
+[ext_resource type="Texture2D" uid="uid://bkbh4itwcin14" path="res://flythingee.png" id="1_mv3iy"]
+[ext_resource type="Script" uid="uid://dmf3ji6e0rrjm" path="res://fly.gd" id="1_qarim"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qarim"]
+atlas = ExtResource("1_mv3iy")
+region = Rect2(0, 0, 150, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c42i"]
+atlas = ExtResource("1_mv3iy")
+region = Rect2(150, 0, 150, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cv6t"]
+atlas = ExtResource("1_mv3iy")
+region = Rect2(300, 0, 150, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is5gm"]
+atlas = ExtResource("1_mv3iy")
+region = Rect2(450, 0, 150, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lis8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qarim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c42i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cv6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is5gm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1calk"]
+radius = 33.37664
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=243860641]
+z_index = -1
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_qarim")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1252119441]
+sprite_frames = SubResource("SpriteFrames_lis8o")
+autoplay = "default"
+frame_progress = 0.33819285
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=279004666]
+position = Vector2(-4, 10)
+shape = SubResource("CircleShape2D_1calk")

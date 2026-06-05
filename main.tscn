@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dbc7k7inp244o"]
+
+[ext_resource type="PackedScene" uid="uid://bjyv6ohavv3qv" path="res://slime.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bdy7tph57iefd" path="res://frog.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://btl081k5to7s7" path="res://fly.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b2s30k0yl416p" path="res://tinyfly.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://mufhcep7ia5u" path="res://bee.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dfms8tsfu2mxw" path="res://tadpole.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://xgk7wegmwaj2" path="res://Have Baby.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://dsknp7xnp5dtp" path="res://egg.tscn" id="9_4c57u"]
+[ext_resource type="PackedScene" uid="uid://f5nr3r55qiof" path="res://spider.tscn" id="9_kek77"]
+[ext_resource type="PackedScene" uid="uid://nfkm440ccsmh" path="res://fairy.tscn" id="10_4c57u"]
+
+[node name="Node2D" type="Node2D" unique_id=1939028541]
+
+[node name="CharacterBody2D" parent="." unique_id=639384067 instance=ExtResource("1_ig7tw")]
+position = Vector2(142, 108)
+
+[node name="Node2D" parent="." unique_id=432296078 instance=ExtResource("2_0xm2m")]
+position = Vector2(442, 148)
+
+[node name="CharacterBody2D2" parent="." unique_id=243860641 instance=ExtResource("3_h2yge")]
+position = Vector2(211, 244)
+
+[node name="CharacterBody2D3" parent="." unique_id=1320956256 instance=ExtResource("3_h2yge")]
+position = Vector2(510, 326)
+
+[node name="CharacterBody2D4" parent="." unique_id=2071525810 instance=ExtResource("3_h2yge")]
+position = Vector2(681, 161)
+
+[node name="CharacterBody2D5" parent="." unique_id=1762901767 instance=ExtResource("4_1bvp3")]
+position = Vector2(263, 107)
+
+[node name="CatchableCreature" parent="." unique_id=831338744 instance=ExtResource("5_lquwl")]
+position = Vector2(-159, 89)
+
+[node name="Node2D2" parent="." unique_id=1888463211 instance=ExtResource("6_7mycd")]
+position = Vector2(793, 111)
+
+[node name="CatchableCreature2" parent="." unique_id=1068487361 instance=ExtResource("7_272bh")]
+position = Vector2(-123, 311)
+
+[node name="CharacterBody2D6" parent="." unique_id=22910198 instance=ExtResource("3_h2yge")]
+position = Vector2(1369, -30)
+
+[node name="CharacterBody2D7" parent="." unique_id=329611029 instance=ExtResource("3_h2yge")]
+position = Vector2(1020, -48)
+
+[node name="CharacterBody2D8" parent="." unique_id=975386738 instance=ExtResource("3_h2yge")]
+position = Vector2(898, -45)
+
+[node name="CharacterBody2D9" parent="." unique_id=1906347798 instance=ExtResource("3_h2yge")]
+position = Vector2(666, -118)
+
+[node name="CharacterBody2D10" parent="." unique_id=980403754 instance=ExtResource("3_h2yge")]
+position = Vector2(891, 212)
+
+[node name="Node2D3" parent="." unique_id=321593095 instance=ExtResource("9_kek77")]
+position = Vector2(1095, 136)
+
+[node name="Node2D4" parent="." unique_id=1207945888 instance=ExtResource("9_4c57u")]
+position = Vector2(1338, 96)
+
+[node name="CatchableCreature3" parent="." unique_id=1727047280 instance=ExtResource("10_4c57u")]
+position = Vector2(64, 7)
