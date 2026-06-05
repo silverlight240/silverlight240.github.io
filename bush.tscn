@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwhhhjrj0bjx0"]
+
+[ext_resource type="Script" uid="uid://b0reeath865iv" path="res://everything else/bush.gd" id="1_28u5p"]
+[ext_resource type="Texture2D" uid="uid://3ts5kjq0hych" path="res://everything else/berrybush-Sheet-Sheet.png" id="2_ilexf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ki2aw"]
+size = Vector2(140, 140)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahiml"]
+atlas = ExtResource("2_ilexf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72gjw"]
+atlas = ExtResource("2_ilexf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og0ie"]
+atlas = ExtResource("2_ilexf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pkwf"]
+atlas = ExtResource("2_ilexf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm7qr"]
+atlas = ExtResource("2_ilexf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hspfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahiml")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72gjw")
+}],
+"loop": true,
+"name": &"picked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og0ie")
+}],
+"loop": true,
+"name": &"stage 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pkwf")
+}],
+"loop": true,
+"name": &"stage 2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm7qr")
+}],
+"loop": true,
+"name": &"stage 3",
+"speed": 5.0
+}]
+
+[node name="Bush" type="StaticBody2D"]
+z_index = -1
+collision_layer = 3
+script = ExtResource("1_28u5p")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20, 0)
+shape = SubResource("RectangleShape2D_ki2aw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_hspfa")
+animation = &"stage 3"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

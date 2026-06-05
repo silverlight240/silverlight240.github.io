@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj8gnga234rj"
-path="res://.godot/imported/icon.svg-79b43ac07c86a43cdd858b3f04c42626.ctex"
+uid="uid://bwx1etcw2vnge"
+path="res://.godot/imported/enemyredsaw-Sheet.png-9b17730c51e71b4438a58804a73304e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-79b43ac07c86a43cdd858b3f04c42626.ctex"]
+source_file="res://everything else/enemyredsaw-Sheet.png"
+dest_files=["res://.godot/imported/enemyredsaw-Sheet.png-9b17730c51e71b4438a58804a73304e4.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
