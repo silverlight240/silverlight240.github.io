@@ -1,0 +1,116 @@
+[gd_scene load_steps=14 format=3 uid="uid://wngtb7nlsajo"]
+
+[ext_resource type="Script" uid="uid://bo0doky48qrbx" path="res://everything else/character_body_2drot.gd" id="1_6e15w"]
+[ext_resource type="Texture2D" uid="uid://dyf5naor62tu8" path="res://everything else/slimewalk-Sheet.png" id="2_7sihm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hl3ix"]
+size = Vector2(21.194727, 23.113834)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45t55"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7v8a"]
+atlas = ExtResource("2_7sihm")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45t55"]
+atlas = ExtResource("2_7sihm")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2vsm"]
+atlas = ExtResource("2_7sihm")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eopf4"]
+atlas = ExtResource("2_7sihm")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cnarc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7v8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45t55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2vsm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eopf4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hmra"]
+radius = 40.012497
+
+[sub_resource type="Animation" id="Animation_xxgkx"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_hl3ix"]
+resource_name = "new_animation"
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xxgkx"]
+_data = {
+&"RESET": SubResource("Animation_xxgkx"),
+&"new_animation": SubResource("Animation_hl3ix")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(2, -1)
+collision_layer = 32769
+collision_mask = 16387
+input_pickable = true
+script = ExtResource("1_6e15w")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+process_priority = 5
+top_level = true
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(1.000002, -10)
+scale = Vector2(4.246339, 3.893772)
+shape = SubResource("RectangleShape2D_hl3ix")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_45t55")
+position = Vector2(-1, -19)
+rotation = -6.2831855
+sprite_frames = SubResource("SpriteFrames_cnarc")
+autoplay = "default"
+frame = 2
+frame_progress = 0.24020898
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_5hmra")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xxgkx")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.225
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+scale = Vector2(2, 2)
+target_position = Vector2(3.864023, -358.9806)
+collision_mask = 16384
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

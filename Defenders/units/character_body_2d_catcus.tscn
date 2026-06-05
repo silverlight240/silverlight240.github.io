@@ -1,0 +1,109 @@
+[gd_scene load_steps=11 format=3 uid="uid://qcax41rfua2t"]
+
+[ext_resource type="Script" uid="uid://jnawfdfa0m7u" path="res://everything else/character_body_enemy_catus.gd" id="1_2ue0b"]
+[ext_resource type="Texture2D" uid="uid://c25nott2oiksw" path="res://everything else/enemy_cactuswalk-Sheet-export.png" id="2_jeg7d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4hm8"]
+size = Vector2(77.78013, 126.18089)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4khiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4hm8"]
+atlas = ExtResource("2_jeg7d")
+region = Rect2(0, 0, 1500, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4khiu"]
+atlas = ExtResource("2_jeg7d")
+region = Rect2(1500, 0, 1500, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy6h7"]
+atlas = ExtResource("2_jeg7d")
+region = Rect2(3000, 0, 1500, 1500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3vir"]
+atlas = ExtResource("2_jeg7d")
+region = Rect2(4500, 0, 1500, 1500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ial36"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4hm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4khiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy6h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3vir")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4hm8"]
+radius = 39.017677
+height = 101.870834
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+rotation = 3.1415927
+scale = Vector2(0.9513999, 0.86383903)
+collision_layer = 2
+up_direction = Vector2(0.99998456, -0.00555547)
+script = ExtResource("1_2ue0b")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.8000578e-06, 21.416021)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_a4hm8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_4khiu")
+position = Vector2(-3.0517578e-05, -1.1576271)
+scale = Vector2(0.1114507, 0.11475002)
+sprite_frames = SubResource("SpriteFrames_ial36")
+autoplay = "default"
+frame = 3
+frame_progress = 0.17649184
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.0510827, 10.418608)
+shape = SubResource("CapsuleShape2D_a4hm8")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1.0510827, 13.891478)
+scale = Vector2(7.1032963, 1.0052764)
+target_position = Vector2(0.14797112, -1045.6047)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.212
+one_shot = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+scale = Vector2(6.638969, 19.692793)
+target_position = Vector2(13.298895, 1.9986589)
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+scale = Vector2(6.638969, 19.692793)
+target_position = Vector2(-12.823934, 1.9986597)
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+scale = Vector2(6.638969, 19.692793)
+target_position = Vector2(9.65753, -3.8209665)
+
+[node name="RayCast2D5" type="RayCast2D" parent="."]
+scale = Vector2(-8.049464, -24.062454)
+target_position = Vector2(-0.26115733, -5.965529)
+
+[node name="RayCast2D6" type="RayCast2D" parent="."]
+scale = Vector2(-8.049464, -24.062454)
+target_position = Vector2(7.3123665, 2.7903278)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

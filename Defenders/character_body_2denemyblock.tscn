@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqw1aq225gp1a"]
+
+[ext_resource type="Script" uid="uid://dpgyqco1tw6ha" path="res://everything else/character_body_2denemysquare.gd" id="1_miio2"]
+[ext_resource type="Texture2D" uid="uid://dghysrrb5c2c4" path="res://everything else/red guy.png" id="2_ye5e0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8xno"]
+size = Vector2(40, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkmw2"]
+size = Vector2(36, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uoxe"]
+size = Vector2(18, 10)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 16386
+collision_mask = 32771
+script = ExtResource("1_miio2")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_d8xno")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ye5e0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_fkmw2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_7uoxe")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.225
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 364)
+collision_mask = 32768
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtpyqav4of2ga"]
+
+[ext_resource type="Texture2D" uid="uid://c60wcycr6jcae" path="res://cactuswalk-Sheet.png" id="1_3lbm6"]
+[ext_resource type="Script" uid="uid://dn42kmcja1wsf" path="res://character_body_2d_3.gd" id="1_j1e30"]
+[ext_resource type="Script" uid="uid://cmlxeacum281y" path="res://animated_sprite_2d.gd" id="3_nwc6l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1e30"]
+atlas = ExtResource("1_3lbm6")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwc6l"]
+atlas = ExtResource("1_3lbm6")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v3dc"]
+atlas = ExtResource("1_3lbm6")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg7dr"]
+atlas = ExtResource("1_3lbm6")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgrgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1e30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwc6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v3dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg7dr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfuhx"]
+radius = 32.0
+height = 72.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+rotation = 0.011935115
+script = ExtResource("1_j1e30")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tgrgw")
+autoplay = "default"
+frame_progress = 0.5078101
+script = ExtResource("3_nwc6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_gfuhx")

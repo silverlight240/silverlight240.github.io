@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://0ixnou0k2t7f"]
+
+[ext_resource type="Script" uid="uid://b87tvfy77af6j" path="res://everything else/static_body_2d.gd" id="1_yjt17"]
+[ext_resource type="Shader" uid="uid://c3q7icocsvtfr" path="res://everything else/blahblah.gdshader" id="2_ypqmy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypqmy"]
+size = Vector2(72, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjt17"]
+size = Vector2(57, 58)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dyby8"]
+shader = ExtResource("2_ypqmy")
+shader_parameter/screen_resolution = Vector2(320, 180)
+shader_parameter/u_roundness = 1.0
+shader_parameter/u_power = 6.0
+shader_parameter/u_swirl = 4.0
+shader_parameter/u_chromatic = 1.5
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_yjt17")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ypqmy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_yjt17")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_dyby8")
+offset_left = -29.0
+offset_top = -29.0
+offset_right = 29.0
+offset_bottom = 30.0

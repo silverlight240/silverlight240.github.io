@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://b5vvgw0c7bpre"]
+
+[ext_resource type="Script" uid="uid://bhu3cksqeb60u" path="res://everything else/character_body_sawgreen.gd" id="1_gjyre"]
+[ext_resource type="Texture2D" uid="uid://cpj7he1cegvqx" path="res://everything else/greensaw-Sheet.png" id="2_6btrv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne4u5"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qswar"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n6aw"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ba5x"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tykrj"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0f7n"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmkw2"]
+atlas = ExtResource("2_6btrv")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y846e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne4u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qswar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n6aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ba5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tykrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0f7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmkw2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i0yn"]
+size = Vector2(21.969387, 17.63962)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ocb7"]
+size = Vector2(20, 17.000002)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(10, 10)
+collision_mask = 2
+script = ExtResource("1_gjyre")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -1)
+sprite_frames = SubResource("SpriteFrames_y846e")
+autoplay = "default"
+frame = 5
+frame_progress = 0.7592527
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.549788e-08, 0.9999991)
+rotation = -3.1415925
+scale = Vector2(0.36414307, -0.90704894)
+shape = SubResource("RectangleShape2D_8i0yn")
+debug_color = Color(0.94900805, 1.6364455e-06, 0.5779402, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.50000113)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_1ocb7")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(-1, -125)
+collision_mask = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.215
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

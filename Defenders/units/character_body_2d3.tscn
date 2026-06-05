@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtpyqav4of2ga"]
+
+[ext_resource type="Script" uid="uid://dn42kmcja1wsf" path="res://everything else/character_body_2d_3.gd" id="1_qlysg"]
+[ext_resource type="Texture2D" uid="uid://c60wcycr6jcae" path="res://everything else/cactuswalk-Sheet.png" id="2_gtf71"]
+[ext_resource type="Script" uid="uid://cmlxeacum281y" path="res://everything else/animated_sprite_2d.gd" id="3_svkuv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwc6l"]
+size = Vector2(110, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1e30"]
+atlas = ExtResource("2_gtf71")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwc6l"]
+atlas = ExtResource("2_gtf71")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v3dc"]
+atlas = ExtResource("2_gtf71")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg7dr"]
+atlas = ExtResource("2_gtf71")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgrgw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1e30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwc6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v3dc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg7dr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfuhx"]
+radius = 35.00944
+height = 70.01888
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+rotation = 6.2831855
+collision_mask = 2
+input_pickable = true
+script = ExtResource("1_qlysg")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.4305114e-06, 5)
+shape = SubResource("RectangleShape2D_nwc6l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.313226e-10, 5.9604645e-08)
+sprite_frames = SubResource("SpriteFrames_tgrgw")
+autoplay = "default"
+frame_progress = 0.5078101
+script = ExtResource("3_svkuv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.9999237, -0.011935234)
+shape = SubResource("CapsuleShape2D_gfuhx")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-0.011934832, -0.9999288)
+target_position = Vector2(-9.769433, -650.92975)
+collision_mask = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.212
+one_shot = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+scale = Vector2(4, -9.798)
+target_position = Vector2(18.7606, -0.31686085)
+collision_mask = 2
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+scale = Vector2(-3.2242534, 14.681013)
+target_position = Vector2(17.58941, -0.28113532)
+collision_mask = 2
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+scale = Vector2(-24.641233, 11.929844)
+target_position = Vector2(-0.012487544, -4.8624115)
+collision_mask = 2
+
+[node name="RayCast2D5" type="RayCast2D" parent="."]
+scale = Vector2(-24.641233, 11.929844)
+target_position = Vector2(-0.27205324, 4.939226)
+collision_mask = 2
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

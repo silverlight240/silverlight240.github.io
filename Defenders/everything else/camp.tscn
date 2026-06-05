@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0xdtqxn5ddsb"]
+
+[ext_resource type="Script" uid="uid://cix1ugqyrcvoq" path="res://everything else/camp.gd" id="1_sneqp"]
+[ext_resource type="Texture2D" uid="uid://b4um2c8txik5f" path="res://everything else/nest lv 1.png" id="2_31t3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_helwt"]
+size = Vector2(460, 460)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_helwt"]
+resource_name = "ee"
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_helwt"]
+font_size = 72
+shadow_size = 20
+shadow_offset = Vector2(10, 10)
+
+[node name="camp" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 32769
+collision_mask = 16386
+script = ExtResource("1_sneqp")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-19.999992, 40.000008)
+shape = SubResource("RectangleShape2D_helwt")
+debug_color = Color(0.84480125, 0.0010317308, 0.9134958, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
+texture = ExtResource("2_31t3n")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+ignore_time_scale = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -300)
+gizmo_extents = 0.0
+
+[node name="Label" type="Label" parent="."]
+material = SubResource("CanvasItemMaterial_helwt")
+offset_left = -250.0
+offset_top = -190.0
+offset_right = 210.0
+offset_bottom = 270.0
+label_settings = SubResource("LabelSettings_helwt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -18, -216, -40, -70, -186, 112, -158, 200, 40, 196, 190, 82, 262, -106, 232, -240, 144, -216, -38)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
