@@ -92,12 +92,12 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = false
 		$Area2D.scale.x = 1
 		if tempspeed < speed:
-			tempspeed += (speed/100) - tempspeed/50
+			tempspeed += (speed/100) - tempspeed/67.5
 		velocity = direction * tempspeed
 	else:
 		velocity.x = 0
 		velocity.y = 0
-		tempspeed = 10
+		tempspeed = move_toward(tempspeed,10,3 * ((speed/100) - tempspeed/67.5))
 	move_and_slide()
 
 
