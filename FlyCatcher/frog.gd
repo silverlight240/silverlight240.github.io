@@ -5,8 +5,9 @@ var flies := 0
 var requirincrease = 4.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var stats
-	stats = SaveLoad.Load("frog")
+	var stats = SaveLoad.Load("frog")
+	if typeof(stats) != TYPE_DICTIONARY:
+		stats = {}
 	flies = stats["flies"]
 	speedincrease = stats["speedincrease"]
 	requirincrease = stats["requirincrease"]

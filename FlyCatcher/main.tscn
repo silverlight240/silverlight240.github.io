@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://dsknp7xnp5dtp" path="res://egg.tscn" id="9_4c57u"]
 [ext_resource type="PackedScene" uid="uid://f5nr3r55qiof" path="res://spider.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://nfkm440ccsmh" path="res://fairy.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://bbalm8pr8khxq" path="res://Saveeloaddee.tscn" id="11_efxa6"]
 
 [node name="Node2D" type="Node2D" unique_id=1939028541]
 
@@ -49,8 +48,6 @@ position = Vector2(891, 212)
 
 [node name="CatchableCreature3" parent="." unique_id=1727047280 instance=ExtResource("10_4c57u")]
 position = Vector2(-19, -59)
-
-[node name="Node2D5" parent="." unique_id=460848927 instance=ExtResource("11_efxa6")]
 
 [node name="CharacterBody2D" parent="." unique_id=639384067 instance=ExtResource("1_ig7tw")]
 position = Vector2(167, 112)

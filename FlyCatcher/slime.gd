@@ -3,13 +3,29 @@ extends CharacterBody2D
 @onready var camera = $Camera2D
 @export var flies = 0
 @onready var spawner = $Node2D
+var placedwebs =[]
 var webs = 0
 var speed = 300.0
 const JUMP_VELOCITY = -400.0
 func _ready() -> void:
 	var stats = SaveLoad.Load("player")
+	if typeof(stats) != TYPE_DICTIONARY:
+		stats = {"scale": {
+		"x": 1,
+		"y": 1
+		}, "flies": 0, "speed": 300, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}
 	flies = stats["flies"]
 	speed = stats["speed"]
+	if stats["placedwebs"].size() > 0: 
+		placedwebs = stats["placedwebs"]
+		print(stats["placedwebs"])
+		for web_position in placedwebs.duplicate():
+			var web = load("res://cobwebtrap.tscn")
+			var scene = web.instantiate()
+			scene.global_position = Vector2(web_position["x"],web_position["y"])
+			get_tree().current_scene.call_deferred("add_child",scene)
+			print(scene)
+			placedwebs.erase(web_position)
 	$Area2D/CollisionShape2D.shape.size = Vector2(
 	stats["range"]["x"],
 	stats["range"]["y"]
@@ -28,7 +44,7 @@ func _ready() -> void:
 	randomize()
 @onready var area2d = $Area2D
 func _physics_process(delta: float) -> void:
-	var stats = {"speed": speed, "zoom":{"x": $Camera2D.zoom.x,"y": $Camera2D.zoom.y,}, "webs": webs, "spawntime": spawner.timer.wait_time, "scale": {
+	var stats = {"placedwebs": placedwebs, "flies": flies, "speed": speed, "zoom":{"x": $Camera2D.zoom.x,"y": $Camera2D.zoom.y,}, "webs": webs, "spawntime": spawner.timer.wait_time, "scale": {
 	"x": scale.x,
 	"y": scale.y
 	},
@@ -93,3 +109,7 @@ func _on_timer_2_timeout() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	body.queue_free()
 	flies += body.giveamount
+
+
+func _on_timer_3_timeout() -> void:
+	SaveLoad.save()
