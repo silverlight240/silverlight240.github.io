@@ -5,7 +5,8 @@ extends CharacterBody2D
 @onready var spawner = $Node2D
 var placedwebs =[]
 var webs = 0
-var speed = 300.0
+var speed = 500.0
+var tempspeed = 0
 const JUMP_VELOCITY = -400.0
 func _ready() -> void:
 	var stats = SaveLoad.Load("player")
@@ -13,7 +14,7 @@ func _ready() -> void:
 		stats = {"scale": {
 		"x": 1,
 		"y": 1
-		}, "flies": 0, "speed": 300, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}
+		}, "flies": 0, "speed": 500, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}
 	flies = stats["flies"]
 	speed = stats["speed"]
 	if stats["placedwebs"].size() > 0: 
@@ -90,10 +91,13 @@ func _physics_process(delta: float) -> void:
 	if direction and $AnimatedSprite2D.animation != "Bugnet":
 		$AnimatedSprite2D.flip_h = false
 		$Area2D.scale.x = 1
-		velocity = direction * speed
+		if tempspeed < speed:
+			tempspeed += (speed/100) - tempspeed/50
+		velocity = direction * tempspeed
 	else:
 		velocity.x = 0
 		velocity.y = 0
+		tempspeed = 10
 	move_and_slide()
 
 

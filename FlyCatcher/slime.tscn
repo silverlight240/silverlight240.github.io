@@ -282,6 +282,8 @@ metadata/_edit_use_anchors_ = true
 wait_time = 15.0
 autostart = true
 
+[node name="Node2D3" type="Node2D" parent="." unique_id=1903725547]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -30,10 +30,9 @@ func _process(delta: float) -> void:
 	if flies >= requier:
 		player.speed += speedincrease
 		flies -= requier
-		speedincrease *= 1.3
-		speedincrease += 10.0
+		speedincrease *= 1.25
+		speedincrease += 6.5
 		requier += requirincrease
-		scale += Vector2(0.1,0.1)
 		requirincrease += 0.15 * requirincrease
 func _on_button_pressed() -> void:
 	flies += player.flies 

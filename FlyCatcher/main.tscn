@@ -52,14 +52,16 @@ position = Vector2(-19, -59)
 [node name="CharacterBody2D" parent="." unique_id=639384067 instance=ExtResource("1_ig7tw")]
 position = Vector2(167, 112)
 
-[node name="Node2D" parent="." unique_id=432296078 instance=ExtResource("2_0xm2m")]
+[node name="Node2D5" type="Node2D" parent="." unique_id=779139419]
+
+[node name="Node2D" parent="Node2D5" unique_id=432296078 instance=ExtResource("2_0xm2m")]
 position = Vector2(476, 133)
 
-[node name="Node2D2" parent="." unique_id=1888463211 instance=ExtResource("6_7mycd")]
+[node name="Node2D2" parent="Node2D5" unique_id=1888463211 instance=ExtResource("6_7mycd")]
 position = Vector2(696, 74)
 
-[node name="Node2D3" parent="." unique_id=321593095 instance=ExtResource("9_kek77")]
+[node name="Node2D3" parent="Node2D5" unique_id=321593095 instance=ExtResource("9_kek77")]
 position = Vector2(924, 90)
 
-[node name="Node2D4" parent="." unique_id=1207945888 instance=ExtResource("9_4c57u")]
+[node name="Node2D4" parent="Node2D5" unique_id=1207945888 instance=ExtResource("9_4c57u")]
 position = Vector2(1170, 70)

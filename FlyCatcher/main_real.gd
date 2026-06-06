@@ -17,7 +17,7 @@ func _on_button_pressed() -> void:
 	SaveLoad.contents = {"player": {"scale": {
 	"x": 1,
 	"y": 1
-	}, "placedwebs": [], "flies": 0.0, "speed": 300, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}, "frog": {"flies": 0,"requirincrease": 4.0, "requier": 10, "speedincrease": 45}, "tadpole":{"requier": 22, "requirincrease": 6.5, "flies": 0}, "spider": {"requier": 70, "flies": 0}, "egg":{"requier":100,"flies":0,"requirething":100},}
+	}, "placedwebs": [], "flies": 0.0, "speed": 500, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}, "frog": {"flies": 0,"requirincrease": 4.0, "requier": 10, "speedincrease": 45}, "tadpole":{"requier": 22, "requirincrease": 6.5, "flies": 0}, "spider": {"requier": 70, "flies": 0}, "egg":{"requier":100,"flies":0,"requirething":100},}
 	SaveLoad.save()
 
 

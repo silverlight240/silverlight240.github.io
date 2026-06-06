@@ -13,6 +13,7 @@ func _ready() -> void:
 @onready var player = get_tree().get_first_node_in_group("player")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	get_parent().scale = player.scale
 	var stats = {"requier": requier, "requirincrease": requirincrease, "flies": flies}
 	SaveLoad.contents["tadpole"] = stats
 	$Button.text =  str(flies) + "/" + str(requier) + " " + "Give Flies"
