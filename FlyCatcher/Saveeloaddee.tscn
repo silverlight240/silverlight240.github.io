@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bbalm8pr8khxq"]
+
+[ext_resource type="Script" uid="uid://chlo2ufxbd8va" path="res://SaveLoad.gd" id="1_fseqj"]
+
+[node name="Node2D" type="Node2D" unique_id=460848927]
+script = ExtResource("1_fseqj")
+
+[node name="Timer" type="Timer" parent="." unique_id=671639722]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

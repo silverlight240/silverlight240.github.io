@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bq4mabpmnr8n1"]
+
+[ext_resource type="Script" uid="uid://c8pnq3lfys76d" path="res://main_real.gd" id="1_45o7k"]
+
+[node name="Node2D" type="Node2D" unique_id=1822524302]
+script = ExtResource("1_45o7k")
+
+[node name="Button" type="Button" parent="." unique_id=221128154]
+offset_left = 211.00005
+offset_top = 198.00002
+offset_right = 345.00006
+offset_bottom = 229.00002
+scale = Vector2(5, 5)
+text = "Start New Run??"
+
+[node name="Button2" type="Button" parent="." unique_id=522348821]
+offset_left = 277.0
+offset_top = 15.0
+offset_right = 363.0
+offset_bottom = 46.0
+scale = Vector2(6, 6)
+text = "Load Save"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

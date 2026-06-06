@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b58rvo1vhi5br"
-path="res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"
+uid="uid://0kf6j76bkeuu"
+path="res://.godot/imported/flythathavebayby.png-4ec5dc93b2f9220a7f4a458d1c43cacc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cobweb.png"
-dest_files=["res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"]
+source_file="res://flythathavebayby.png"
+dest_files=["res://.godot/imported/flythathavebayby.png-4ec5dc93b2f9220a7f4a458d1c43cacc.ctex"]
 
 [params]
 

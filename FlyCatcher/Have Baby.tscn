@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://xgk7wegmwaj2"]
+
+[ext_resource type="Script" uid="uid://ckuafugog1haa" path="res://havebaby.gd" id="1_km35w"]
+[ext_resource type="Texture2D" uid="uid://0kf6j76bkeuu" path="res://flythathavebayby.png" id="2_hgt5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xwu6"]
+atlas = ExtResource("2_hgt5e")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sut8l"]
+atlas = ExtResource("2_hgt5e")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31rie"]
+atlas = ExtResource("2_hgt5e")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmewg"]
+atlas = ExtResource("2_hgt5e")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1op4h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xwu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sut8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31rie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmewg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l02wg"]
+radius = 43.0
+height = 110.0
+
+[node name="CatchableCreature" type="CharacterBody2D" unique_id=1068487361]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_km35w")
+giveamount = 0
+SPEED = 400.0
+metadata/_custom_type_script = "uid://dmf3ji6e0rrjm"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=317292661]
+sprite_frames = SubResource("SpriteFrames_1op4h")
+autoplay = "default"
+frame_progress = 0.07588034
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=422675536]
+position = Vector2(-1, 1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_l02wg")

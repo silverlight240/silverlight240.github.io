@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b58rvo1vhi5br"
-path="res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"
+uid="uid://bncqnh2qquvmw"
+path="res://.godot/imported/slime jump.png-1a97cc1ad0271041000edb18ae5c8ca2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cobweb.png"
-dest_files=["res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"]
+source_file="res://slime jump.png"
+dest_files=["res://.godot/imported/slime jump.png-1a97cc1ad0271041000edb18ae5c8ca2.ctex"]
 
 [params]
 

@@ -152,7 +152,7 @@ shape = SubResource("CapsuleShape2D_sdpr3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=28765098]
 sprite_frames = SubResource("SpriteFrames_awyb5")
 autoplay = "default"
-frame_progress = 0.8405001
+frame_progress = 0.47488368
 speed_scale = 2.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=762274653]
@@ -162,7 +162,7 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_808es")
 
 [node name="Timer" type="Timer" parent="." unique_id=478664450]
-wait_time = 0.1
+wait_time = 0.2
 one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

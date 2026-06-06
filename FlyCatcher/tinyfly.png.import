@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b58rvo1vhi5br"
-path="res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"
+uid="uid://dusex55m707f6"
+path="res://.godot/imported/tinyfly.png-7d4d0604480cec6eef77828849e4f970.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cobweb.png"
-dest_files=["res://.godot/imported/cobweb.png-f0bf2f663ba929b667f3b845976fcd29.ctex"]
+source_file="res://tinyfly.png"
+dest_files=["res://.godot/imported/tinyfly.png-7d4d0604480cec6eef77828849e4f970.ctex"]
 
 [params]
 

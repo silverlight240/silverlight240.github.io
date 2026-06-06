@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://f5nr3r55qiof"]
+
+[ext_resource type="Texture2D" uid="uid://c0qc6y0h5omia" path="res://spider.png" id="1_k3kcl"]
+[ext_resource type="Script" uid="uid://cheu33qftttq6" path="res://spider.gd" id="1_qrebf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrebf"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yt70"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vivtl"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_binfs"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wdmt"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsryr"]
+atlas = ExtResource("1_k3kcl")
+region = Rect2(800, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_01nvu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrebf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yt70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vivtl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_binfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wdmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsryr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=321593095]
+z_index = -5
+script = ExtResource("1_qrebf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1788585605]
+position = Vector2(-10, -1)
+sprite_frames = SubResource("SpriteFrames_01nvu")
+autoplay = "default"
+frame_progress = 0.93593436
+
+[node name="Button" type="Button" parent="." unique_id=319645170]
+offset_left = -120.0
+offset_top = -85.0
+offset_right = 117.0
+offset_bottom = -54.0
+text = "Give Flyyyessssss"
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=425399422]
+modulate = Color(1, 0, 0, 1)
+z_index = 3
+offset_left = -121.0
+offset_top = -84.0
+offset_right = 117.0
+offset_bottom = -55.0
+mouse_filter = 2
+value = 100.0
+show_percentage = false
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
