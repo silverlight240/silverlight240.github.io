@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dsknp7xnp5dtp" path="res://egg.tscn" id="9_4c57u"]
 [ext_resource type="PackedScene" uid="uid://f5nr3r55qiof" path="res://spider.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://nfkm440ccsmh" path="res://fairy.tscn" id="10_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dgb1fgmg5lind" path="res://firefly.tscn" id="11_efxa6"]
 
 [node name="Node2D" type="Node2D" unique_id=1939028541]
 
@@ -65,3 +66,19 @@ position = Vector2(924, 90)
 
 [node name="Node2D4" parent="Node2D5" unique_id=1207945888 instance=ExtResource("9_4c57u")]
 position = Vector2(1170, 70)
+
+[node name="CatchableCreature" parent="Node2D5" unique_id=764424401 instance=ExtResource("11_efxa6")]
+position = Vector2(228, -224)
+SPEED = 450.0
+
+[node name="CatchableCreature2" parent="Node2D5" unique_id=1251263998 instance=ExtResource("11_efxa6")]
+position = Vector2(290, 25)
+
+[node name="CatchableCreature3" parent="Node2D5" unique_id=757514490 instance=ExtResource("11_efxa6")]
+position = Vector2(111, 25)
+
+[node name="CatchableCreature4" parent="Node2D5" unique_id=921097546 instance=ExtResource("11_efxa6")]
+position = Vector2(79, -145)
+
+[node name="CatchableCreature5" parent="Node2D5" unique_id=649442050 instance=ExtResource("11_efxa6")]
+position = Vector2(358, -162)

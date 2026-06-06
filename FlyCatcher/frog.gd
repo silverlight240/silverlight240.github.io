@@ -1,6 +1,6 @@
 extends Node2D
 var requier := 10
-var speedincrease = 45
+var speedincrease = 70
 var flies := 0
 var requirincrease = 4.0
 # Called when the node enters the scene tree for the first time.
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 		player.speed += speedincrease
 		flies -= requier
 		speedincrease *= 1.25
-		speedincrease += 6.5
+		speedincrease += 10
 		requier += requirincrease
 		requirincrease += 0.15 * requirincrease
 func _on_button_pressed() -> void:

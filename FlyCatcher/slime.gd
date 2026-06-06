@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var spawner = $Node2D
 var placedwebs =[]
 var webs = 0
-var speed = 500.0
+var speed = 550.0
 var tempspeed = 0
 const JUMP_VELOCITY = -400.0
 func _ready() -> void:
