@@ -6,7 +6,9 @@ extends CharacterBody2D
 var placedwebs =[]
 var webs = 0
 var speed = 550.0
+var meats = 0
 var tempspeed = 0
+var placedmeats = []
 const JUMP_VELOCITY = -400.0
 func _ready() -> void:
 	var stats = SaveLoad.Load("player")
@@ -16,7 +18,18 @@ func _ready() -> void:
 		"y": 1
 		}, "flies": 0, "speed": 500, "zoom":{"x": 0.75,"y": 0.75,}, "spawntime": 4.00, "webs": 0, "range":{"x": 91.0,"y": 96.0}}
 	flies = stats["flies"]
+	meats = stats["meats"]
 	speed = stats["speed"]
+	if stats["placedmeats"].size() > 0:
+		placedmeats = stats["placedmeats"]
+		print(stats["placedmeats"])
+		for meat_position in placedmeats.duplicate():
+			var meat = load("res://meat.tscn")
+			var scene = meat.instantiate()
+			scene.global_position = Vector2(meat_position["x"],meat_position["y"])
+			get_tree().current_scene.call_deferred("add_child",scene)
+			print(scene)
+			placedwebs.erase(meat_position)
 	if stats["placedwebs"].size() > 0: 
 		placedwebs = stats["placedwebs"]
 		print(stats["placedwebs"])
@@ -45,7 +58,7 @@ func _ready() -> void:
 	randomize()
 @onready var area2d = $Area2D
 func _physics_process(delta: float) -> void:
-	var stats = {"placedwebs": placedwebs, "flies": flies, "speed": speed, "zoom":{"x": $Camera2D.zoom.x,"y": $Camera2D.zoom.y,}, "webs": webs, "spawntime": spawner.timer.wait_time, "scale": {
+	var stats = {"meats": meats, "placedmeats": placedmeats, "placedwebs": placedwebs, "flies": flies, "speed": speed, "zoom":{"x": $Camera2D.zoom.x,"y": $Camera2D.zoom.y,}, "webs": webs, "spawntime": spawner.timer.wait_time, "scale": {
 	"x": scale.x,
 	"y": scale.y
 	},
@@ -60,6 +73,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		$Cobweb.modulate = Color(1,1,1,0.7)
 		$Cobweb/Label.text = str(webs)
+	if meats == 0:
+		$Meat.modulate = Color(0.2,0.2,0.2,0.4)
+		$Meat/Label2.text = ""
+	else:
+		$Meat.modulate = Color(1,1,1,0.7)
+		$Meat/Label2.text = str(meats)
 	$Timer2.wait_time = (speed/389.6103896103896)
 	if $Timer2.wait_time >= 1:
 		$Timer2.wait_time = 0.99

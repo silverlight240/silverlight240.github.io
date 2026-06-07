@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmnh6go762x6e"]
+
+[ext_resource type="Script" uid="uid://dr51sdf6hjj1j" path="res://meat.gd" id="1_0wnju"]
+[ext_resource type="Texture2D" uid="uid://b6roc05tt0itv" path="res://meat.png" id="2_ur8ib"]
+
+[node name="Node2D" type="Node2D" unique_id=1313513228]
+z_index = -5
+script = ExtResource("1_0wnju")
+
+[node name="Meat" type="Sprite2D" parent="." unique_id=2135614560]
+texture = ExtResource("2_ur8ib")

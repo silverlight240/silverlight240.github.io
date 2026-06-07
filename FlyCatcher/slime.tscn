@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ggvghsbhty1m" path="res://spawner.tscn" id="4_ppcr1"]
 [ext_resource type="Texture2D" uid="uid://dl78l0d6w47ky" path="res://arrow.png" id="5_jayke"]
 [ext_resource type="Texture2D" uid="uid://b58rvo1vhi5br" path="res://cobweb.png" id="6_2002g"]
+[ext_resource type="Texture2D" uid="uid://b6roc05tt0itv" path="res://meat.png" id="7_bratd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppcr1"]
 atlas = ExtResource("1_5jc4t")
@@ -283,6 +284,21 @@ wait_time = 15.0
 autostart = true
 
 [node name="Node2D3" type="Node2D" parent="." unique_id=1903725547]
+
+[node name="Meat" type="Sprite2D" parent="." unique_id=1543272969]
+position = Vector2(556, 364)
+texture = ExtResource("7_bratd")
+
+[node name="Label2" type="Label" parent="Meat" unique_id=150684602]
+offset_left = -40.0
+offset_top = -44.0
+offset_right = 42.0
+offset_bottom = 44.0
+text = "0"
+label_settings = SubResource("LabelSettings_2002g")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

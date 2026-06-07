@@ -1,7 +1,7 @@
 extends Node
 var loadwebs = true
 const SAVELOCATION = "user://SaveFile.json"
-var contents: Dictionary = {"player": {}, "frog": {}, "tadpole":{}, "spider": {}, "egg":{},}
+var contents: Dictionary = {"player": {}, "frog": {}, "tadpole":{}, "spider": {}, "egg":{},"bear": {},}
 var webs:= []
 var newsave = false
 func save():

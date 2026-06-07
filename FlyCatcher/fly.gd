@@ -11,6 +11,16 @@ func _physics_process(delta: float) -> void:
 	player = get_tree().get_first_node_in_group("player")
 	if (not trapped) and player != null:
 		direction = (player.global_position - global_position).normalized()
+		if get_tree().get_nodes_in_group("meat") != null:
+			var avverage = Vector2()
+			var thing = Vector2()
+			var number: int
+			for meat in get_tree().get_nodes_in_group("meat"):
+				thing += meat.global_position 
+				number += 1
+			avverage = thing / number
+			direction += 0.9 * -((avverage-global_position).normalized())
+			direction = direction.normalized()
 		if global_position.distance_to(player.global_position) < distance:
 			velocity = direction * -SPEED
 		else:

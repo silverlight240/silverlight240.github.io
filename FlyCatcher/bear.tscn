@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dq7awo01kxsag"]
+
+[ext_resource type="Script" uid="uid://qq8b11s0ai0y" path="res://bear.gd" id="1_8ceia"]
+[ext_resource type="Texture2D" uid="uid://ksftsnintkvi" path="res://bear.png" id="1_wvk3l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ceia"]
+atlas = ExtResource("1_wvk3l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_balfo"]
+atlas = ExtResource("1_wvk3l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq7sg"]
+atlas = ExtResource("1_wvk3l")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py70x"]
+atlas = ExtResource("1_wvk3l")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uh6h"]
+atlas = ExtResource("1_wvk3l")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5r7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ceia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_balfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq7sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py70x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uh6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=96424235]
+z_index = -5
+script = ExtResource("1_8ceia")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1333937387]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_q5r7r")
+autoplay = "default"
+frame_progress = 0.31197688
+
+[node name="Button" type="Button" parent="." unique_id=1871689390]
+offset_left = -103.0
+offset_top = -93.0
+offset_right = 107.0
+offset_bottom = -62.0
+text = "0/10 Grr. You know what to do."
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=138510742]
+modulate = Color(0.3731071, 0.28134543, 0.017241012, 1)
+offset_left = -104.0
+offset_top = -93.0
+offset_right = 145.0
+offset_bottom = -62.0
+mouse_filter = 2
+value = 100.0
+show_percentage = false
