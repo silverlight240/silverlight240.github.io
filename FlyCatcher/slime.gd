@@ -103,11 +103,16 @@ func _physics_process(delta: float) -> void:
 			get_parent().add_child(spawnweb)
 	if Input.is_action_just_pressed("jump"):
 		$AnimatedSprite2D.play("Bugnet")
+		$Whoosh.pitch_scale = randf_range(0.7,0.9)
+		$Whoosh.volume_db = randf_range(2.2,2.4)
+		$Whoosh.play()
+		$Slimesquelch.stop()
 		if direction.x > 0:
 			$AnimatedSprite2D.flip_h = true
 			$Area2D.scale.x = -1
 		$Timer.start()
 	if $AnimatedSprite2D.animation != "Bugnet":
+		$Whoosh.stop()
 		if $Slimesquelch.playing == false:
 			$Slimesquelch.volume_db = randf_range(4.4,5.4)
 			$Slimesquelch.pitch_scale = randf_range(0.7,1.1)
@@ -119,7 +124,6 @@ func _physics_process(delta: float) -> void:
 			tempspeed += (speed/100) - tempspeed/67.5
 		velocity = direction * tempspeed
 	else:
-		$Slimesquelch.stop()
 		velocity.x = 0
 		velocity.y = 0
 		tempspeed = move_toward(tempspeed,10,3 * ((speed/100) - tempspeed/67.5))
@@ -137,8 +141,14 @@ func _on_timer_2_timeout() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	body.queue_free()
+	if not $Beep.playing:
+		$Beep.play()
 	flies += body.giveamount
 
 
 func _on_timer_3_timeout() -> void:
 	SaveLoad.save()
+
+
+func _on_timer_4_timeout() -> void:
+	$Beep.stop()
