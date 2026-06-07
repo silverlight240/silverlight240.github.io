@@ -2,9 +2,12 @@ extends Node2D
 var requier := 320
 var flies := 0
 func _ready() -> void:
-	var stats = SaveLoad.Load("bear")
-	flies = stats["flies"]
-	requier = stats["requier"]
+	if SaveLoad.Load("bear") != null:
+		var stats = SaveLoad.Load("bear")
+		if stats["flies"] != null:
+			flies = stats["flies"]
+		if stats["requier"] != null:
+			requier = stats["requier"]
 # Called when the node enters the scene tree for the first time.
 @onready var player = get_tree().get_first_node_in_group("player")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
