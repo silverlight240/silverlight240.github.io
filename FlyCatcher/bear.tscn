@@ -54,7 +54,7 @@ script = ExtResource("1_8ceia")
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_q5r7r")
 autoplay = "default"
-frame_progress = 0.3525711
+frame_progress = 0.27521238
 
 [node name="Button" type="Button" parent="." unique_id=1871689390]
 offset_left = -103.0
