@@ -47,6 +47,22 @@ position = Vector2(666, -118)
 [node name="CharacterBody2D10" parent="." unique_id=980403754 instance=ExtResource("3_h2yge")]
 position = Vector2(891, 212)
 
+[node name="CatchableCreature4" parent="." unique_id=764424401 instance=ExtResource("11_efxa6")]
+position = Vector2(228, -224)
+SPEED = 450.0
+
+[node name="CatchableCreature8" parent="." unique_id=649442050 instance=ExtResource("11_efxa6")]
+position = Vector2(358, -162)
+
+[node name="CatchableCreature7" parent="." unique_id=921097546 instance=ExtResource("11_efxa6")]
+position = Vector2(79, -145)
+
+[node name="CatchableCreature5" parent="." unique_id=1251263998 instance=ExtResource("11_efxa6")]
+position = Vector2(290, 25)
+
+[node name="CatchableCreature6" parent="." unique_id=757514490 instance=ExtResource("11_efxa6")]
+position = Vector2(111, 25)
+
 [node name="CatchableCreature3" parent="." unique_id=1727047280 instance=ExtResource("10_4c57u")]
 position = Vector2(-19, -59)
 
@@ -66,19 +82,3 @@ position = Vector2(924, 90)
 
 [node name="Node2D4" parent="Node2D5" unique_id=1207945888 instance=ExtResource("9_4c57u")]
 position = Vector2(1170, 70)
-
-[node name="CatchableCreature" parent="Node2D5" unique_id=764424401 instance=ExtResource("11_efxa6")]
-position = Vector2(228, -224)
-SPEED = 450.0
-
-[node name="CatchableCreature2" parent="Node2D5" unique_id=1251263998 instance=ExtResource("11_efxa6")]
-position = Vector2(290, 25)
-
-[node name="CatchableCreature3" parent="Node2D5" unique_id=757514490 instance=ExtResource("11_efxa6")]
-position = Vector2(111, 25)
-
-[node name="CatchableCreature4" parent="Node2D5" unique_id=921097546 instance=ExtResource("11_efxa6")]
-position = Vector2(79, -145)
-
-[node name="CatchableCreature5" parent="Node2D5" unique_id=649442050 instance=ExtResource("11_efxa6")]
-position = Vector2(358, -162)

@@ -14,12 +14,14 @@ func _process(delta: float) -> void:
 func _on_timer_timeout() -> void:
 	var random = flys.pick_random()
 	if random == "res://firefly.tscn":
+		var spawnplace = global_position +  Vector2(randi_range(-750,750),randi_range(-750,750))
 		for i in randi_range(6,12):
 			var fly = load(random)
 			var spawn = fly.instantiate()
-			spawn.global_position = global_position + Vector2(randi_range(-750,750),randi_range(-750,750))
+			spawn.global_position = spawnplace + Vector2(randi_range(-30,30),randi_range(-30,30))
 			get_parent().get_parent().add_child(spawn)
-	var fly = load(random)
-	var spawn = fly.instantiate()
-	spawn.global_position = global_position + Vector2(randi_range(-750,750),randi_range(-750,750))
-	get_parent().get_parent().add_child(spawn)
+	else:
+		var fly = load(random)
+		var spawn = fly.instantiate()
+		spawn.global_position = global_position + Vector2(randi_range(-750,750),randi_range(-750,750))
+		get_parent().get_parent().add_child(spawn)

@@ -109,7 +109,8 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_fc1d2")
 giveamount = 4
-SPEED = 700.0
+distance = 4000
+SPEED = 800.0
 metadata/_custom_type_script = "uid://dmf3ji6e0rrjm"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97061559]
@@ -118,5 +119,5 @@ shape = SubResource("RectangleShape2D_qoos8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=131944250]
 sprite_frames = SubResource("SpriteFrames_has0f")
 autoplay = "default"
-frame_progress = 0.11482059
+frame_progress = 0.58269536
 offset = Vector2(5, 15)

@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 			thing += firefly.global_position
 			number += 1
 	average = thing / number
-	if global_position.distance_to(average) > randi_range(90,110):
+	if global_position.distance_to(average) > randi_range(70,130):
 		direction = (average - global_position).normalized()
 		direction = direction.normalized()
 	velocity = direction * 0.4 * SPEED
