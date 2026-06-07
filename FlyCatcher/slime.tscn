@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bncqnh2qquvmw" path="res://slime jump.png" id="2_4l1t8"]
 [ext_resource type="PackedScene" uid="uid://ggvghsbhty1m" path="res://spawner.tscn" id="4_ppcr1"]
 [ext_resource type="Texture2D" uid="uid://dl78l0d6w47ky" path="res://arrow.png" id="5_jayke"]
-[ext_resource type="Texture2D" uid="uid://b58rvo1vhi5br" path="res://cobweb.png" id="6_2002g"]
+[ext_resource type="Texture2D" uid="uid://b58rvo1vhi5br" path="res://icon.png" id="6_2002g"]
 [ext_resource type="Texture2D" uid="uid://b6roc05tt0itv" path="res://meat.png" id="7_bratd"]
 [ext_resource type="AudioStream" uid="uid://848ayaj1xvr6" path="res://slimesquelch.ogg" id="8_5b0gg"]
 [ext_resource type="AudioStream" uid="uid://bs80mtkvx5hab" path="res://whoosh.ogg" id="9_da4t2"]

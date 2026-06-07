@@ -14,7 +14,7 @@ config/name="FlyCatcher"
 config/version="1.0.0"
 run/main_scene="uid://bq4mabpmnr8n1"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://tie4v5q5tue7"
+config/icon="uid://b58rvo1vhi5br"
 
 [autoload]
 
