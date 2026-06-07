@@ -101,6 +101,13 @@ func _physics_process(delta: float) -> void:
 			var spawnweb = web.instantiate()
 			spawnweb.global_position = global_position + 0.75 * (speed * direction)
 			get_parent().add_child(spawnweb)
+	if Input.is_action_just_pressed("place meat"):
+		if meats > 0:
+			meats -= 1
+			var web = load("res://meat.tscn")
+			var spawnweb = web.instantiate()
+			spawnweb.global_position = global_position + 0.75 * (speed * direction)
+			get_parent().add_child(spawnweb)
 	if Input.is_action_just_pressed("jump"):
 		$AnimatedSprite2D.play("Bugnet")
 		$Whoosh.pitch_scale = randf_range(0.7,0.9)
