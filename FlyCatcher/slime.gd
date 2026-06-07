@@ -107,6 +107,11 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h = true
 			$Area2D.scale.x = -1
 		$Timer.start()
+	if $AnimatedSprite2D.animation != "Bugnet":
+		if $Slimesquelch.playing == false:
+			$Slimesquelch.volume_db = randf_range(4.4,5.4)
+			$Slimesquelch.pitch_scale = randf_range(0.7,1.1)
+			$Slimesquelch.play()
 	if direction and $AnimatedSprite2D.animation != "Bugnet":
 		$AnimatedSprite2D.flip_h = false
 		$Area2D.scale.x = 1
@@ -114,6 +119,7 @@ func _physics_process(delta: float) -> void:
 			tempspeed += (speed/100) - tempspeed/67.5
 		velocity = direction * tempspeed
 	else:
+		$Slimesquelch.stop()
 		velocity.x = 0
 		velocity.y = 0
 		tempspeed = move_toward(tempspeed,10,3 * ((speed/100) - tempspeed/67.5))
