@@ -58,6 +58,8 @@ func _ready() -> void:
 	randomize()
 @onready var area2d = $Area2D
 func _physics_process(delta: float) -> void:
+	if $Untitled.playing == false:
+		$Untitled.play()
 	var stats = {"meats": meats, "placedmeats": placedmeats, "placedwebs": placedwebs, "flies": flies, "speed": speed, "zoom":{"x": $Camera2D.zoom.x,"y": $Camera2D.zoom.y,}, "webs": webs, "spawntime": spawner.timer.wait_time, "scale": {
 	"x": scale.x,
 	"y": scale.y
