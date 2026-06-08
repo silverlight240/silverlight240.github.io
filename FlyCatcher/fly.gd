@@ -14,12 +14,11 @@ func _physics_process(delta: float) -> void:
 		if get_tree().get_nodes_in_group("meat").size() > 0:
 			var avverage = Vector2()
 			var thing = Vector2()
-			var number: int
+			var number = []
 			for meat in get_tree().get_nodes_in_group("meat"):
-				thing += meat.global_position 
-				number += 1
-			avverage = thing / number
-			direction += 0.9 * -((avverage-global_position).normalized())
+				number.append((meat.global_position - global_position))
+			avverage = number.min()
+			direction += 0.9 * -((avverage).normalized())
 			direction = direction.normalized()
 		if global_position.distance_to(player.global_position) < distance:
 			velocity = direction * -SPEED
