@@ -121,8 +121,8 @@ func _physics_process(delta: float) -> void:
 	if $AnimatedSprite2D.animation != "Bugnet":
 		$Whoosh.stop()
 		if $Slimesquelch.playing == false:
-			$Slimesquelch.volume_db = randf_range(4.4,5.4)
-			$Slimesquelch.pitch_scale = randf_range(0.7,1.1)
+			$Slimesquelch.volume_db = randf_range(15.6,21.6)
+			$Slimesquelch.pitch_scale = randf_range(0.7,1.2)
 			$Slimesquelch.play()
 	if direction and $AnimatedSprite2D.animation != "Bugnet":
 		$AnimatedSprite2D.flip_h = false

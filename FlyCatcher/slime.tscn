@@ -305,13 +305,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Slimesquelch" type="AudioStreamPlayer" parent="." unique_id=1886631425]
 stream = ExtResource("8_5b0gg")
-volume_db = 5.0
+volume_db = 20.0
 pitch_scale = 0.9
 max_polyphony = 2
 playback_type = 1
 
 [node name="Whoosh" type="AudioStreamPlayer" parent="." unique_id=1248220248]
 stream = ExtResource("9_da4t2")
+volume_db = 13.0
 pitch_scale = 1.6
 
 [node name="Timer4" type="Timer" parent="." unique_id=692395039]
