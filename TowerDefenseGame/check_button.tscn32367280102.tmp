@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bs6mjgmemnfmu"]
+
+[ext_resource type="Script" uid="uid://b3sx2655xgknq" path="res://check_button.gd" id="1_plcih"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_plcih"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aerq3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tukws"]
+font_size = 8
+
+[node name="CheckButton" type="VSlider" unique_id=731560136]
+offset_right = 144.0
+offset_bottom = 114.0
+min_value = -10.0
+max_value = 10.0
+value = 1.0
+script = ExtResource("1_plcih")
+
+[node name="Label" type="Label" parent="." unique_id=808202032]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -32.0
+offset_right = 118.0
+offset_bottom = -9.0
+text = "Game Speed"
+
+[node name="Label2" type="Label" parent="." unique_id=1713475817]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 39.0
+offset_right = 117.0
+offset_bottom = 62.0
+text = "1x"
+label_settings = SubResource("LabelSettings_plcih")
+
+[node name="Label3" type="Label" parent="." unique_id=101234307]
+layout_mode = 0
+offset_left = 77.0
+offset_top = -4.0
+offset_right = 117.0
+offset_bottom = 19.0
+text = "10x"
+label_settings = SubResource("LabelSettings_aerq3")
+
+[node name="Label4" type="Label" parent="." unique_id=1222733669]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 104.0
+offset_right = 116.0
+offset_bottom = 127.0
+text = "0.1x"
+label_settings = SubResource("LabelSettings_tukws")

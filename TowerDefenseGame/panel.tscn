@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cbmr0dgancu88"]
+
+[ext_resource type="Script" uid="uid://cykj2ep76jcth" path="res://panel.gd" id="1_ikblc"]
+[ext_resource type="Texture2D" uid="uid://qgfclgfodex1" path="res://tower.png" id="1_y26ic"]
+[ext_resource type="Texture2D" uid="uid://b5d7jrk1owevo" path="res://poisontower.png" id="3_5b1ud"]
+[ext_resource type="Texture2D" uid="uid://7gb21k7bb7o5" path="res://bluetower.png" id="4_mn0ys"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn0ys"]
+atlas = ExtResource("3_5b1ud")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjkeq"]
+atlas = ExtResource("3_5b1ud")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3bou"]
+atlas = ExtResource("3_5b1ud")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjqlg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn0ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjkeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3bou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqlg"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6taj"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3hqj"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou6fo"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsws6"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ewyy"]
+atlas = ExtResource("4_mn0ys")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2u76m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqlg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6taj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3hqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou6fo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsws6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ewyy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Panel" type="Panel" unique_id=162870458]
+offset_left = -32.0
+offset_top = -61.0
+offset_right = 38.0
+offset_bottom = 118.0
+script = ExtResource("1_ikblc")
+
+[node name="Button" type="Button" parent="." unique_id=663206377]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 54.0
+offset_bottom = 56.0
+
+[node name="Tower" type="Sprite2D" parent="." unique_id=739197302]
+position = Vector2(34, 36)
+texture = ExtResource("1_y26ic")
+
+[node name="Label" type="Label" parent="." unique_id=691074609]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 25.0
+offset_right = 68.0
+offset_bottom = 48.0
+text = "5"
+
+[node name="Button2" type="Button" parent="." unique_id=801554808]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 69.0
+offset_right = 54.0
+offset_bottom = 109.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=52326056]
+position = Vector2(34, 89)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_qjqlg")
+autoplay = "default"
+frame_progress = 0.06814346
+
+[node name="Label2" type="Label" parent="." unique_id=1511373453]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 76.0
+offset_right = 63.0
+offset_bottom = 125.0
+text = "10
+"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1321699426]
+position = Vector2(34, 140)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_2u76m")
+autoplay = "default"
+frame_progress = 0.40547907
+
+[node name="Label3" type="Label" parent="." unique_id=961730267]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 128.0
+offset_right = 69.0
+offset_bottom = 151.0
+text = "5
+"
+
+[node name="Button3" type="Button" parent="." unique_id=304322004]
+z_index = -1
+layout_mode = 0
+offset_left = 14.0
+offset_top = 120.0
+offset_right = 54.0
+offset_bottom = 160.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

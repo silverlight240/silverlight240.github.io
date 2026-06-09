@@ -1,0 +1,66 @@
+[gd_scene format=4 uid="uid://giae87vnc2yq"]
+
+[ext_resource type="PackedScene" uid="uid://ciwuql144k47" path="res://crystal.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cn6lehyxbww5n" path="res://enemyReal.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://kys14lgwox34" path="res://path_2d.gd" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cg3sacufjx0yy" path="res://tilemap.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bovujxplsjirn" path="res://player controller.tscn" id="4_7mycd"]
+[ext_resource type="PackedScene" uid="uid://c2ktksuihrnmu" path="res://tower.tscn" id="6_7mycd"]
+
+[sub_resource type="Curve2D" id="Curve2D_1bvp3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -0.97540987, 0, 0, 0, 0, 0, 102.41803, 6, 0, 0, 0, 0, 120.95081, 144, 0, 0, 0, 0, 320.90982, 139, 0, 0, 0, 0, 317.00818, 382, 0, 0, 0, 0, -196.05736, 303, 0, 0, 0, 0, -172.04443, 38.935936, 0, 0, 0, 0, -106.31967, -17, 0, 0, 0, 0, 104.36885, 5, 0, 0, 0, 0, 129.7295, 155, 0, 0, 0, 0, 372.60654, 153, 0, 0, 0, 0, 391.91138, 531.752, 0, 0, 0, 0, -22.434425, 525)
+}
+point_count = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1944764132]
+
+[node name="Area2D" parent="." unique_id=1163338952 instance=ExtResource("1_0xm2m")]
+position = Vector2(1, 496)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=600428827]
+position = Vector2(3, 0)
+scale = Vector2(1.0252101, 1)
+curve = SubResource("Curve2D_1bvp3")
+script = ExtResource("2_lquwl")
+enemy = ExtResource("2_h2yge")
+
+[node name="PathFollow2D" parent="Path2D" unique_id=1411911556 instance=ExtResource("2_h2yge")]
+position = Vector2(-0.97540987, 0)
+rotation = 0.18272966
+
+[node name="Timer" type="Timer" parent="Path2D" unique_id=1102984582]
+wait_time = 4.0
+autostart = true
+
+[node name="Label" type="Label" parent="Path2D" unique_id=1946530151]
+z_index = 4096
+z_as_relative = false
+offset_left = -22.434425
+offset_top = -186.0
+offset_right = 17.565575
+offset_bottom = -163.0
+label_settings = SubResource("LabelSettings_lquwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1070863445]
+position = Vector2(86, 271)
+
+[node name="TileMapLayer" parent="." unique_id=1369814027 instance=ExtResource("3_h2yge")]
+position = Vector2(1, 2)
+tile_map_data = PackedByteArray("AAD+/wkAAAAAAAAAADD//wkAAAAAAAAAADAAAAkAAAAAAAAAADABAAkAAAAAAAAAADACAAkAAAAAAAAAADADAAkAAAAAAAAAADAEAAkAAAAAAAAAADAFAAkAAAAAAAAAADAGAAkAAAAAAAAAADAHAAkAAAAAAAAAADAIAAkAAAAAAAAAADAJAAkAAAADAAEAAAAJAAgAAAAAAAAAAFAJAAcAAAAAAAAAAFAJAAYAAAADAAAAAAAIAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAADAAYAAAAAAAAAAAACAAUAAAAAAAAAAFACAAQAAAAAAAAAAFACAAMAAAAAAAAAAFACAAIAAAADAAAAAAABAAEAAAADAAAAAAAAAAIAAAABAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD8/wEAAAACAAAAAAACAAYAAAABAAAAAAACAAcAAAABAAAAAAADAAcAAAABAAAAAAAEAAcAAAABAAAAAAAFAAcAAAABAAAAAAAGAAcAAAABAAAAAAAHAAcAAAABAAAAAAAIAAcAAAABAAAAAAAIAAgAAAABAAAAAAAHAAgAAAABAAAAAAAGAAgAAAABAAAAAAAFAAgAAAABAAAAAAAEAAgAAAABAAAAAAADAAgAAAABAAAAAAACAAgAAAABAAAAAAABAAgAAAABAAAAAAAAAAcAAAABAAAAAAD//wcAAAABAAAAAAD//wgAAAABAAAAAAD+/wgAAAABAAAAAAAAAAgAAAABAAAAAAABAAcAAAABAAAAAAABAAYAAAABAAAAAAABAAUAAAABAAAAAAABAAQAAAABAAAAAAABAAMAAAABAAAAAAD//wIAAAABAAAAAAD+/wIAAAABAAAAAAD9/wIAAAABAAAAAAD9/wMAAAABAAAAAAD+/wMAAAABAAAAAAD+/wQAAAABAAAAAAD//wQAAAABAAAAAAD//wMAAAABAAAAAAAAAAMAAAABAAAAAAAAAAQAAAABAAAAAAAAAAUAAAABAAAAAAAAAAYAAAABAAAAAAD//wYAAAABAAAAAAD//wUAAAABAAAAAAD+/wcAAAABAAAAAAD+/wYAAAABAAAAAAD+/wUAAAABAAAAAAD9/wQAAAABAAAAAAD9/wUAAAABAAAAAAD9/wYAAAABAAAAAAD9/wcAAAABAAAAAAD9/wgAAAABAAAAAAD9/wkAAAABAAEAAAD8/wkAAAACAAEAAAD8/wgAAAAAAAAAAGD8/wcAAAAAAAAAAGD8/wYAAAAAAAAAAGD8/wUAAAAAAAAAAGD8/wQAAAAAAAAAAGD8/wMAAAAAAAAAAGD8/wIAAAAAAAAAAGABAAIAAAABAAAAAAA=")
+
+[node name="Node2D" parent="." unique_id=855197034 instance=ExtResource("4_7mycd")]
+position = Vector2(-787.00006, -158)
+scale = Vector2(1.0252101, 1)
+
+[node name="Area2D2" parent="." unique_id=1448146203 instance=ExtResource("6_7mycd")]
+position = Vector2(204, 213)
+
+[connection signal="timeout" from="Path2D/Timer" to="Area2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dghu2m5aosgot"]
+
+[sub_resource type="Curve2D" id="Curve2D_cnff4"]
+
+[node name="Path2D" type="Path2D" unique_id=487720871]
+curve = SubResource("Curve2D_cnff4")

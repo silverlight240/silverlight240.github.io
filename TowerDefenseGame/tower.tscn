@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c2ktksuihrnmu"]
+
+[ext_resource type="Script" uid="uid://b5e8l0e3uiod0" path="res://tower.gd" id="1_vedim"]
+[ext_resource type="Texture2D" uid="uid://qgfclgfodex1" path="res://tower.png" id="2_stebd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jbe1c"]
+radius = 156.89487
+
+[node name="Area2D" type="Area2D" unique_id=1448146203]
+script = ExtResource("1_vedim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012033799]
+shape = SubResource("CircleShape2D_jbe1c")
+
+[node name="Tower" type="Sprite2D" parent="." unique_id=1826996926]
+texture = ExtResource("2_stebd")
+
+[node name="Timer" type="Timer" parent="." unique_id=1319950706]
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cn6lehyxbww5n"]
+
+[ext_resource type="PackedScene" uid="uid://bjt7cxo6ntx86" path="res://enemy.tscn" id="1_cj6rx"]
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=1411911556]
+rotates = false
+
+[node name="CharacterBody2D" parent="." unique_id=1717781093 instance=ExtResource("1_cj6rx")]

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bjt7cxo6ntx86"]
+
+[ext_resource type="Script" uid="uid://cht0j2glcmv06" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://bw3moo4uy1bbe" path="res://ballthingthat attacks.png" id="1_7k104"]
+
+[sub_resource type="Animation" id="Animation_4gyqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BallthingthatAttacks:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qi2p4"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BallthingthatAttacks:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iifgy"]
+_data = {
+&"RESET": SubResource("Animation_4gyqm"),
+&"spin": SubResource("Animation_qi2p4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_epg4t"]
+radius = 36.05551
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1717781093]
+script = ExtResource("1_4gyqm")
+speed = 70.0
+
+[node name="BallthingthatAttacks" type="Sprite2D" parent="." unique_id=342502238]
+texture = ExtResource("1_7k104")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1468708241]
+libraries/ = SubResource("AnimationLibrary_iifgy")
+autoplay = &"spin"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=730079637]
+shape = SubResource("CircleShape2D_epg4t")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1455398317]
+modulate = Color(1, 0, 0, 1)
+offset_left = -59.0
+offset_top = -43.0
+offset_right = 59.0
+offset_bottom = -38.0
+show_percentage = false
