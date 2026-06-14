@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2ktksuihrnmu"]
 
-[ext_resource type="Script" uid="uid://b5e8l0e3uiod0" path="res://tower.gd" id="1_vedim"]
+[ext_resource type="Script" uid="uid://g817cfsyt833" path="res://pinktower.gd" id="1_vedim"]
 [ext_resource type="Texture2D" uid="uid://qgfclgfodex1" path="res://tower.png" id="2_stebd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jbe1c"]
@@ -13,10 +13,63 @@ script = ExtResource("1_vedim")
 shape = SubResource("CircleShape2D_jbe1c")
 
 [node name="Tower" type="Sprite2D" parent="." unique_id=1826996926]
+z_index = 1
 texture = ExtResource("2_stebd")
 
 [node name="Timer" type="Timer" parent="." unique_id=1319950706]
 autostart = true
 
+[node name="Panel" type="Panel" parent="." unique_id=1936751794]
+visible = false
+offset_left = 20.0
+offset_top = -63.0
+offset_right = 119.0
+offset_bottom = 61.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1560992169]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 28.0
+offset_top = 93.0
+offset_right = 70.0
+offset_bottom = 124.0
+text = "hide"
+
+[node name="Button2" type="Button" parent="Panel" unique_id=1490706987]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 0
+offset_top = 3.0
+offset_right = 99.0
+offset_bottom = 34.0
+text = "More range"
+
+[node name="Label" type="Label" parent="Panel/Button2" unique_id=319250935]
+visible = false
+layout_mode = 0
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 74.0
+offset_bottom = 44.0
+text = "Cost: 5"
+
+[node name="Button3" type="Button" parent="Panel" unique_id=1608878275]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 101.0
+offset_bottom = 33.0
+text = "Double Shot"
+
+[node name="Label" type="Label" parent="Panel/Button3" unique_id=998044067]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 21.0
+offset_right = 74.0
+offset_bottom = 44.0
+text = "Cost: 10"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]

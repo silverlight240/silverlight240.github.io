@@ -6,9 +6,10 @@ class_name Bullet
 		Despawn = value
 		notify_property_list_changed()
 @export var Lifetime = 0.7
-@export var aimlevel = 100.0
-@export var pierce = 0.0
-@export var speed = 700.0
+@export var aimlevel = 100
+@export var damage = 1
+@export var pierce = 0
+@export var speed = 700
 var target: PathFollow2D
 var direction
 # Called when the node enters the scene tree for the first time.
@@ -47,9 +48,10 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	body.health -= 1
+	body.health -= damage
 	if pierce == 0:
-		queue_free()
+			if Despawn == true:
+				queue_free()
 	else:
 		pierce -= 1
 		if is_instance_valid(target):
