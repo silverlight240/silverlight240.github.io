@@ -72,38 +72,38 @@ autoplay = "default"
 frame_progress = 0.93288016
 
 [node name="Panel" type="Panel" parent="." unique_id=331414878]
-visible = false
 z_index = 999
 offset_left = 40.0
-offset_top = -113.33333
+offset_top = -231.66666
 offset_right = 275.0
-offset_bottom = 90.0
+offset_bottom = 179.99997
 script = ExtResource("4_2kje1")
 
 [node name="Button" type="Button" parent="Panel" unique_id=741986196]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 0
-offset_left = 68.333336
-offset_top = 171.66666
-offset_right = 161.66666
-offset_bottom = 203.33333
+offset_left = 46.666664
+offset_top = 336.66666
+offset_right = 148.88889
+offset_bottom = 385.0
+scale = Vector2(1.5, 1.5)
 text = "Hide"
 
 [node name="Button2" type="Button" parent="Panel" unique_id=1216757828]
 modulate = Color(0.011764706, 1, 0, 1)
 layout_mode = 0
-offset_left = 41.666664
-offset_top = 28.333332
-offset_right = 181.66666
-offset_bottom = 63.333332
+offset_left = -3.3333302
+offset_right = 155.55556
+offset_bottom = 43.333336
+scale = Vector2(1.5, 1.5)
 text = "More Range"
 
 [node name="Label" type="Label" parent="Panel/Button2" unique_id=1876344111]
 layout_mode = 0
-offset_left = 43.333332
-offset_top = 21.66667
-offset_right = 95.33333
-offset_bottom = 44.66667
+offset_left = 50.0
+offset_top = 32.222225
+offset_right = 102.0
+offset_bottom = 55.22223
 text = "Cost: 5"
 
 [node name="Bullet" parent="." unique_id=983899243 instance=ExtResource("2_2kje1")]
