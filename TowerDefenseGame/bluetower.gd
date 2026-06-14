@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	super._process(delta)
-	if not is_instance_valid(get_child(2)) and not spawned:
+	if not is_instance_valid(get_child(3)) and not spawned:
 		spawn(self)
 		if range_upgrade:
 			$"Bullet".scale += Vector2(0.2,0.2)
