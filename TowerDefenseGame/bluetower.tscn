@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://desl5hb4enwjv" path="res://aura.tscn" id="2_2kje1"]
 [ext_resource type="Script" uid="uid://dsi7jngkeuc57" path="res://the thingy.gd" id="4_2kje1"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2kje1"]
+radius = 183.36362
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tph6u"]
 atlas = ExtResource("1_eyacp")
 region = Rect2(0, 0, 80, 80)
@@ -55,15 +58,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2kje1"]
-radius = 183.36362
-
 [node name="Area2D" type="Area2D" unique_id=367821562]
 scale = Vector2(0.6, 0.6)
 script = ExtResource("1_tph6u")
 CareAboutEnemies = false
 projectile = ExtResource("2_2kje1")
 metadata/_custom_type_script = "uid://b5e8l0e3uiod0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872965464]
+shape = SubResource("CircleShape2D_2kje1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1617810794]
 z_index = 5
@@ -72,6 +75,7 @@ autoplay = "default"
 frame_progress = 0.93288016
 
 [node name="Panel" type="Panel" parent="." unique_id=331414878]
+visible = false
 z_index = 999
 offset_left = 40.0
 offset_top = -231.66666
@@ -110,9 +114,6 @@ text = "Cost: 5"
 z_index = 1
 pierce = 0
 speed = 700
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=872965464]
-shape = SubResource("CircleShape2D_2kje1")
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]

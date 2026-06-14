@@ -12,6 +12,7 @@ radius = 156.89487
 script = ExtResource("1_vedim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012033799]
+position = Vector2(-6, 1)
 shape = SubResource("CircleShape2D_jbe1c")
 
 [node name="Tower" type="Sprite2D" parent="." unique_id=1826996926]
@@ -31,9 +32,9 @@ offset_bottom = 108.0
 [node name="Button" type="Button" parent="Panel" unique_id=1560992169]
 modulate = Color(1, 0, 0, 1)
 layout_mode = 0
-offset_left = 51.0
-offset_top = 203.0
-offset_right = 93.0
+offset_left = 29.0
+offset_top = 158.0
+offset_right = 122.0
 offset_bottom = 234.0
 text = "hide"
 
@@ -59,10 +60,10 @@ label_settings = SubResource("LabelSettings_vedim")
 [node name="Button3" type="Button" parent="Panel" unique_id=1608878275]
 visible = false
 layout_mode = 0
-offset_left = -2.0
-offset_top = 1.0
-offset_right = 101.0
-offset_bottom = 33.0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 125.0
+offset_bottom = 46.0
 text = "Double Shot"
 
 [node name="Label" type="Label" parent="Panel/Button3" unique_id=998044067]
@@ -73,8 +74,46 @@ offset_right = 74.0
 offset_bottom = 44.0
 text = "Cost: 10"
 
+[node name="Button4" type="Button" parent="Panel" unique_id=494774420]
+visible = false
+modulate = Color(1, 0.6313726, 0, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 152.0
+offset_bottom = 59.0
+text = "Triple Shot"
+
+[node name="Label" type="Label" parent="Panel/Button4" unique_id=1365558631]
+layout_mode = 0
+offset_left = 39.0
+offset_top = -2.0
+offset_right = 100.0
+offset_bottom = 21.0
+text = "Cost: 50"
+
+[node name="Button5" type="Button" parent="Panel" unique_id=260187343]
+visible = false
+modulate = Color(1, 1, 0, 1)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 142.0
+offset_bottom = 44.0
+text = "Machine GUN!!!!"
+
+[node name="Label" type="Label" parent="Panel/Button5" unique_id=2063042132]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -12.0
+offset_right = 99.0
+offset_bottom = 11.0
+text = "cost: 150"
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Panel/Button5" to="." method="_on_button_5_pressed"]

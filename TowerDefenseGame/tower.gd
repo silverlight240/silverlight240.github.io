@@ -39,7 +39,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$PointLight2D.scale.x = $CollisionShape2D.shape.radius/14
 	$PointLight2D.scale.y = $CollisionShape2D.shape.radius/14
-
 func _on_body_entered(body: Node2D) -> void:
 	Bodey = body
 	if get_overlapping_bodies().size() < 2:
@@ -52,8 +51,11 @@ func _on_timer_timeout() -> void:
 func spawn(x):
 	for i in ShootTimes:
 		var spawnbullet = projectile.instantiate()
+		spacing = clamp(((spawnbullet.speed/3) / ShootTimes),30,999)
 		if x == get_parent():
 				if CareAboutEnemies:
+					if i > 0:
+						spawnbullet.Lifetime += (spawnbullet.speed/30) / i
 					spawnbullet.global_position = global_position - spacing * (i *  (Bodey.global_position - global_position ).normalized())
 				else:
 					spawnbullet.global_position = global_position

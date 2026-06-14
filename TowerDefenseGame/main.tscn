@@ -60,7 +60,7 @@ position = Vector2(-775, -142)
 scale = Vector2(1.5, 1.5)
 
 [node name="Area2D2" parent="." unique_id=1448146203 instance=ExtResource("6_7mycd")]
-position = Vector2(264, 217)
+position = Vector2(258, 227)
 
 [connection signal="timeout" from="Path2D/Timer" to="Area2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

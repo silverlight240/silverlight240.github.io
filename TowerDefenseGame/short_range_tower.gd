@@ -7,6 +7,7 @@ extends Tower
 
 func _on_button_pressed() -> void:
 	$Panel.hide()
+	$PointLight2D.hide()
 
 
 func _on_button_2_pressed() -> void:
