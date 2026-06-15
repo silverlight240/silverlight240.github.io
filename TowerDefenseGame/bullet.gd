@@ -1,3 +1,4 @@
+@tool
 extends CharacterBody2D
 class_name Bullet
 @export_group("Stats")
@@ -7,6 +8,8 @@ class_name Bullet
 		notify_property_list_changed()
 @export var Lifetime = 0.7
 @export var aimlevel = 100
+@export var spawn_late = false
+@export var amount_of_lateness = 0.00
 @export var damage = 1
 @export var pierce = 0
 @export var speed = 700
@@ -18,8 +21,15 @@ func _validate_property(property: Dictionary) -> void:
 		if not Despawn:
 			property.usage |= PROPERTY_USAGE_READ_ONLY
 func _ready() -> void:
-	$Timer.wait_time = Lifetime
-	$Timer.start()
+	if spawn_late:
+		hide()
+		$Area2D.monitoring = false
+		$Timer2.wait_time = amount_of_lateness
+		$Timer2.start()
+	if Despawn:
+		$Timer.wait_time = Lifetime
+		if not spawn_late:
+			$Timer.start()
 	if is_instance_valid(target):
 		direction = (target.global_position - global_position).normalized()
 		rotation = direction.angle() + (5 * (PI/180))
@@ -29,7 +39,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if direction != null and target != null:
-		direction += ((target.global_position - global_position).normalized()/ aimlevel)
+		if not spawn_late:
+			direction += ((target.global_position - global_position).normalized()/ aimlevel)
 	else:
 		var distance = 0
 		for i in get_tree().get_nodes_in_group("enemy"):
@@ -38,11 +49,12 @@ func _process(delta: float) -> void:
 					target = i.get_parent()
 			else:
 				target = i.get_parent()
-	if direction:
-		direction = direction.normalized()
-		velocity = direction * speed
-		rotation = direction.angle() + (5 * (PI/180))
-	move_and_slide()
+	if not spawn_late:
+		if direction:
+			direction = direction.normalized()
+			velocity = direction * speed
+			rotation = direction.angle() + (5 * (PI/180))
+		move_and_slide()
 
 
 
@@ -62,3 +74,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_timer_timeout() -> void:
 	if Despawn == true:
 		queue_free()
+
+
+func _on_timer_2_timeout() -> void:
+	spawn_late = false
+	show()
+	$Area2D.monitoring = true
+	$Timer.start()

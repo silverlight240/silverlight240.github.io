@@ -55,8 +55,9 @@ func spawn(x):
 		if x == get_parent():
 				if CareAboutEnemies:
 					if i > 0:
-						spawnbullet.Lifetime += (spawnbullet.speed/30) / i
-					spawnbullet.global_position = global_position - spacing * (i *  (Bodey.global_position - global_position ).normalized())
+						spawnbullet.global_position = global_position
+						spawnbullet.spawn_late = true
+						spawnbullet.amount_of_lateness = (spawnbullet.speed/1000) * i
 				else:
 					spawnbullet.global_position = global_position
 		if CareAboutEnemies:
