@@ -55,6 +55,7 @@ wait_time = 0.6
 autostart = true
 
 [node name="Panel" type="Panel" parent="." unique_id=1761690746]
+visible = false
 offset_left = 23.0
 offset_top = -145.0
 offset_right = 177.0
