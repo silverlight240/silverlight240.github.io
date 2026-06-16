@@ -40,14 +40,17 @@ func _process(delta: float) -> void:
 	$PointLight2D.scale.x = $CollisionShape2D.shape.radius/14
 	$PointLight2D.scale.y = $CollisionShape2D.shape.radius/14
 func _on_body_entered(body: Node2D) -> void:
-	Bodey = body
-	if get_overlapping_bodies().size() < 2:
-		$Timer.start()
+	if Bodey == null:
+		Bodey = body
+		if $Timer.paused:
+			$Timer.paused = false
 
 
 func _on_timer_timeout() -> void:
 	if Bodey in get_overlapping_bodies() or not CareAboutEnemies:
 		spawn(get_parent())
+	elif not Bodey in get_overlapping_bodies():
+		$Timer.paused = true
 func spawn(x):
 	for i in ShootTimes:
 		var spawnbullet = projectile.instantiate()
@@ -57,12 +60,17 @@ func spawn(x):
 					if i > 0:
 						spawnbullet.global_position = global_position
 						spawnbullet.spawn_late = true
-						spawnbullet.amount_of_lateness = (spawnbullet.speed/1000) * i
-				else:
-					spawnbullet.global_position = global_position
+						spawnbullet.amount_of_lateness = 0.05 * i
+					else:
+						spawnbullet.global_position = global_position
 		if CareAboutEnemies:
 			spawnbullet.target = Bodey.get_parent()
 		x.add_child(spawnbullet)
 func _on_pressed():
 	$PointLight2D.show()
 	$Panel.show()
+
+
+func _on_body_exited(body: Node2D) -> void:
+	if body == Bodey:
+		Bodey = null

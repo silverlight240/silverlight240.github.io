@@ -96,19 +96,47 @@ text = "Hide"
 [node name="Button2" type="Button" parent="Panel" unique_id=1216757828]
 modulate = Color(0.011764706, 1, 0, 1)
 layout_mode = 0
-offset_left = -3.3333302
-offset_right = 155.55556
+offset_left = -11.666666
+offset_right = 158.33333
 offset_bottom = 43.333336
 scale = Vector2(1.5, 1.5)
-text = "More Range"
+text = "More Range, Cost: 25"
 
 [node name="Label" type="Label" parent="Panel/Button2" unique_id=1876344111]
+visible = false
 layout_mode = 0
 offset_left = 50.0
 offset_top = 32.222225
 offset_right = 102.0
 offset_bottom = 55.22223
 text = "Cost: 5"
+
+[node name="Button3" type="Button" parent="Panel" unique_id=287351397]
+visible = false
+modulate = Color(1, 0.4862745, 0, 1)
+layout_mode = 0
+offset_left = -1.6666679
+offset_top = 6.666666
+offset_right = 156.33333
+offset_bottom = 37.666664
+scale = Vector2(1.5, 1.5)
+text = "EVEN MORE RANGE, Cost: 250"
+
+[node name="Button4" type="Button" parent="Panel" unique_id=1159153491]
+visible = false
+modulate = Color(1, 0.58431375, 0, 1)
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 63.33333
+text = "Range, Range, Range, Cost: 500"
+
+[node name="Button5" type="Button" parent="Panel" unique_id=678556243]
+visible = false
+modulate = Color(1, 0, 1, 1)
+layout_mode = 0
+offset_right = 236.66666
+offset_bottom = 65.0
+text = "BLACK HOLE!! Cost: 1000"
 
 [node name="Bullet" parent="." unique_id=983899243 instance=ExtResource("2_2kje1")]
 z_index = 1
@@ -118,3 +146,6 @@ speed = 700
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button2" to="Panel" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Panel/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Panel/Button5" to="." method="_on_button_5_pressed"]

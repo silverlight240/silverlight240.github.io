@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name Enemy
+@export var DefaultSpeed = 150
 @onready var playercontroller = get_tree().get_first_node_in_group("playercontroller")
 @export_group("Stats")
 @export var speed = 150.0
@@ -7,6 +8,7 @@ class_name Enemy
 @export_group("Drops")
 @export var crystals = 1.0
 func _ready() -> void:
+	DefaultSpeed = speed
 	add_to_group("enemy")
 	playercontroller = get_tree().get_first_node_in_group("playercontroller")
 	$ProgressBar.max_value = health

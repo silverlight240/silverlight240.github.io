@@ -1,5 +1,5 @@
 extends Node2D
-var cash = 0
+var cash = 10
 var spawnobject = "res://tower.tscn"
 var lookingforclicks = false
 # Called when the node enters the scene tree for the first time.

@@ -24,7 +24,7 @@ linear_accel_min = -5.000002
 linear_accel_max = 4.9999976
 scale_min = 10.0
 scale_max = 10.0
-color = Color(1.8289685e-06, 0.5566262, 0.5613946, 1)
+color = Color(0, 0.5568628, 0.56078434, 0.20392157)
 color_ramp = SubResource("GradientTexture1D_wwqm4")
 
 [sub_resource type="Animation" id="Animation_qdqck"]

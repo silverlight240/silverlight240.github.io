@@ -29,3 +29,8 @@ func _on_timer_timeout() -> void:
 		health = 3 + ((wave - 1) * 0.5)
 		health *= 1.15
 	$Timer.start()
+
+
+func _on_button_pressed() -> void:
+	$Timer.start()
+	$Button.hide()

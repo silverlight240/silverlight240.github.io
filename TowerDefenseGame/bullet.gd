@@ -10,7 +10,7 @@ class_name Bullet
 @export var aimlevel = 100
 @export var spawn_late = false
 @export var amount_of_lateness = 0.00
-@export var damage = 1
+@export var damage = 1.0
 @export var pierce = 0
 @export var speed = 700
 var target: PathFollow2D
@@ -66,8 +66,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				queue_free()
 	else:
 		pierce -= 1
+		aimlevel += 0.2
 		if is_instance_valid(target):
-			$Timer.wait_time *= 1.75
+			$Timer.wait_time = Lifetime * 1.3
 			$Timer.start()
 
 

@@ -1,0 +1,234 @@
+[gd_scene format=3 uid="uid://cd4omtvj1bqvv"]
+
+[ext_resource type="Script" uid="uid://bkg1pc000ljpw" path="res://blackhole.gd" id="1_bjy8h"]
+
+[sub_resource type="Gradient" id="Gradient_rv61l"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y4q54"]
+gradient = SubResource("Gradient_rv61l")
+fill = 1
+fill_from = Vector2(0.47008547, 0.4871795)
+fill_to = Vector2(0.62393165, 0.26923078)
+
+[sub_resource type="Animation" id="Animation_ivaat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ncgot"]
+resource_name = "blackhole"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.24, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.2831855, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.49, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.283185307179586, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_epebc"]
+_data = {
+&"RESET": SubResource("Animation_ivaat"),
+&"blackhole": SubResource("Animation_ncgot")
+}
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qx7v2"]
+gradient = SubResource("Gradient_rv61l")
+fill = 1
+fill_from = Vector2(0.47008547, 0.4871795)
+fill_to = Vector2(0.62393165, 0.26923078)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rv61l"]
+radius = 1.0
+
+[sub_resource type="Animation" id="Animation_bjy8h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/CollisionShape2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="Animation" id="Animation_rv61l"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/CollisionShape2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(170, 170)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4q54"]
+_data = {
+&"RESET": SubResource("Animation_bjy8h"),
+&"new_animation": SubResource("Animation_rv61l")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bjy8h"]
+radius = 3.2843807
+
+[sub_resource type="Animation" id="Animation_y4q54"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D2/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_epebc"]
+resource_name = "new_animation"
+length = 0.05
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D2/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qx7v2"]
+_data = {
+&"RESET": SubResource("Animation_y4q54"),
+&"new_animation": SubResource("Animation_epebc")
+}
+
+[node name="Bullet" type="CharacterBody2D" unique_id=1536969003]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_bjy8h")
+Despawn = false
+damage = 3.5
+speed = 0
+metadata/_custom_type_script = "uid://bh886cc747xtm"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2145330171]
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_y4q54")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=234426117]
+libraries/ = SubResource("AnimationLibrary_epebc")
+autoplay = &"blackhole"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=657803033]
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_qx7v2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1136279821]
+scale = Vector2(10, 10)
+texture = SubResource("GradientTexture2D_y4q54")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=969947569]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=727414364]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("CircleShape2D_rv61l")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=114573718]
+libraries/ = SubResource("AnimationLibrary_y4q54")
+autoplay = &"new_animation"
+speed_scale = 9.0
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=596969109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1324375237]
+scale = Vector2(114.18692, 114.18692)
+shape = SubResource("CircleShape2D_bjy8h")
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="." unique_id=864053990]
+libraries/ = SubResource("AnimationLibrary_qx7v2")
+autoplay = &"new_animation"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]
