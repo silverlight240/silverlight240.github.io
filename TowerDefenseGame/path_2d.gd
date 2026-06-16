@@ -23,11 +23,11 @@ func _on_timer_timeout() -> void:
 		add_child(spawn)
 		spawns -= 1
 	else:
-		$Timer.wait_time = clamp((4 - wave/3),0.2,6)
+		$Timer.wait_time = clamp((4 - wave/5),0.4,6)
 		wave += 1
 		spawns = 3 + (wave-1)
 		health = 3 + ((wave - 1) * 0.5)
-		health *= 1.15
+		health *= 1.05 + ((wave - 1) / 10)
 	$Timer.start()
 
 
