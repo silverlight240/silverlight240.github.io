@@ -27,7 +27,8 @@ func _on_timer_timeout() -> void:
 		wave += 1
 		spawns = 3 + (wave-1)
 		health = 3 + ((wave - 1) * 0.5)
-		health *= 1.05 + ((wave - 1) / 10)
+		health *= 1.05 + ((wave - 1) / 25)
+		get_tree().get_first_node_in_group("playercontroller").cash += 10
 	$Timer.start()
 
 

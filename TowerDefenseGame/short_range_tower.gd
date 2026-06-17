@@ -38,6 +38,7 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	if playercontroller.cash >= 9:
 		playercontroller.cash -= 9
+		value += 9
 		$Timer.wait_time = 0.15
 		$Panel/Button2.hide()
 		$Panel/Button3.show()
@@ -46,6 +47,7 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	if playercontroller.cash >= 45:
 		playercontroller.cash -= 45
+		value += 45
 		$Panel/Button3.hide()
 		pierceupgrade = true
 		$Panel/Button4.show()
@@ -54,6 +56,7 @@ func _on_button_3_pressed() -> void:
 func _on_button_4_pressed() -> void:
 	if playercontroller.cash >= 320:
 		playercontroller.cash -= 320
+		value += 320
 		pierceupgrade2 = true
 		$Panel/Button4.hide()
 		$Panel/Button5.show()
@@ -62,5 +65,11 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	if playercontroller.cash >= 1000:
 		playercontroller.cash -= 1000
+		value += 1000
 		autumn = true
 		$Panel/Button5.hide()
+
+
+func _on_button_6_pressed() -> void:
+	playercontroller.cash += value
+	queue_free()

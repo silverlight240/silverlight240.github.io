@@ -36,6 +36,7 @@ func _on_button_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	if playercontroller.cash > 249:
 		playercontroller.cash -= 250
+		value += 250
 		$Bullet.scale += Vector2(0.3,0.3)
 		$Bullet.particles.process_material.initial_velocity_min *= 1.3
 		$Bullet.particles.process_material.initial_velocity_max *= 1.3
@@ -48,6 +49,7 @@ func _on_button_3_pressed() -> void:
 func _on_button_4_pressed() -> void:
 	if playercontroller.cash > 499:
 		playercontroller.cash -= 500
+		value += 500
 	$Bullet.scale += Vector2(0.3,0.3)
 	$Bullet.particles.process_material.initial_velocity_min *= 1.3
 	$Bullet.particles.process_material.initial_velocity_max *= 1.3
@@ -61,8 +63,14 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	if playercontroller.cash > 999:
 		playercontroller.cash -= 1000
+		value += 1000
 		var blackhole = load("res://blackhole.tscn")
 		var spawn = blackhole.instantiate()
 		spawn.global_position = global_position
 		get_parent().add_child(spawn)
 		queue_free()
+
+
+func _on_button_6_pressed() -> void:
+	playercontroller.cash += value
+	queue_free()

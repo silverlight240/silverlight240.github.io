@@ -77,10 +77,10 @@ frame_progress = 0.93288016
 [node name="Panel" type="Panel" parent="." unique_id=331414878]
 visible = false
 z_index = 999
-offset_left = 40.0
-offset_top = -231.66666
-offset_right = 275.0
-offset_bottom = 179.99997
+offset_left = 41.666664
+offset_top = -245.0
+offset_right = 276.66666
+offset_bottom = 166.66663
 script = ExtResource("4_2kje1")
 
 [node name="Button" type="Button" parent="Panel" unique_id=741986196]
@@ -138,6 +138,16 @@ offset_right = 236.66666
 offset_bottom = 65.0
 text = "BLACK HOLE!! Cost: 1000"
 
+[node name="Button6" type="Button" parent="Panel" unique_id=1466163368]
+layout_mode = 0
+offset_left = 5.000002
+offset_top = 121.666664
+offset_right = 231.66666
+offset_bottom = 203.33333
+theme_override_font_sizes/font_size = 64
+text = "sell
+"
+
 [node name="Bullet" parent="." unique_id=983899243 instance=ExtResource("2_2kje1")]
 z_index = 1
 pierce = 0
@@ -149,3 +159,4 @@ speed = 700
 [connection signal="pressed" from="Panel/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Panel/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Panel/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Panel/Button6" to="." method="_on_button_6_pressed"]

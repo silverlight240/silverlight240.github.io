@@ -1,6 +1,7 @@
 extends Area2D
 class_name Tower
 var Bodey 
+@export var value = 5
 @onready var playercontroller = get_tree().get_first_node_in_group("playercontroller")
 @export_group("Stats")
 @export var ShootTimes = 1

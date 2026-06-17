@@ -10,6 +10,7 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	if playercontroller.cash > 4:
 		playercontroller.cash -= 5
+		value += 5
 		$CollisionShape2D.shape.radius += 30
 		$Panel/Button2.hide()
 		$Panel/Button3.show()
@@ -18,6 +19,7 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	if playercontroller.cash >= 10:
 		playercontroller.cash -= 10
+		value += 10
 		ShootTimes += 1
 		$Panel/Button3.hide()
 		$Panel/Button4.show()
@@ -26,6 +28,7 @@ func _on_button_3_pressed() -> void:
 func _on_button_4_pressed() -> void:
 	if playercontroller.cash >= 100:
 		playercontroller.cash -= 100
+		value += 100
 		ShootTimes += 1
 		$Timer.wait_time -= 0.25
 		$Timer.start()
@@ -36,7 +39,13 @@ func _on_button_4_pressed() -> void:
 func _on_button_5_pressed() -> void:
 	if playercontroller.cash >= 480:
 		playercontroller.cash -= 480
-		ShootTimes += 4
-		$Timer.wait_time -= 0.5
+		value += 480
+		ShootTimes += 8
+		$Timer.wait_time -= 0.65
 		$Timer.start()
 		$Panel/Button5.hide()
+
+
+func _on_button_6_pressed() -> void:
+	playercontroller.cash += value
+	queue_free()

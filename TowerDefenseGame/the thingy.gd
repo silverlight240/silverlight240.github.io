@@ -18,6 +18,7 @@ func _on_button_pressed() -> void:
 func _on_button_2_pressed() -> void:
 	if playercontroller.cash > 25:
 		playercontroller.cash -= 25
+		get_parent().value += 25
 		$Button2.hide()
 		$"../Bullet".scale += Vector2(0.2,0.2)
 		$"../Bullet".particles.process_material.initial_velocity_min *= 1.2
