@@ -17,8 +17,9 @@ func spawn(x):
 						spawnbullet.pierce = 36
 					if autumn:
 						spawnbullet.get_child(0).texture = load("res://autumnLeaf.png")
-						spawnbullet.get_child(0).modulate = Color(1.2,0.7,0.3,1)
-						spawnbullet.aimlevel = 1
+						spawnbullet.damage = 2.5
+						spawnbullet.speed += 450
+						spawnbullet.aimlevel = 0.01
 						spawnbullet.pierce = -1
 					if i > 0:
 						spawnbullet.global_position = global_position
