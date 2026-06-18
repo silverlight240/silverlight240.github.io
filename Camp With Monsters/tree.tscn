@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bu7dgx4420tln"]
+
+[ext_resource type="Texture2D" uid="uid://51nu7j7jau0a" path="res://Tree1.png" id="1_brfkd"]
+[ext_resource type="Script" uid="uid://dejcw723xqu7o" path="res://tree.gd" id="1_nnvrw"]
+
+[sub_resource type="Animation" id="Animation_brfkd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.08726646]
+}
+
+[sub_resource type="Animation" id="Animation_nnvrw"]
+resource_name = "sway"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree1:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.08726646, -0.08726646]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gvmkm"]
+_data = {
+&"RESET": SubResource("Animation_brfkd"),
+&"sway": SubResource("Animation_nnvrw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2g23"]
+size = Vector2(61, 163)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1062891428]
+y_sort_enabled = true
+script = ExtResource("1_nnvrw")
+
+[node name="Tree1" type="Sprite2D" parent="." unique_id=356129416]
+y_sort_enabled = true
+position = Vector2(22, 85)
+rotation = 0.08726646
+texture = ExtResource("1_brfkd")
+offset = Vector2(0, -160)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=731442814]
+libraries/ = SubResource("AnimationLibrary_gvmkm")
+autoplay = &"sway"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240539980]
+position = Vector2(18.5, 1)
+shape = SubResource("RectangleShape2D_d2g23")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=440910103]
+modulate = Color(1, 0, 0, 1)
+offset_left = -68.0
+offset_top = -274.0
+offset_right = 52.0
+offset_bottom = -247.0
+max_value = 5.0
+show_percentage = false

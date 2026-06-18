@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dpyow7h2gr6wf"]
+
+[ext_resource type="Script" uid="uid://8wlidrehimua" path="res://manitrue.gd" id="1_1nlct"]
+[ext_resource type="Texture2D" uid="uid://cco64f7dasvqw" path="res://inventory.png" id="1_yblsf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qswxc"]
+font_size = 160
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1nlct"]
+font_size = 84
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=167541295]
+script = ExtResource("1_1nlct")
+
+[node name="Label" type="Label" parent="." unique_id=976103550]
+offset_left = -273.0
+offset_top = 39.0
+offset_right = 1344.0
+offset_bottom = 297.0
+text = "Camp With Monsters"
+label_settings = SubResource("LabelSettings_qswxc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=292131127]
+position = Vector2(396, 184)
+zoom = Vector2(0.5, 0.5)
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=153295241]
+modulate = Color(0, 1, 0, 1)
+offset_left = 337.0
+offset_top = 238.0
+offset_right = 657.0
+offset_bottom = 558.0
+texture_normal = ExtResource("1_yblsf")
+
+[node name="Label2" type="Label" parent="." unique_id=160162562]
+offset_left = 424.0
+offset_top = 330.0
+offset_right = 593.0
+offset_bottom = 445.0
+text = "Play"
+label_settings = SubResource("LabelSettings_1nlct")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
