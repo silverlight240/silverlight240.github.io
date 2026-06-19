@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://by5tbpvowed8c" path="res://craft_table.gd" id="1_ekoch"]
 [ext_resource type="Texture2D" uid="uid://c8uol7o68wssc" path="res://ScienceTable.png" id="1_wtj3c"]
+[ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_gpql4"]
 [ext_resource type="Resource" uid="uid://d3hfa5y3o35yg" path="res://WoodSwordRecipe.tres" id="2_liku3"]
+[ext_resource type="Resource" uid="uid://bwemifvcmv6v2" path="res://Wodd Pickacks Recype.tres" id="4_n3lx2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekoch"]
 radius = 402.6475
@@ -83,7 +85,7 @@ size = Vector2(229, 134)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1799246534]
 script = ExtResource("1_ekoch")
-recipe = ExtResource("2_liku3")
+recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2")])
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1832808069]
 
@@ -93,7 +95,7 @@ shape = SubResource("CircleShape2D_ekoch")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=803116699]
 sprite_frames = SubResource("SpriteFrames_jidw8")
 autoplay = "default"
-frame_progress = 0.65350115
+frame_progress = 0.052122016
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938009871]
 position = Vector2(-4.5, 95)
@@ -107,13 +109,13 @@ offset_bottom = -26.0
 text = "CRAFTING"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1909943694]
-offset_left = -257.0
-offset_top = -20.0
+offset_left = -347.0
+offset_top = -152.0
 offset_right = -120.0
-offset_bottom = 163.0
+offset_bottom = 369.0
 follow_focus = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1532661294]
+[node name="VBoxContainer" type="GridContainer" parent="ScrollContainer" unique_id=690516227]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

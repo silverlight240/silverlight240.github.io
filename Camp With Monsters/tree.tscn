@@ -60,6 +60,7 @@ libraries/ = SubResource("AnimationLibrary_gvmkm")
 autoplay = &"sway"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240539980]
+z_index = 1
 position = Vector2(18.5, 1)
 shape = SubResource("RectangleShape2D_d2g23")
 

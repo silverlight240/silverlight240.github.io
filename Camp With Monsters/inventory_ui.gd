@@ -24,7 +24,8 @@ func _on_button_pressed(button: TextureButton):
 		get_parent().item = "axe"
 	if item.name == "Wood Sword":
 		get_parent().item = "sword"
-
+	if item.name == "Wood Pickaxe":
+		get_parent().item = "pickaxe"
 
 func _on_timer_timeout() -> void:
 	if is_instance_valid($Panel/GridContainer.get_child(0)):

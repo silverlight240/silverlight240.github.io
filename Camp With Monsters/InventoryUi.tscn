@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4gyyhb3gn3e7" path="res://slimeball.png" id="4_knm5t"]
 [ext_resource type="Texture2D" uid="uid://cco64f7dasvqw" path="res://inventory.png" id="5_0byjc"]
 [ext_resource type="Texture2D" uid="uid://psh2msajmjqt" path="res://axe.png" id="5_wylon"]
+[ext_resource type="Texture2D" uid="uid://y0xir3j5shsx" path="res://Rock.png" id="6_wylon"]
 [ext_resource type="Texture2D" uid="uid://dfujlmf725isb" path="res://inventoryslot.png" id="7_8gvmr"]
 
 [sub_resource type="Resource" id="Resource_lw0fi"]
@@ -29,9 +30,16 @@ name = "Axe"
 texture = ExtResource("5_wylon")
 metadata/_custom_type_script = "uid://cxms7vrodb3wi"
 
+[sub_resource type="Resource" id="Resource_ifw5j"]
+script = ExtResource("2_p27tm")
+name = "Rock"
+texture = ExtResource("6_wylon")
+amount = 0
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"
+
 [sub_resource type="Resource" id="Resource_8gvmr"]
 script = ExtResource("4_5vkqp")
-items = Array[ExtResource("2_p27tm")]([SubResource("Resource_lw0fi"), SubResource("Resource_d3j2i"), SubResource("Resource_qyv72"), null, null, null, null, null, null, null, null, null])
+items = Array[ExtResource("2_p27tm")]([SubResource("Resource_lw0fi"), SubResource("Resource_d3j2i"), SubResource("Resource_qyv72"), SubResource("Resource_ifw5j")])
 metadata/_custom_type_script = "uid://carlxm0hkeojk"
 
 [node name="Control" type="Control" unique_id=886190057]
