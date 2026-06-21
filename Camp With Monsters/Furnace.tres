@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://5livwhg8yh0j"]
+
+[ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="1_u6f3g"]
+[ext_resource type="Texture2D" uid="uid://dyxb2ujb2bglr" path="res://FurnaceItem.png" id="2_gyws5"]
+
+[resource]
+script = ExtResource("1_u6f3g")
+name = "Furnace"
+texture = ExtResource("2_gyws5")
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"
