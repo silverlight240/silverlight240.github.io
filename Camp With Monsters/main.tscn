@@ -422,9 +422,6 @@ sources/0 = SubResource("TileSetAtlasSource_ycdy4")
 
 [node name="Node2D" type="Node2D" unique_id=1375803443]
 
-[node name="CharacterBody2D" parent="." unique_id=664983709 instance=ExtResource("1_ig7tw")]
-position = Vector2(-41, -210)
-
 [node name="Surface" type="Node2D" parent="." unique_id=199897167]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Surface" unique_id=889788911]
@@ -519,6 +516,9 @@ color = Color(0, 0, 0, 1)
 
 [node name="Area2D3" parent="Surface" unique_id=1526673792 instance=ExtResource("6_272bh")]
 position = Vector2(-2317, -229)
+
+[node name="CharacterBody2D" parent="Surface" unique_id=664983709 instance=ExtResource("1_ig7tw")]
+position = Vector2(-41, -210)
 
 [node name="Cave" type="Node2D" parent="." unique_id=611788970]
 z_index = -5

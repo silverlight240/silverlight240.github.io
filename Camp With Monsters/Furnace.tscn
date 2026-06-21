@@ -61,11 +61,13 @@ shape = SubResource("CircleShape2D_qeamr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=661491779]
 sprite_frames = SubResource("SpriteFrames_tj2ga")
 autoplay = "default"
-frame_progress = 0.9705663
+frame_progress = 0.25636944
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1454449074]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -391.0
+offset_top = -82.0
+offset_right = -141.0
+offset_bottom = 95.0
 
 [node name="VBoxContainer" type="GridContainer" parent="ScrollContainer" unique_id=1311819072]
 layout_mode = 2
