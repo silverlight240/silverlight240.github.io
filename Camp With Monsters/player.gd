@@ -39,8 +39,14 @@ func _physics_process(delta: float) -> void:
 			var i = -1
 			for item in $Control.inventory.items:
 				i += 1
-				if item.name == "Furnace":
-					$Control.inventory.items[0] = null
+				if item != null:
+					if item.name == "Furnace":
+						$Control.inventory.items[0] = null
+			var furnace = load("res://Furnace.tscn")
+			var spawn = furnace.instantiate()
+			spawn.global_position = global_position
+			get_parent().add_child(spawn)
+			item = "axe"
 		if item == "sword":
 			swording = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():

@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 var hp = 0
 @export var recipes: Array[Recipe]
 # Called when the node enters the scene tree for the first time.

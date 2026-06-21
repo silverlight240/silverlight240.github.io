@@ -1,7 +1,23 @@
 [gd_scene format=3 uid="uid://bb3tlu50j2t5q"]
 
-[ext_resource type="Script" uid="uid://by5tbpvowed8c" path="res://craft_table.gd" id="1_f8tgt"]
+[ext_resource type="Script" uid="uid://dgcy5g18707v5" path="res://furnace.gd" id="1_f8tgt"]
 [ext_resource type="Texture2D" uid="uid://citg3nm43au2h" path="res://furnace.png" id="2_j5yns"]
+[ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_qeamr"]
+[ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="3_3rs31"]
+[ext_resource type="Resource" uid="uid://bf562qglma4ca" path="res://Wood.tres" id="4_xb8x1"]
+[ext_resource type="Resource" uid="uid://dedkxs6fy3jm1" path="res://Charcoal.tres" id="5_8mtv3"]
+
+[sub_resource type="Resource" id="Resource_tj2ga"]
+script = ExtResource("3_3rs31")
+QuantityWanted = 5
+item = ExtResource("4_xb8x1")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_sulq5"]
+script = ExtResource("2_qeamr")
+item = ExtResource("5_8mtv3")
+Require = Array[ExtResource("3_3rs31")]([SubResource("Resource_tj2ga")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qeamr"]
 radius = 314.99365
@@ -37,12 +53,21 @@ animations = [{
 
 [node name="Area2D" type="Area2D" unique_id=2000401127]
 script = ExtResource("1_f8tgt")
+recipes = Array[ExtResource("2_qeamr")]([SubResource("Resource_sulq5")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1298865013]
 shape = SubResource("CircleShape2D_qeamr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=661491779]
 sprite_frames = SubResource("SpriteFrames_tj2ga")
-frame_progress = 0.8482175
+autoplay = "default"
+frame_progress = 0.9705663
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1454449074]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="GridContainer" parent="ScrollContainer" unique_id=1311819072]
+layout_mode = 2
+
+[connection signal="body_entered" from="." to="." method="_on_area_2d_body_entered"]

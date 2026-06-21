@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_gpql4"]
 [ext_resource type="Resource" uid="uid://d3hfa5y3o35yg" path="res://WoodSwordRecipe.tres" id="2_liku3"]
 [ext_resource type="Resource" uid="uid://bwemifvcmv6v2" path="res://Wodd Pickacks Recype.tres" id="4_n3lx2"]
+[ext_resource type="Resource" uid="uid://dmw5bani318ln" path="res://FurnaceRecipe.tres" id="5_cpit6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekoch"]
 radius = 402.6475
@@ -85,7 +86,7 @@ size = Vector2(229, 134)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1799246534]
 script = ExtResource("1_ekoch")
-recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2")])
+recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2"), ExtResource("5_cpit6")])
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1832808069]
 
@@ -95,7 +96,7 @@ shape = SubResource("CircleShape2D_ekoch")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=803116699]
 sprite_frames = SubResource("SpriteFrames_jidw8")
 autoplay = "default"
-frame_progress = 0.8468737
+frame_progress = 0.045078255
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938009871]
 position = Vector2(-4.5, 95)
