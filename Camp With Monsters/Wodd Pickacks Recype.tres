@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://bwemifvcmv6v2"]
+
+[ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="1_76eg0"]
+[ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_2kiyj"]
+[ext_resource type="Resource" uid="uid://bf562qglma4ca" path="res://Wood.tres" id="2_iyw1f"]
+[ext_resource type="Resource" uid="uid://d2edya6urackj" path="res://Wood Pickaxe.tres" id="3_hqklc"]
+
+[sub_resource type="Resource" id="Resource_5d2xl"]
+script = ExtResource("1_76eg0")
+QuantityWanted = 4
+item = ExtResource("2_iyw1f")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[resource]
+script = ExtResource("2_2kiyj")
+item = ExtResource("3_hqklc")
+Require = Array[ExtResource("1_76eg0")]([SubResource("Resource_5d2xl")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
