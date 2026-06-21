@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Recipe" format=3 uid="uid://dmw5bani318ln"]
+
+[ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="1_bgh21"]
+[ext_resource type="Resource" uid="uid://d2x71i4sbp26x" path="res://Stone.tres" id="2_wd34i"]
+[ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_y1vh1"]
+[ext_resource type="Resource" uid="uid://5livwhg8yh0j" path="res://Furnace.tres" id="3_xninf"]
+
+[sub_resource type="Resource" id="Resource_ysng3"]
+script = ExtResource("1_bgh21")
+QuantityWanted = 15
+item = ExtResource("2_wd34i")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[resource]
+script = ExtResource("2_y1vh1")
+item = ExtResource("3_xninf")
+Require = Array[ExtResource("1_bgh21")]([SubResource("Resource_ysng3")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
