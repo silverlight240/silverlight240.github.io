@@ -2,11 +2,10 @@ extends CharacterBody2D
 const SPEED = 400
 var health = 20
 var axeing = false
-var item: String = "axe"
+var item = "axe"
 var pickaxeing
 var swording = false
 func _ready() -> void:
-	DropItem("Axe",1)
 	$Area2D.monitoring = false
 	add_to_group("player")
 func _physics_process(delta: float) -> void:
@@ -35,12 +34,6 @@ func _physics_process(delta: float) -> void:
 			if direction.y == 1:
 				$AnimatedSprite2D.play("AxeFront")
 				$AnimatedSprite2D.flip_h = true
-		if item == "furnace":
-			var i = -1
-			for item in $Control.inventory.items:
-				i += 1
-				if item.name == "Furnace":
-					$Control.inventory.items[0] = null
 		if item == "sword":
 			swording = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
@@ -102,44 +95,29 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.get_parent().visible == true:
 		if body != self:
 			if item == "axe":
+				body.hp -= 1
 				if body.is_in_group("tree"):
-					body.hp -= 2
+					body.hp -= 1
 					if body.hp < 1:
-						DropItem("Wood",1)
+						$Control.inventory.items[0].amount += 1
 						body.queue_free()
 				if body.is_in_group("slime"):
-					body.hp -= 1
 					if body.hp < 1:
-						DropItem("Slimeball",1)
+						$Control.inventory.items[1].amount += 1
 						body.queue_free()
 				if body.is_in_group("Rock"):
-					body.hp -= 1
-					if body.hp <= 0:
-						DropItem("Stone",1)
+					if body.hp < 1:
+						$Control.inventory.items[3].amount += 1
 						body.queue_free()
 			if item == "sword":
 				if body.is_in_group("slime"):
 					body.hp -= 2
 					if body.hp < 1:
-						DropItem("Slimeball", 1)
+						$Control.inventory.items[1].amount += 1
 						body.queue_free()
 			if item == "pickaxe":
 				if body.is_in_group("Rock"):
 					body.hp -= 10
 					if body.hp < 1:
-						DropItem("Stone",1)
+						$Control.inventory.items[3].amount += 1
 						body.queue_free()
-func DropItem(x:String,y:int):
-	var slot = 0
-	for i in $Control.inventory.items:
-		if i != null:
-			if i.name == (load("res://" + x + ".tres").name):
-				i.amount += y
-				return
-		slot += 1
-	slot = 0
-	for i in $Control.inventory.items:
-		if i == null:
-			$Control.inventory.items[slot] = load("res://" + x + ".tres")
-			return
-		slot += 1

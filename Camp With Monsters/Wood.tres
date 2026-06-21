@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://bf562qglma4ca"]
 
 [ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="1_onokj"]
-[ext_resource type="Texture2D" uid="uid://0aw6ygsn6riv" path="res://wood.png" id="2_85f5g"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_onokj"]
 
 [resource]
 script = ExtResource("1_onokj")
 name = "Wood"
-texture = ExtResource("2_85f5g")
+texture = SubResource("ImageTexture_onokj")
 metadata/_custom_type_script = "uid://cxms7vrodb3wi"

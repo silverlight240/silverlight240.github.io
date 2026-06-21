@@ -16,37 +16,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		for i in $ScrollContainer/VBoxContainer.get_children():
 			i.queue_free()
 		$ScrollContainer.show()
-		var thing: int = 0
+		var thing = 0
 		for recipe in recipes:
-			if body.get_child(5).inventory.items[FindItem(recipe)] != null:
-				if body.get_child(5).inventory.items[FindItem(recipe)].amount >= (recipe.Require[0].QuantityWanted):
-					$ScrollContainer/VBoxContainer.add_child(TextureButton.new())
-					$ScrollContainer/VBoxContainer.get_child(thing).texture_normal = recipe.item.texture
-					$ScrollContainer/VBoxContainer.get_child(thing).pressed.connect(_on_button_pressed.bind(recipe))
-					$ScrollContainer/VBoxContainer.get_child(thing).z_index = 9999
-					thing += 1
-func _on_button_pressed(recipe: Recipe):
-	print(recipe)
-	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindEmptySlot()] = recipe.item
-	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount -= recipe.Require[0].QuantityWanted
+			print(recipe)
+			if body.get_child(5).inventory.items[0].amount > (recipe.Require[0].QuantityWanted - 1):
+				print("this part works")
+				$ScrollContainer/VBoxContainer.add_child(TextureButton.new())
+				$ScrollContainer/VBoxContainer.get_child(thing).texture_normal = recipe.item.texture
+				$ScrollContainer/VBoxContainer.get_child(thing).pressed.connect(on_button_pressed.bind(recipe))
+				thing += 1
+func on_button_pressed(recipe: Recipe):
+	get_tree().get_first_node_in_group("player").get_child(5).inventory.items.append(recipe.item)
+	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[0].amount -= recipe.Require[0].QuantityWanted
 	for i in $ScrollContainer/VBoxContainer.get_children():
 		i.queue_free()
-func FindItem(recipe):
-			var thingeee: int = -1
-			for i in get_tree().get_first_node_in_group("player").get_child(5).inventory.items:
-				thingeee += 1
-				if i != null:
-					if i.name == recipe.Require[0].item.name:
-						break
-			return thingeee
-func FindEmptySlot():
-			var thingeee: int = -1
-			for i in get_tree().get_first_node_in_group("player").get_child(5).inventory.items:
-				thingeee += 1
-				if i == null:
-					break
-			return thingeee
-
-
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.

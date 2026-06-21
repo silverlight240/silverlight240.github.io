@@ -95,7 +95,7 @@ shape = SubResource("CircleShape2D_ekoch")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=803116699]
 sprite_frames = SubResource("SpriteFrames_jidw8")
 autoplay = "default"
-frame_progress = 0.8468737
+frame_progress = 0.052122016
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938009871]
 position = Vector2(-4.5, 95)
@@ -113,13 +113,11 @@ offset_left = -347.0
 offset_top = -152.0
 offset_right = -120.0
 offset_bottom = 369.0
-mouse_filter = 2
 follow_focus = true
 
 [node name="VBoxContainer" type="GridContainer" parent="ScrollContainer" unique_id=690516227]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-mouse_filter = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
