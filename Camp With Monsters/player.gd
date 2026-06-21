@@ -41,7 +41,7 @@ func _physics_process(delta: float) -> void:
 				i += 1
 				if item != null:
 					if item.name == "Furnace":
-						$Control.inventory.items[0] = null
+						$Control.inventory.items[i] = null
 			var furnace = load("res://Furnace.tscn")
 			var spawn = furnace.instantiate()
 			spawn.global_position = global_position
