@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://jjet84y3he5e"]
+
+[ext_resource type="Texture2D" uid="uid://d28t74xmvuslo" path="res://Stairs.png" id="1_7eqnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajk7x"]
+size = Vector2(10.5, 321)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=85254852]
+z_index = -1
+
+[node name="Stairs" type="Sprite2D" parent="." unique_id=836488176]
+texture = ExtResource("1_7eqnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=180037236]
+z_index = -1
+position = Vector2(-155.5, -0.5)
+shape = SubResource("RectangleShape2D_ajk7x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1284442558]
+z_index = -1
+position = Vector2(154.25, -1)
+shape = SubResource("RectangleShape2D_ajk7x")

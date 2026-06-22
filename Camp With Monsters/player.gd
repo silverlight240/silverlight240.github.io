@@ -1,10 +1,10 @@
 extends CharacterBody2D
-const SPEED = 400
-var health = 20
-var axeing = false
+const SPEED: int = 400
+var health: int = 20
+var axeing: bool = false
 var item: String = "axe"
-var pickaxeing
-var swording = false
+var pickaxeing: bool = false
+var swording: bool = false
 func _ready() -> void:
 	DropItem("Axe",1)
 	$Area2D.monitoring = false
@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 	$ProgressBar.value = health
 	if health <= 0:
 		queue_free()
-	var direction := Input.get_vector("left", "right","up","down")
+	var direction: Vector2 = Input.get_vector("left", "right","up","down")
 	if direction:
 		velocity = direction * SPEED
 	else:
@@ -35,19 +35,19 @@ func _physics_process(delta: float) -> void:
 			if direction.y == 1:
 				$AnimatedSprite2D.play("AxeFront")
 				$AnimatedSprite2D.flip_h = true
-		if item == "furnace":
+		elif item == "furnace":
 			var i = -1
 			for item in $Control.inventory.items:
 				i += 1
 				if item != null:
 					if item.name == "Furnace":
-						$Control.inventory.items[0] = null
+						$Control.inventory.items[i] = null
 			var furnace = load("res://Furnace.tscn")
 			var spawn = furnace.instantiate()
 			spawn.global_position = global_position
 			get_parent().add_child(spawn)
 			item = "axe"
-		if item == "sword":
+		elif item == "sword":
 			swording = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
 				$Timer.start()
@@ -63,7 +63,7 @@ func _physics_process(delta: float) -> void:
 			if direction.y == 1:
 				$AnimatedSprite2D.play("swordfront")
 				$AnimatedSprite2D.flip_h = true
-		if item == "pickaxe":
+		elif item == "pickaxe":
 			pickaxeing = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
 				$Timer.start()
@@ -80,7 +80,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("PickAxeFront")
 				$AnimatedSprite2D.flip_h = true
 	else:
-		if not (axeing or swording):
+		if not (axeing or swording or pickaxeing):
 			if direction.x == 1:
 				$AnimatedSprite2D.flip_h = false
 				$AnimatedSprite2D.play("side of player")
@@ -93,7 +93,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("Front of player")
 				$AnimatedSprite2D.flip_h = true
 			move_and_slide()
-
+#
 
 func _on_timer_timeout() -> void:
 	axeing = false
@@ -136,16 +136,17 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 						DropItem("Stone",1)
 						body.queue_free()
 func DropItem(x:String,y:int):
-	var slot = 0
+	var slot: int = -1
 	for i in $Control.inventory.items:
+		slot += 1
 		if i != null:
 			if i.name == (load("res://" + x + ".tres").name):
-				i.amount += y
+				$Control.inventory.items[slot].amount += y
 				return
-		slot += 1
-	slot = 0
+	slot = -1
 	for i in $Control.inventory.items:
-		if i == null:
-			$Control.inventory.items[slot] = load("res://" + x + ".tres")
-			return
 		slot += 1
+		if i == null:
+			$Control.inventory.items[slot] = (load("res://" + x + ".tres")).duplicate()
+			print($Control.inventory.items)
+			return

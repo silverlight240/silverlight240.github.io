@@ -7,9 +7,13 @@ func _physics_process(delta: float) -> void:
 		item = playerinventory.inventory.items[slot]
 		if item.amount > 0:
 			$TextureRect.texture = item.texture
-		else:
+		if playerinventory.inventory.items[slot].amount <= 0:
 			playerinventory.inventory.items[slot] = null
-
+			item = null
+			$TextureRect.texture = null
+	else:
+		item = null
+		$TextureRect.texture = null
 
 func _on_pressed() -> void:
 	if item == null:
