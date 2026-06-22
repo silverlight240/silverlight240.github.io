@@ -140,7 +140,7 @@ func DropItem(x:String,y:int):
 	for i in $Control.inventory.items:
 		if i != null:
 			if i.name == (load("res://" + x + ".tres").name):
-				i.amount += y
+				$Control.inventory.items[slot].amount += y
 				return
 		slot += 1
 	slot = 0
