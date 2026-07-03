@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://clbgrt47dcs2a"]
+
+[ext_resource type="Script" uid="uid://b7sv3bpfk0gmw" path="res://zoom.gd" id="1_dmw7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt70g"]
+size = Vector2(1162, 745)
+
+[node name="Area2D" type="Area2D" unique_id=1193448295]
+z_index = -999
+z_as_relative = false
+collision_mask = 2
+script = ExtResource("1_dmw7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1129619486]
+z_index = -999
+z_as_relative = false
+position = Vector2(-1.5258789e-05, 4.5)
+shape = SubResource("RectangleShape2D_tt70g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

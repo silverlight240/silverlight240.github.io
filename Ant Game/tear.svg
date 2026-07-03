@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1.7982066mm"
+   height="8.0123081mm"
+   viewBox="0 0 1.7982066 8.0123081"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="tear.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="1.7982066"
+       height="8.0123081"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch6"
+       id="linearGradient6"
+       x1="142.42751"
+       y1="155.9066"
+       x2="146.56783"
+       y2="155.9066"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.43431458,0,0,2.2329041,-0.210419,-316.60167)" />
+    <linearGradient
+       id="swatch6"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#2f92a3;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.647919,-27.516665)">
+    <ellipse
+       style="fill:url(#linearGradient6);stroke-width:0.260965;paint-order:stroke fill markers"
+       id="path6"
+       cx="62.547024"
+       cy="31.522818"
+       rx="0.89910382"
+       ry="4.0061536" />
+  </g>
+</svg>

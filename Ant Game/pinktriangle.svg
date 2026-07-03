@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100.56444mm"
+   height="87.27356mm"
+   viewBox="0 0 100.56444 87.27356"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="pinktriangle.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="100.56444"
+       height="87.27356"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#d63edb;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch1"
+       id="linearGradient1"
+       x1="43.048168"
+       y1="128.14926"
+       x2="140.95538"
+       y2="128.14926"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-48.244562,-78.478131)">
+    <path
+       sodipodi:type="star"
+       style="fill:url(#linearGradient1);stroke-width:0.264999;paint-order:stroke fill markers"
+       id="path1"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="98.631973"
+       sodipodi:cy="136.53903"
+       sodipodi:r1="58.061283"
+       sodipodi:r2="29.030642"
+       sodipodi:arg1="0.75401833"
+       sodipodi:arg2="1.8012159"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 140.95539,176.28624 43.048169,153.31858 111.89236,80.01227 Z"
+       inkscape:transform-center-x="0.10519245"
+       inkscape:transform-center-y="-14.424126"
+       transform="rotate(-12.994456,98.631973,136.53903)" />
+  </g>
+</svg>

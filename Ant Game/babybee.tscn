@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://cq41frn4mas1t"]
+
+[ext_resource type="Script" uid="uid://c7k2dn3s35tdl" path="res://babybee.gd" id="1_pl31i"]
+[ext_resource type="Texture2D" uid="uid://da425ugvdx8kx" path="res://babybee.svg" id="2_rcafs"]
+
+[sub_resource type="Animation" id="Animation_ptvov"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Babybee:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dlkab"]
+resource_name = "cry"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Babybee:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.9)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_komj4"]
+_data = {
+&"RESET": SubResource("Animation_ptvov"),
+&"cry": SubResource("Animation_dlkab")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0520m"]
+
+[sub_resource type="Curve" id="Curve_mee2n"]
+_data = [Vector2(0.03649635, 0.5869894), 0.0, 0.0, 0, 0, Vector2(0.39051095, 1), 0.0, 0.0, 0, 0, Vector2(0.44890508, 0.96066564), 0.0, 0.0, 0, 0, Vector2(0.5437956, 1), 0.0, 0.0, 0, 0, Vector2(0.74817514, 0.596823), 0.0, 0.0, 0, 0, Vector2(0.82481754, 0.31164902), 0.0, 0.0, 0, 0, Vector2(1, 0.026475072), 0.0, 0.0, 0, 0]
+point_count = 7
+
+[sub_resource type="CurveTexture" id="CurveTexture_pl31i"]
+curve = SubResource("Curve_mee2n")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_86wuo"]
+particle_flag_disable_z = true
+angle_min = -0.09998927
+angle_max = 0.10001073
+initial_velocity_min = -5.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.19999999
+scale_max = 3.0
+color = Color(4.7168137e-06, 0.6740717, 0.6758227, 0.69803923)
+alpha_curve = SubResource("CurveTexture_pl31i")
+collision_mode = 1
+collision_friction = 0.25
+collision_bounce = 0.25
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1set"]
+size = Vector2(1217, 333)
+
+[node name="Node2D" type="Node2D" unique_id=446773875]
+script = ExtResource("1_pl31i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1074210127]
+libraries/ = SubResource("AnimationLibrary_komj4")
+autoplay = &"cry"
+
+[node name="Babybee" type="Sprite2D" parent="." unique_id=390995645]
+texture = ExtResource("2_rcafs")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Babybee" unique_id=1747783606]
+z_index = 99
+position = Vector2(256, 68.99908)
+scale = Vector2(1, 1.0146923)
+amount = 400
+texture = SubResource("CanvasTexture_0520m")
+lifetime = 4.0
+collision_base_size = 3.0
+process_material = SubResource("ParticleProcessMaterial_86wuo")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Babybee" unique_id=204140599]
+z_index = 99
+position = Vector2(259, 73.057846)
+scale = Vector2(1, 1.0146923)
+amount = 400
+texture = SubResource("CanvasTexture_0520m")
+lifetime = 4.0
+collision_base_size = 3.0
+process_material = SubResource("ParticleProcessMaterial_86wuo")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="Babybee" unique_id=1207183353]
+z_index = 99
+position = Vector2(251, 72.04315)
+scale = Vector2(1, 1.0146923)
+amount = 400
+texture = SubResource("CanvasTexture_0520m")
+lifetime = 4.0
+collision_base_size = 3.0
+process_material = SubResource("ParticleProcessMaterial_86wuo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1678149282]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1488126744]
+position = Vector2(598.5, -7.5)
+shape = SubResource("RectangleShape2D_p1set")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

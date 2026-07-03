@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://n3xy21m3st76"]
+
+[ext_resource type="Texture2D" uid="uid://ctnpw7mmfs0ku" path="res://staff.svg" id="1_gtmim"]
+[ext_resource type="Script" uid="uid://b1xwfgfivhade" path="res://flypole.gd" id="1_vrjku"]
+[ext_resource type="Texture2D" uid="uid://dltv5bdwoiulh" path="res://staffwing.svg" id="2_vrjku"]
+[ext_resource type="Texture2D" uid="uid://bl732jnfqfd0n" path="res://staffwing2.svg" id="3_b6thm"]
+[ext_resource type="Texture2D" uid="uid://dhyebgggctn22" path="res://staffwing3.svg" id="4_4tgvv"]
+
+[sub_resource type="Animation" id="Animation_lc886"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Staff:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Staffwing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Staffwing2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Staffwing3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Staffwing4:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Staffwing5:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Staffwing6:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wsoyd"]
+resource_name = "flap"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Staff:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Staffwing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.9599311]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Staffwing2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.9599311]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Staffwing3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.0471976, 0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Staffwing4:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0471976, -0.5235988]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Staffwing5:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.6981317]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Node2D/Staffwing6:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.6981317]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mpkpv"]
+_data = {
+&"RESET": SubResource("Animation_lc886"),
+&"flap": SubResource("Animation_wsoyd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wias"]
+size = Vector2(146, 381)
+
+[node name="Area2D" type="Area2D" unique_id=598036148]
+z_index = -1
+collision_mask = 2
+script = ExtResource("1_vrjku")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1196015847]
+libraries/ = SubResource("AnimationLibrary_mpkpv")
+autoplay = &"flap"
+
+[node name="Staff" type="Sprite2D" parent="." unique_id=1931592528]
+texture = ExtResource("1_gtmim")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1203008163]
+
+[node name="Staffwing" type="Sprite2D" parent="Node2D" unique_id=1813630215]
+z_index = -3
+position = Vector2(-33, -101)
+texture = ExtResource("2_vrjku")
+
+[node name="Staffwing2" type="Sprite2D" parent="Node2D" unique_id=486390631]
+z_index = -3
+position = Vector2(28, -100)
+scale = Vector2(1, -1)
+texture = ExtResource("2_vrjku")
+
+[node name="Staffwing3" type="Sprite2D" parent="Node2D" unique_id=598207203]
+z_index = -2
+position = Vector2(-31, -128)
+texture = ExtResource("3_b6thm")
+
+[node name="Staffwing4" type="Sprite2D" parent="Node2D" unique_id=2009785787]
+z_index = -2
+position = Vector2(27, -129)
+scale = Vector2(1, -1)
+texture = ExtResource("3_b6thm")
+
+[node name="Staffwing5" type="Sprite2D" parent="Node2D" unique_id=1674942014]
+z_index = -1
+position = Vector2(-24, -171)
+scale = Vector2(1, -1)
+texture = ExtResource("4_4tgvv")
+
+[node name="Staffwing6" type="Sprite2D" parent="Node2D" unique_id=1076716257]
+z_index = -1
+position = Vector2(15, -169)
+texture = ExtResource("4_4tgvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=77370987]
+position = Vector2(-4, -24.5)
+shape = SubResource("RectangleShape2D_8wias")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

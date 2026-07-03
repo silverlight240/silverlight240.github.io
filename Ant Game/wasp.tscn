@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://b8q0yedufbi3d"]
+
+[ext_resource type="Script" uid="uid://cud5mn42jsapg" path="res://wasp.gd" id="1_pe6kf"]
+[ext_resource type="Texture2D" uid="uid://byxebl0i8kelp" path="res://waspkitebody.svg" id="2_ni2v7"]
+[ext_resource type="Texture2D" uid="uid://bygje6bjohps0" path="res://flywing.svg" id="3_x6yx1"]
+
+[sub_resource type="Animation" id="Animation_6cv6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+
+[sub_resource type="Animation" id="Animation_is5gm"]
+resource_name = "fly"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, -0.5235987755982988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, 1.7453292519943295]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lis8o"]
+_data = {
+&"RESET": SubResource("Animation_6cv6t"),
+&"fly": SubResource("Animation_is5gm")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=692167548]
+collision_layer = 4
+script = ExtResource("1_pe6kf")
+health = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1748915887]
+libraries/ = SubResource("AnimationLibrary_lis8o")
+autoplay = &"fly"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1737004825]
+position = Vector2(-220, 40)
+
+[node name="Waspkitebody" type="Sprite2D" parent="Node2D" unique_id=179957103]
+z_index = 1
+position = Vector2(220, -40)
+texture = ExtResource("2_ni2v7")
+
+[node name="Flywing" type="Sprite2D" parent="Node2D" unique_id=149934351]
+modulate = Color(0.15127608, 0.15127608, 0.15127605, 1)
+z_index = -1
+position = Vector2(289, -111.00001)
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("3_x6yx1")
+
+[node name="Flywing2" type="Sprite2D" parent="Node2D" unique_id=1708796523]
+modulate = Color(0.27172562, 0.27172565, 0.27172554, 1)
+position = Vector2(315, -66.00001)
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("3_x6yx1")
+
+[node name="Timer" type="Timer" parent="." unique_id=104715672]
+wait_time = 4.0
+autostart = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1159306920]
+polygon = PackedVector2Array(83, -124, -138, 5, 98, 120, 138, -13)
+
+[node name="Timer2" type="Timer" parent="." unique_id=254597010]
+wait_time = 0.3
+one_shot = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1998019632]
+scale = Vector2(3, 30)
+target_position = Vector2(-807, 0.13333334)
+collision_mask = 2
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1312337871]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=728445861]
+polygon = PackedVector2Array(83, -124, -138, 5, 98, 120, 138, -13)
+
+[node name="Timer3" type="Timer" parent="." unique_id=924726295]
+wait_time = 0.1
+one_shot = true
+
+[node name="Timer4" type="Timer" parent="." unique_id=2044973043]
+wait_time = 100.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_timer_4_timeout"]

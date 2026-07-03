@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.438652mm"
+   height="35.458828mm"
+   viewBox="0 0 82.438652 35.458828"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="horseheadand neck.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="82.438652"
+       height="35.458828"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.20074,-106.96869)">
+    <path
+       style="fill:#866534;fill-opacity:1;stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 108.20074,138.74721 c 0,0 48.94796,-22.81785 50.42008,-29.44238 1.47212,-6.62453 -0.36803,2.94424 -0.36803,2.94424 l 19.8736,3.31226 6.99257,2.94424 5.52044,11.04089 -4.41635,6.99257 -25.76208,-6.25651 -28.70632,12.14498 z"
+       id="path2" />
+    <ellipse
+       style="fill:#171108;fill-opacity:1;stroke-width:0.298124;paint-order:stroke fill markers"
+       id="path3"
+       cx="179.04259"
+       cy="126.27969"
+       rx="5.0746083"
+       ry="5.2697854" />
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11.61984mm"
+   height="69.189583mm"
+   viewBox="0 0 11.61984 69.189583"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="seaweed.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="3.7189733e-22"
+       y="0"
+       width="11.619841"
+       height="69.189583"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#448555;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch1"
+       id="linearGradient1"
+       x1="75.011932"
+       y1="141.32341"
+       x2="110.40892"
+       y2="141.32341"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.32827197,0,0,1,50.387617,0)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-75.011921,-106.72862)">
+    <path
+       style="fill:url(#linearGradient1);stroke-width:0.151831;paint-order:stroke fill markers"
+       d="m 83.853052,175.91821 c 0,0 2.778717,-38.64312 -2.174651,-40.8513 -4.953367,-2.20818 4.953368,-28.33829 4.953368,-28.33829 0,0 -12.202198,7.3606 -11.598129,17.2974 0.60407,9.9368 6.523948,9.56877 6.523948,25.39405 0,15.82528 2.295464,26.49814 2.295464,26.49814 z"
+       id="path1" />
+  </g>
+</svg>

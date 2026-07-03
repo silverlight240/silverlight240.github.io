@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://dygntquhyujot"]
+
+[ext_resource type="Script" uid="uid://bv4ie1mdisdd1" path="res://chickenonstick.gd" id="1_ehmby"]
+[ext_resource type="Texture2D" uid="uid://ctnpw7mmfs0ku" path="res://staff.svg" id="1_g5j3x"]
+[ext_resource type="Texture2D" uid="uid://br1rrb5bt6px5" path="res://fishbody.svg" id="2_ehmby"]
+[ext_resource type="Texture2D" uid="uid://clcrof7kvgv8b" path="res://otherfin.svg" id="3_uxok2"]
+[ext_resource type="Texture2D" uid="uid://4q71ayk8uuky" path="res://fin.svg" id="4_n4b0o"]
+
+[sub_resource type="Animation" id="Animation_g5j3x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fishbody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fin:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Staff:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5707964]
+}
+
+[sub_resource type="Animation" id="Animation_ehmby"]
+resource_name = "new_animation"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fishbody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.017453292519943295]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fin:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.017453292]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Staff:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.5707964, 1.5882496]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uxok2"]
+_data = {
+&"RESET": SubResource("Animation_g5j3x"),
+&"new_animation": SubResource("Animation_ehmby")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g5j3x"]
+radius = 161.62302
+
+[node name="Node2D" type="Area2D" unique_id=1562141188]
+collision_mask = 2
+script = ExtResource("1_ehmby")
+
+[node name="Staff" type="Sprite2D" parent="." unique_id=1658477168]
+position = Vector2(-196.21623, -8.576883e-06)
+rotation = 1.5707964
+scale = Vector2(1, 3.817974)
+texture = ExtResource("1_g5j3x")
+
+[node name="Fishbody" type="Sprite2D" parent="." unique_id=1259308122]
+modulate = Color(0.7121294, 0.7121294, 0.71212935, 1)
+position = Vector2(238, 0)
+texture = ExtResource("2_ehmby")
+
+[node name="Otherfin" type="Sprite2D" parent="." unique_id=2008844124]
+modulate = Color(0.6255971, 0.6255971, 0.6255971, 1)
+position = Vector2(209, 4)
+texture = ExtResource("3_uxok2")
+
+[node name="Fin" type="Sprite2D" parent="." unique_id=861085072]
+z_index = -1
+position = Vector2(234, 154)
+scale = Vector2(1, -1)
+texture = ExtResource("4_n4b0o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1691984208]
+libraries/ = SubResource("AnimationLibrary_uxok2")
+autoplay = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269959119]
+position = Vector2(244, 8)
+shape = SubResource("CircleShape2D_g5j3x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

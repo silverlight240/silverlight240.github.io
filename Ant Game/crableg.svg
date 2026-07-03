@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="36.906013mm"
+   height="46.37175mm"
+   viewBox="0 0 36.906013 46.37175"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="crableg.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="9.9525194e-38"
+       width="36.906013"
+       height="46.37175"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch4"
+       id="linearGradient3"
+       x1="47.004757"
+       y1="203.52045"
+       x2="83.910782"
+       y2="203.52045"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(39.51399,-54.922075)" />
+    <linearGradient
+       id="swatch4"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#a4352a;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-86.518743,-125.41249)">
+    <path
+       style="fill:url(#linearGradient3);stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 119.00841,125.4125 c 0,0 -28.70632,18.03346 -27.97026,24.65799 0.73606,6.62454 -4.04832,11.40892 -4.41635,14.72119 -0.36803,3.31227 0.36803,6.99257 0.36803,6.99257 l 8.83271,-18.76952 15.45725,-14.72119 12.14498,-7.72862 z"
+       id="path3" />
+  </g>
+</svg>

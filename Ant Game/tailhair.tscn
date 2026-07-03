@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ebdeflqdk32r"]
+
+[ext_resource type="Script" uid="uid://cp8h6k2aku2ed" path="res://tailhair.gd" id="1_rp7rv"]
+[ext_resource type="Texture2D" uid="uid://d05w1q56grr7r" path="res://tailhair.svg" id="2_kqgah"]
+
+[sub_resource type="Animation" id="Animation_aevo7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Horsehair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6thrt"]
+resource_name = "move"
+length = 18.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Horsehair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.2617993877991494, 0.4363323129985824, 0.008726646259971648]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dw4q4"]
+_data = {
+&"RESET": SubResource("Animation_aevo7"),
+&"move": SubResource("Animation_6thrt")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1763973404]
+z_index = -5
+script = ExtResource("1_rp7rv")
+
+[node name="Horsehair" type="Sprite2D" parent="." unique_id=1803072951]
+modulate = Color(0.851769, 0.8517689, 0.85176885, 1)
+position = Vector2(1.9073486e-06, 1.9073486e-06)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_kqgah")
+offset = Vector2(-120, 130)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=63479447]
+libraries/ = SubResource("AnimationLibrary_dw4q4")
+autoplay = &"move"
+speed_scale = 0.2

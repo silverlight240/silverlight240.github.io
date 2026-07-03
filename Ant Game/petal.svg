@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="7.9974604mm"
+   height="23.723633mm"
+   viewBox="0 0 7.9974604 23.723633"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="petal.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="9.9525194e-38"
+       width="7.9974604"
+       height="23.723633"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-102.84941,-120.96441)">
+    <path
+       style="fill:#9c0e81;fill-opacity:1;stroke-width:0.22359"
+       d="m 104.86224,120.96442 c 0,0 -4.18267,10.91622 -0.48914,17.79981 3.69356,6.88361 6.47377,5.87157 6.47377,5.87157 0,0 -5.60497,-9.11029 -4.53655,-13.48281 1.06841,-4.37253 -1.44808,-10.18857 -1.44808,-10.18857 z"
+       id="path1-8-1" />
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="81.334564mm"
+   height="71.765785mm"
+   viewBox="0 0 81.334564 71.765785"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="tilerock.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="81.334564"
+       height="71.765785"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-64.77323,-83.54276)">
+    <rect
+       style="fill:#939393;stroke-width:0.232754"
+       id="rect1"
+       width="81.334572"
+       height="71.765785"
+       x="64.773232"
+       y="83.542763" />
+    <rect
+       style="fill:#403b2f;fill-opacity:1;stroke-width:0.271348"
+       id="rect7"
+       width="68.702385"
+       height="60.895302"
+       x="70.643745"
+       y="88.635414"
+       inkscape:label="rect7" />
+  </g>
+</svg>

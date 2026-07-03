@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://cuf6ydk51ld47"]
+
+[ext_resource type="Script" uid="uid://b22w0s2nfchq0" path="res://fly.gd" id="1_7c42i"]
+[ext_resource type="Texture2D" uid="uid://bygje6bjohps0" path="res://flywing.svg" id="1_qarim"]
+[ext_resource type="Texture2D" uid="uid://w265rtfjcevg" path="res://flybody.svg" id="2_7c42i"]
+
+[sub_resource type="Animation" id="Animation_6cv6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+
+[sub_resource type="Animation" id="Animation_is5gm"]
+resource_name = "fly"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, -0.5235987755982988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, 1.7453292519943295]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lis8o"]
+_data = {
+&"RESET": SubResource("Animation_6cv6t"),
+&"fly": SubResource("Animation_is5gm")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6cv6t"]
+radius = 137.78607
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=692167548]
+collision_layer = 2
+script = ExtResource("1_7c42i")
+health = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1748915887]
+libraries/ = SubResource("AnimationLibrary_lis8o")
+autoplay = &"fly"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1737004825]
+position = Vector2(-220, 40)
+
+[node name="Flywing" type="Sprite2D" parent="Node2D" unique_id=149934351]
+modulate = Color(0.60960835, 0.60960835, 0.60960835, 1)
+z_index = -1
+position = Vector2(329, -147)
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("1_qarim")
+
+[node name="Flywing2" type="Sprite2D" parent="Node2D" unique_id=1708796523]
+position = Vector2(354.00006, -113)
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("1_qarim")
+
+[node name="Flybody" type="Sprite2D" parent="Node2D" unique_id=57374814]
+position = Vector2(217, -42)
+texture = ExtResource("2_7c42i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619077489]
+shape = SubResource("CircleShape2D_6cv6t")
+
+[node name="Timer" type="Timer" parent="." unique_id=104715672]
+wait_time = 4.0
+autostart = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=254597010]
+wait_time = 0.3
+one_shot = true
+
+[node name="Timer3" type="Timer" parent="." unique_id=1662446309]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]

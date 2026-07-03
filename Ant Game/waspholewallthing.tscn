@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://2jk53sv6abl2"]
+
+[ext_resource type="Texture2D" uid="uid://bfm2uy2v0jkhi" path="res://tiles/waspnestinside.svg" id="1_s4t4f"]
+[ext_resource type="Texture2D" uid="uid://cf1m2deem3j82" path="res://waspnestoutside.svg" id="2_58cyd"]
+[ext_resource type="Texture2D" uid="uid://g6077ahkntss" path="res://waspnesthole.svg" id="3_bagb4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lspq1"]
+size = Vector2(334, 297)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=218635302]
+scale = Vector2(1.2, 1.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=327910590]
+z_index = -5
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_lspq1")
+
+[node name="Waspnestinside" type="Sprite2D" parent="." unique_id=1779242452]
+z_as_relative = false
+texture = ExtResource("1_s4t4f")
+
+[node name="Waspnestoutside" type="Sprite2D" parent="." unique_id=2040861822]
+z_index = -1
+z_as_relative = false
+texture = ExtResource("2_58cyd")
+
+[node name="Waspnesthole" type="Sprite2D" parent="." unique_id=1947342997]
+z_index = 1
+z_as_relative = false
+position = Vector2(-92, -90)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_bagb4")
+
+[node name="Waspnesthole2" type="Sprite2D" parent="." unique_id=2128844705]
+z_index = 1
+z_as_relative = false
+position = Vector2(95.999985, -83)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_bagb4")
+
+[node name="Waspnesthole3" type="Sprite2D" parent="." unique_id=1927820688]
+z_index = 1
+z_as_relative = false
+position = Vector2(-14.000008, 4.9999924)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_bagb4")
+
+[node name="Waspnesthole4" type="Sprite2D" parent="." unique_id=2114413587]
+z_index = 1
+z_as_relative = false
+position = Vector2(-101, 74.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_bagb4")
+
+[node name="Waspnesthole5" type="Sprite2D" parent="." unique_id=104135770]
+z_index = 1
+z_as_relative = false
+position = Vector2(75.999985, 65.999985)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_bagb4")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ch0ge4n475sga"]
+
+[ext_resource type="Texture2D" uid="uid://dp1qhd82uuv4n" path="res://wart.svg" id="1_h13m6"]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1471773403]
+scale = Vector2(2, 2)
+
+[node name="Wart" type="Sprite2D" parent="." unique_id=2124137928]
+modulate = Color(1.753959, 1.753959, 1.753959, 1)
+texture = ExtResource("1_h13m6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=842198119]
+z_index = -999
+polygon = PackedVector2Array(-52, -39, 55, -37, 100, -3, 77, 28, 9, 44, -70, 32, -100, -2)

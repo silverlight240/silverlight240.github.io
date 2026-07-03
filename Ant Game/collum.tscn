@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cf2twot6sjqav"]
+
+[ext_resource type="PackedScene" uid="uid://c0r82u1yufeqa" path="res://block of grass.tscn" id="1_220r1"]
+
+[node name="Node2D" type="Node2D" unique_id=108488086]
+z_as_relative = false
+
+[node name="Node2D" type="Node2D" parent="." unique_id=22768658]
+z_index = -1
+position = Vector2(0, 400)
+
+[node name="StaticBody2D5" parent="Node2D" unique_id=739562135 instance=ExtResource("1_220r1")]
+position = Vector2(0, 400)
+
+[node name="StaticBody2D4" parent="Node2D" unique_id=128311724 instance=ExtResource("1_220r1")]
+position = Vector2(0, 300)
+
+[node name="StaticBody2D2" parent="Node2D" unique_id=2055494613 instance=ExtResource("1_220r1")]
+position = Vector2(0, 100)
+
+[node name="StaticBody2D3" parent="Node2D" unique_id=1737141729 instance=ExtResource("1_220r1")]
+position = Vector2(0, 200)
+
+[node name="StaticBody2D" parent="Node2D" unique_id=2085401549 instance=ExtResource("1_220r1")]
+
+[node name="StaticBody2D5" parent="." unique_id=1916607215 instance=ExtResource("1_220r1")]
+position = Vector2(0, 400)
+
+[node name="StaticBody2D4" parent="." unique_id=777565385 instance=ExtResource("1_220r1")]
+position = Vector2(0, 300)
+
+[node name="StaticBody2D2" parent="." unique_id=1434506472 instance=ExtResource("1_220r1")]
+position = Vector2(0, 100)
+
+[node name="StaticBody2D3" parent="." unique_id=2001323112 instance=ExtResource("1_220r1")]
+position = Vector2(0, 200)
+
+[node name="StaticBody2D6" parent="." unique_id=792647112 instance=ExtResource("1_220r1")]

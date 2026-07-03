@@ -1,0 +1,395 @@
+[gd_scene format=3 uid="uid://bny4uuxa51leo"]
+
+[ext_resource type="Texture2D" uid="uid://bgb5rrvvsrc5a" path="res://forgbody.svg" id="1_6ekd3"]
+[ext_resource type="Script" uid="uid://eutuimbplp5y" path="res://frog.gd" id="1_j38ec"]
+[ext_resource type="Texture2D" uid="uid://bngyl6we7qexy" path="res://forgleg.svg" id="2_slgur"]
+[ext_resource type="PackedScene" uid="uid://ch0ge4n475sga" path="res://wart.tscn" id="3_byod8"]
+[ext_resource type="PackedScene" uid="uid://clbgrt47dcs2a" path="res://zoomarea.tscn" id="3_slgur"]
+[ext_resource type="Texture2D" uid="uid://63wefvgi2bxu" path="res://tounge.svg" id="6_5cyyp"]
+
+[sub_resource type="Animation" id="Animation_byod8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Forgleg3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Forgleg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Forgleg:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Forgleg4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Forgbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Tounge:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1372, 105)]
+}
+
+[sub_resource type="Animation" id="Animation_j38ec"]
+resource_name = "frog"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Forgleg3:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Forgleg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.2617993877991494]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Forgleg:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Forgleg4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Forgbody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 25)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Tounge:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1372, 105)]
+}
+
+[sub_resource type="Animation" id="Animation_rd326"]
+resource_name = "supertounge"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tounge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1372, 105), Vector2(6700, 979), Vector2(1372, 105)]
+}
+
+[sub_resource type="Animation" id="Animation_cvt0w"]
+resource_name = "tounge"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tounge:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(9.125, 9.25, 9.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1372, 105), Vector2(7000, 797), Vector2(1372, 105)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cyyp"]
+_data = {
+&"RESET": SubResource("Animation_byod8"),
+&"frog": SubResource("Animation_j38ec"),
+&"supertounge": SubResource("Animation_rd326"),
+&"tounge": SubResource("Animation_cvt0w")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40hiu"]
+size = Vector2(2217, 4792)
+
+[node name="Node2D" type="Node2D" unique_id=1645655779]
+scale = Vector2(-1, 1)
+script = ExtResource("1_j38ec")
+
+[node name="Area2D" parent="." unique_id=1193448295 instance=ExtResource("3_slgur")]
+position = Vector2(-76, 76)
+scale = Vector2(15, 15)
+
+[node name="Forgbody" type="Sprite2D" parent="." unique_id=92088134]
+z_index = -5
+texture = ExtResource("1_6ekd3")
+
+[node name="Forgleg" type="Sprite2D" parent="." unique_id=573806984]
+z_index = -5
+position = Vector2(-2985.0002, 2999.0002)
+texture = ExtResource("2_slgur")
+
+[node name="Forgleg4" type="Sprite2D" parent="." unique_id=916573938]
+z_index = -5
+position = Vector2(-4742, 2736)
+texture = ExtResource("2_slgur")
+
+[node name="Forgleg3" type="Sprite2D" parent="." unique_id=2040426416]
+z_index = -5
+position = Vector2(3477, 2976)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_slgur")
+
+[node name="StaticBody2D3" parent="Forgleg3" unique_id=548967263 instance=ExtResource("3_byod8")]
+position = Vector2(-90.00011, 79.999886)
+
+[node name="StaticBody2D" parent="Forgleg3" unique_id=2044876368 instance=ExtResource("3_byod8")]
+position = Vector2(47.18329, -305.653)
+
+[node name="StaticBody2D2" parent="Forgleg3" unique_id=1296452008 instance=ExtResource("3_byod8")]
+position = Vector2(-283.00012, 1080)
+
+[node name="StaticBody2D4" parent="Forgleg3" unique_id=1123517539 instance=ExtResource("3_byod8")]
+position = Vector2(-1087.9999, 958.0001)
+
+[node name="StaticBody2D5" parent="Forgleg3" unique_id=1599289898 instance=ExtResource("3_byod8")]
+position = Vector2(-390.00006, 539.99994)
+
+[node name="Forgleg2" type="Sprite2D" parent="." unique_id=489064232]
+z_index = -6
+position = Vector2(1051, 2776)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_slgur")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=897355125]
+libraries/ = SubResource("AnimationLibrary_5cyyp")
+autoplay = &"frog"
+
+[node name="StaticBody2D6" parent="." unique_id=763056384 instance=ExtResource("3_byod8")]
+position = Vector2(-430, -873)
+
+[node name="StaticBody2D7" parent="." unique_id=1120800291 instance=ExtResource("3_byod8")]
+position = Vector2(554, -697)
+
+[node name="StaticBody2D8" parent="." unique_id=2063695326 instance=ExtResource("3_byod8")]
+position = Vector2(-3202, -497)
+
+[node name="StaticBody2D9" parent="." unique_id=1353656384 instance=ExtResource("3_byod8")]
+position = Vector2(-2251, -708)
+
+[node name="StaticBody2D10" parent="." unique_id=860584376 instance=ExtResource("3_byod8")]
+position = Vector2(-586, 552)
+
+[node name="StaticBody2D11" parent="." unique_id=963614537 instance=ExtResource("3_byod8")]
+position = Vector2(1549, 127)
+
+[node name="StaticBody2D13" parent="." unique_id=777653196 instance=ExtResource("3_byod8")]
+position = Vector2(358, 577)
+
+[node name="StaticBody2D14" parent="." unique_id=1090921914 instance=ExtResource("3_byod8")]
+position = Vector2(-2030, 395)
+
+[node name="StaticBody2D15" parent="." unique_id=1171887149 instance=ExtResource("3_byod8")]
+position = Vector2(-961, 378)
+
+[node name="StaticBody2D16" parent="." unique_id=729581627 instance=ExtResource("3_byod8")]
+position = Vector2(-1028, -860)
+
+[node name="StaticBody2D17" parent="." unique_id=801534871 instance=ExtResource("3_byod8")]
+position = Vector2(197, -927)
+
+[node name="StaticBody2D18" parent="." unique_id=1845922290 instance=ExtResource("3_byod8")]
+position = Vector2(4613, -207)
+
+[node name="StaticBody2D20" parent="." unique_id=487251684 instance=ExtResource("3_byod8")]
+position = Vector2(1167, -591)
+
+[node name="StaticBody2D21" parent="." unique_id=1545026380 instance=ExtResource("3_byod8")]
+position = Vector2(2511, -903)
+
+[node name="StaticBody2D22" parent="." unique_id=542233126 instance=ExtResource("3_byod8")]
+position = Vector2(2307, -392)
+
+[node name="StaticBody2D23" parent="." unique_id=162382321 instance=ExtResource("3_byod8")]
+position = Vector2(2852, 214)
+
+[node name="StaticBody2D24" parent="." unique_id=2096227021 instance=ExtResource("3_byod8")]
+position = Vector2(4269, -780)
+
+[node name="StaticBody2D25" parent="." unique_id=1616748049 instance=ExtResource("3_byod8")]
+position = Vector2(2426, 630)
+
+[node name="StaticBody2D26" parent="." unique_id=1166057660 instance=ExtResource("3_byod8")]
+position = Vector2(3964, 659)
+
+[node name="StaticBody2D27" parent="." unique_id=2070075383 instance=ExtResource("3_byod8")]
+position = Vector2(3167, 1937)
+
+[node name="StaticBody2D28" parent="." unique_id=848550053 instance=ExtResource("3_byod8")]
+position = Vector2(-1645, 1101)
+
+[node name="StaticBody2D32" parent="." unique_id=1568124875 instance=ExtResource("3_byod8")]
+position = Vector2(2747, 1672)
+
+[node name="StaticBody2D34" parent="." unique_id=2125841452 instance=ExtResource("3_byod8")]
+position = Vector2(965, 760)
+
+[node name="Timer" type="Timer" parent="." unique_id=2092922864]
+wait_time = 3.0
+one_shot = true
+
+[node name="StaticBody2D" parent="." unique_id=1196642579 instance=ExtResource("3_byod8")]
+position = Vector2(1888, 1192)
+
+[node name="StaticBody2D4" parent="." unique_id=1219204973 instance=ExtResource("3_byod8")]
+position = Vector2(-2869, 769)
+
+[node name="StaticBody2D29" parent="." unique_id=522185000 instance=ExtResource("3_byod8")]
+position = Vector2(-1964, 1306)
+
+[node name="StaticBody2D35" parent="." unique_id=1710810975 instance=ExtResource("3_byod8")]
+position = Vector2(-2305, 1458)
+
+[node name="StaticBody2D36" parent="." unique_id=1360105313 instance=ExtResource("3_byod8")]
+position = Vector2(-2672, 1619)
+
+[node name="StaticBody2D37" parent="." unique_id=1523568166 instance=ExtResource("3_byod8")]
+position = Vector2(-1767, -297)
+
+[node name="StaticBody2D38" parent="." unique_id=987790888 instance=ExtResource("3_byod8")]
+position = Vector2(-3569, 1156)
+
+[node name="StaticBody2D40" parent="." unique_id=1800578693 instance=ExtResource("3_byod8")]
+position = Vector2(-4140, 1773)
+
+[node name="StaticBody2D41" parent="." unique_id=422062918 instance=ExtResource("3_byod8")]
+position = Vector2(-4475, 2364)
+
+[node name="StaticBody2D42" parent="." unique_id=1621486154 instance=ExtResource("3_byod8")]
+position = Vector2(-4790, 2767)
+
+[node name="StaticBody2D43" parent="." unique_id=1795463448 instance=ExtResource("3_byod8")]
+position = Vector2(-4574, 3418)
+
+[node name="StaticBody2D44" parent="." unique_id=1017118868 instance=ExtResource("3_byod8")]
+position = Vector2(-5125, 3487)
+
+[node name="StaticBody2D45" parent="." unique_id=1985125714 instance=ExtResource("3_byod8")]
+position = Vector2(-5775, 3575)
+
+[node name="Tounge" type="Sprite2D" parent="." unique_id=1703558012]
+z_index = -99
+position = Vector2(1372, 105)
+scale = Vector2(-2, -2)
+texture = ExtResource("6_5cyyp")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=1298193542]
+libraries/ = SubResource("AnimationLibrary_5cyyp")
+autoplay = &"tounge"
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=197814201]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1115228207]
+position = Vector2(5095.5, -35)
+shape = SubResource("RectangleShape2D_40hiu")
+
+[node name="Timer2" type="Timer" parent="." unique_id=700630856]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

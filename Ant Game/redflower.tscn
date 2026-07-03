@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://c1vpw2uasbhd0"]
+
+[ext_resource type="Script" uid="uid://5qfuutoysetq" path="res://flower.gd" id="1_vgh2w"]
+[ext_resource type="Texture2D" uid="uid://idvkmlae41kn" path="res://stem.svg" id="2_w76p1"]
+[ext_resource type="Texture2D" uid="uid://chtojy43a33d4" path="res://petal.svg" id="3_beddy"]
+[ext_resource type="Texture2D" uid="uid://dwy5grggjgxf7" path="res://petal2.svg" id="4_qjr8t"]
+[ext_resource type="Texture2D" uid="uid://dfbm8xfsny5do" path="res://petal3.svg" id="5_th31p"]
+[ext_resource type="Texture2D" uid="uid://da0auo717hotd" path="res://pollen.svg" id="6_0ewpd"]
+
+[sub_resource type="Animation" id="Animation_fb224"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Petal:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Petal4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Petal3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Petal6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Petal5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Petal2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1gdcy"]
+resource_name = "sway"
+length = 24.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Petal:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.17453292]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Petal4:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.17453292]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Petal3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.17453292, 0.17453292]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Petal6:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, -0.17453292]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Petal5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, -0.17453292]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Node2D/Petal2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, -0.17453292]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1omfy"]
+_data = {
+&"RESET": SubResource("Animation_fb224"),
+&"sway": SubResource("Animation_1gdcy")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5hw8"]
+size = Vector2(32, 277)
+
+[node name="Area2D" type="Area2D" unique_id=170782606]
+z_index = -12
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("1_vgh2w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=676889901]
+libraries/ = SubResource("AnimationLibrary_1omfy")
+autoplay = &"sway"
+
+[node name="Stem" type="Sprite2D" parent="." unique_id=1757616373]
+texture = ExtResource("2_w76p1")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=192047377]
+modulate = Color(1, 0, 0, 1)
+
+[node name="Petal" type="Sprite2D" parent="Node2D" unique_id=1826090629]
+position = Vector2(-10, -139)
+texture = ExtResource("3_beddy")
+
+[node name="Petal2" type="Sprite2D" parent="Node2D" unique_id=327033986]
+position = Vector2(16, -140)
+scale = Vector2(-1, 1)
+texture = ExtResource("3_beddy")
+
+[node name="Petal5" type="Sprite2D" parent="Node2D" unique_id=1953312088]
+z_index = 1
+position = Vector2(26, -142)
+scale = Vector2(-1, 1)
+texture = ExtResource("4_qjr8t")
+
+[node name="Petal3" type="Sprite2D" parent="Node2D" unique_id=406164397]
+z_index = 1
+position = Vector2(-19, -144)
+texture = ExtResource("4_qjr8t")
+
+[node name="Petal4" type="Sprite2D" parent="Node2D" unique_id=1669787552]
+z_index = 2
+position = Vector2(-30, -146)
+texture = ExtResource("5_th31p")
+
+[node name="Petal6" type="Sprite2D" parent="Node2D" unique_id=2002153384]
+z_index = 2
+position = Vector2(37, -145)
+scale = Vector2(-1, 1)
+texture = ExtResource("5_th31p")
+
+[node name="Pollen" type="Sprite2D" parent="." unique_id=1982804563]
+position = Vector2(3, -123)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_0ewpd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=924347871]
+z_index = -99
+position = Vector2(2, -35.5)
+shape = SubResource("RectangleShape2D_m5hw8")
+
+[node name="Timer" type="Timer" parent="." unique_id=977504236]
+wait_time = 60.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

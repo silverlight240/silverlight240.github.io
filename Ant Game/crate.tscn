@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cx45jdqnwutt6"]
+
+[ext_resource type="Texture2D" uid="uid://bo6q8x47xutgp" path="res://crate.svg" id="1_uep05"]
+
+[sub_resource type="Animation" id="Animation_uep05"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mo0jf"]
+resource_name = "bob up and down"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -33.333), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ggnq6"]
+_data = {
+&"RESET": SubResource("Animation_uep05"),
+&"bob up and down": SubResource("Animation_mo0jf")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1541996115]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=41580771]
+
+[node name="Crate" type="Sprite2D" parent="StaticBody2D" unique_id=1990999480]
+rotation = 0.55850536
+scale = Vector2(1, 1.2740867)
+texture = ExtResource("1_uep05")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=184676807]
+z_index = -999
+position = Vector2(-562, 647.1012)
+scale = Vector2(15, 15)
+polygon = PackedVector2Array(-51, -423, 404, -150, 138, 315, -331, 60)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=73743119]
+libraries/ = SubResource("AnimationLibrary_ggnq6")

@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://dmu6yfhwrjpbk"]
+
+[ext_resource type="Script" uid="uid://b0urfe1lv0uec" path="res://nuke.gd" id="1_3mwdu"]
+[ext_resource type="Texture2D" uid="uid://cxtoo1oyt6gx3" path="res://nuke.svg" id="1_tceaf"]
+[ext_resource type="Texture2D" uid="uid://bxomdgb7f15mi" path="res://exposiion.svg" id="3_og4ry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvcs2"]
+radius = 199.11052
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mwdu"]
+size = Vector2(661, 767)
+
+[sub_resource type="Animation" id="Animation_q5itk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exposiion:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exposiion:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_spn85"]
+resource_name = "expode"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exposiion:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(80, 80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exposiion:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eo3ic"]
+_data = {
+&"RESET": SubResource("Animation_q5itk"),
+&"expode": SubResource("Animation_spn85")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_3mwdu"]
+font_size = 48
+font_color = Color(0.18431373, 1, 0, 1)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1613498538]
+mass = 0.01
+script = ExtResource("1_3mwdu")
+
+[node name="Nuke" type="Sprite2D" parent="." unique_id=1156943800]
+modulate = Color(0.31380656, 0.2976344, 0.2976344, 1)
+position = Vector2(0, -1)
+texture = ExtResource("1_tceaf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2039920175]
+shape = SubResource("CircleShape2D_gvcs2")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1261757671]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=698511734]
+position = Vector2(-7.5, -31.5)
+shape = SubResource("RectangleShape2D_3mwdu")
+
+[node name="Exposiion" type="Sprite2D" parent="." unique_id=1233695215]
+modulate = Color(6.9081635, 6.9081635, 6.9081635, 1)
+z_index = 1
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_og4ry")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1342121069]
+libraries/ = SubResource("AnimationLibrary_eo3ic")
+
+[node name="Timer" type="Timer" parent="." unique_id=744943459]
+wait_time = 0.5
+
+[node name="Label" type="Label" parent="." unique_id=1883211599]
+modulate = Color(0.5649617, 0.5649616, 0.5649616, 1)
+offset_left = -115.0
+offset_top = -120.0
+offset_right = 102.0
+offset_bottom = -97.0
+text = "Nuke"
+label_settings = SubResource("LabelSettings_3mwdu")
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
