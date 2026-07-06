@@ -1,5 +1,5 @@
 extends Control
-var opened = false
+var opened: bool = false
 var helditem: Item = null
 @export var inventory: Inventory
 func _ready() -> void:

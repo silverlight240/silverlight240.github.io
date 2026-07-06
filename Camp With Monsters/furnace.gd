@@ -27,7 +27,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					thing += 1
 func _on_button_pressed(recipe: Recipe):
 	print(recipe)
-	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindEmptySlot()] = recipe.item
+	get_tree().get_first_node_in_group("player").Dropitem(recipe.item.name,recipe.item.amount)
 	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount -= recipe.Require[0].QuantityWanted
 	for i in $ScrollContainer/VBoxContainer.get_children():
 		i.queue_free()

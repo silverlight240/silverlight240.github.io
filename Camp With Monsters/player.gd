@@ -5,6 +5,7 @@ var axeing: bool = false
 var item: String = "axe"
 var pickaxeing: bool = false
 var swording: bool = false
+var furnacing = false
 func _ready() -> void:
 	DropItem("Axe",1)
 	$Area2D.monitoring = false
@@ -21,7 +22,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("space"):
 		if item == "axe":
 			axeing = true
-			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
+			if (not $Timer.time_left < 0.49) or $Timer.is_stopped():
 				$Timer.start()
 			$Area2D.monitoring = true
 			if direction.x == 1:
@@ -36,17 +37,15 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("AxeFront")
 				$AnimatedSprite2D.flip_h = true
 		elif item == "furnace":
-			var i = -1
-			for item in $Control.inventory.items:
-				i += 1
-				if item != null:
-					if item.name == "Furnace":
-						$Control.inventory.items[i] = null
-			var furnace = load("res://Furnace.tscn")
-			var spawn = furnace.instantiate()
-			spawn.global_position = global_position
-			get_parent().add_child(spawn)
-			item = "axe"
+			if not furnacing:
+				if not DropItem("Furnace",-1):
+					item = "axe"
+				var furnace = load("res://Furnace.tscn")
+				var spawn = furnace.instantiate()
+				spawn.global_position = global_position
+				get_parent().add_child(spawn)
+				furnacing = true
+				$Timer.start()
 		elif item == "sword":
 			swording = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
@@ -99,6 +98,7 @@ func _on_timer_timeout() -> void:
 	axeing = false
 	swording = false
 	pickaxeing = false
+	furnacing = false
 	if not Input.is_action_pressed("space"):
 		$AnimatedSprite2D.play("Front of player")
 	$Area2D.monitoring = false
@@ -142,11 +142,12 @@ func DropItem(x:String,y:int):
 		if i != null:
 			if i.name == (load("res://" + x + ".tres").name):
 				$Control.inventory.items[slot].amount += y
-				return
+				return true
 	slot = -1
 	for i in $Control.inventory.items:
 		slot += 1
 		if i == null:
 			$Control.inventory.items[slot] = (load("res://" + x + ".tres")).duplicate()
+			$Control.inventory.items[slot].amount = y
 			print($Control.inventory.items)
-			return
+			return false

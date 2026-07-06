@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="2_p27tm"]
 [ext_resource type="Script" uid="uid://carlxm0hkeojk" path="res://inventory.gd" id="4_5vkqp"]
 [ext_resource type="Texture2D" uid="uid://cco64f7dasvqw" path="res://inventory.png" id="5_0byjc"]
-[ext_resource type="Script" uid="uid://h0iu0c71tc2" path="res://Slot.gd" id="6_8gvmr"]
 [ext_resource type="Texture2D" uid="uid://dfujlmf725isb" path="res://inventoryslot.png" id="7_8gvmr"]
 [ext_resource type="PackedScene" uid="uid://bbig4k5u5hfot" path="res://Slot.tscn" id="9_d3j2i"]
 
@@ -47,61 +46,49 @@ columns = 4
 
 [node name="TextureButton" parent="Panel/GridContainer" unique_id=1961916194 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 
 [node name="TextureButton2" parent="Panel/GridContainer" unique_id=880244377 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 1
 
 [node name="TextureButton3" parent="Panel/GridContainer" unique_id=121160373 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 2
 
 [node name="TextureButton4" parent="Panel/GridContainer" unique_id=660322945 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 3
 
 [node name="TextureButton5" parent="Panel/GridContainer" unique_id=52437892 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 4
 
 [node name="TextureButton6" parent="Panel/GridContainer" unique_id=598778517 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 4
 
 [node name="TextureButton7" parent="Panel/GridContainer" unique_id=2043251365 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 6
 
 [node name="TextureButton8" parent="Panel/GridContainer" unique_id=1150765584 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 7
 
 [node name="TextureButton9" parent="Panel/GridContainer" unique_id=1760701234 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 8
 
 [node name="TextureButton10" parent="Panel/GridContainer" unique_id=1202817688 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 9
 
 [node name="TextureButton11" parent="Panel/GridContainer" unique_id=623643217 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 10
 
 [node name="TextureButton12" parent="Panel/GridContainer" unique_id=25526641 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-script = ExtResource("6_8gvmr")
 slot = 11
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1033479434]
