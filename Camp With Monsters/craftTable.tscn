@@ -6,6 +6,21 @@
 [ext_resource type="Resource" uid="uid://d3hfa5y3o35yg" path="res://WoodSwordRecipe.tres" id="2_liku3"]
 [ext_resource type="Resource" uid="uid://bwemifvcmv6v2" path="res://Wodd Pickacks Recype.tres" id="4_n3lx2"]
 [ext_resource type="Resource" uid="uid://dmw5bani318ln" path="res://FurnaceRecipe.tres" id="5_cpit6"]
+[ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="6_dx17x"]
+[ext_resource type="Resource" uid="uid://daj8l5k7yycle" path="res://PurpleJelly.tres" id="7_2m2hr"]
+[ext_resource type="Resource" uid="uid://dqu8raxx18b4l" path="res://PurpleSword.tres" id="8_nja46"]
+
+[sub_resource type="Resource" id="Resource_jidw8"]
+script = ExtResource("6_dx17x")
+QuantityWanted = 3
+item = ExtResource("7_2m2hr")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_pv152"]
+script = ExtResource("2_gpql4")
+item = ExtResource("8_nja46")
+Require = Array[ExtResource("6_dx17x")]([SubResource("Resource_jidw8")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekoch"]
 radius = 402.6475
@@ -86,7 +101,7 @@ size = Vector2(229, 134)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1799246534]
 script = ExtResource("1_ekoch")
-recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2"), ExtResource("5_cpit6")])
+recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2"), ExtResource("5_cpit6"), SubResource("Resource_pv152")])
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1832808069]
 

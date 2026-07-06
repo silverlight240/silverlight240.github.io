@@ -62,6 +62,22 @@ func _physics_process(delta: float) -> void:
 			if direction.y == 1:
 				$AnimatedSprite2D.play("swordfront")
 				$AnimatedSprite2D.flip_h = true
+		elif item == "Purplesword":
+			swording = true
+			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
+				$Timer.start()
+			$Area2D.monitoring = true
+			if direction.x == 1:
+				$AnimatedSprite2D.play("SwordSideObsidion")
+				$AnimatedSprite2D.flip_h = false
+			if direction.x == -1:
+				$AnimatedSprite2D.play("SwordSideObsidion")
+				$AnimatedSprite2D.flip_h = true
+			if direction.y == -1:
+				$AnimatedSprite2D.play("SwordBackObsidion")
+			if direction.y == 1:
+				$AnimatedSprite2D.play("SwordFrontObsidion")
+				$AnimatedSprite2D.flip_h = true
 		elif item == "pickaxe":
 			pickaxeing = true
 			if (not $Timer.time_left < 0.99) or $Timer.is_stopped():
@@ -92,7 +108,7 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.play("Front of player")
 				$AnimatedSprite2D.flip_h = true
 			move_and_slide()
-#
+
 
 func _on_timer_timeout() -> void:
 	axeing = false
@@ -128,6 +144,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					body.hp -= 2
 					if body.hp < 1:
 						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
+						body.queue_free()
+			if item == "Purplesword":
+				if body.is_in_group("slime"):
+					body.hp -= 5
+					if body.hp < 1:
+						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
 						body.queue_free()
 			if item == "pickaxe":
 				if body.is_in_group("Rock"):

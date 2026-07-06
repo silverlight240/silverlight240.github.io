@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dqu8raxx18b4l"]
+
+[ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="1_ahbav"]
+[ext_resource type="Texture2D" uid="uid://dlq2qwr6wy5nn" path="res://PurpleSword.png" id="2_xm3eb"]
+
+[resource]
+script = ExtResource("1_ahbav")
+name = "PurpleSword"
+texture = ExtResource("2_xm3eb")
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"

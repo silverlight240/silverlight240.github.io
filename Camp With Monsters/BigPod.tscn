@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://hgj68b1t0e87"]
+
+[ext_resource type="Script" uid="uid://33txjtgp3n4v" path="res://pod.gd" id="1_vex75"]
+[ext_resource type="Texture2D" uid="uid://cn7f1ek4nrev6" path="res://Exploding_Pod.png" id="2_bx5rn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0kku"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1yhk"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lt0rs"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4om5d"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjnku"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apvgh"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0a3e"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(1920, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0osg4"]
+atlas = ExtResource("2_bx5rn")
+region = Rect2(2240, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7cxqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0kku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1yhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lt0rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4om5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjnku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apvgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0a3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0osg4")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 8.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1307965201]
+modulate = Color(0.32544088, 0.3254409, 0.32544088, 1)
+scale = Vector2(1.7, 1.7)
+script = ExtResource("1_vex75")
+slimesize = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=11663476]
+sprite_frames = SubResource("SpriteFrames_7cxqt")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.31536964
+speed_scale = -1.0
+
+[node name="Timer" type="Timer" parent="." unique_id=1985772766]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

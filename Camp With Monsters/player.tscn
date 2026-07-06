@@ -14,6 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cgrdkswm2k73h" path="res://InventoryUi.tscn" id="9_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://d1ul5yr777b64" path="res://SidePickaxe.png" id="9_u1c27"]
 [ext_resource type="Texture2D" uid="uid://ccejt7wite8k7" path="res://swordback.png" id="9_urp6f"]
+[ext_resource type="Texture2D" uid="uid://bi5k366ki3vn0" path="res://swordbackObsiion.png" id="10_op7ga"]
+[ext_resource type="Texture2D" uid="uid://orkddrojtqtr" path="res://PlayerSwordObsidianFront.png" id="11_q13i1"]
+[ext_resource type="Texture2D" uid="uid://cdcv7xtidsaen" path="res://SwordsideObsiioin.png" id="12_pylmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfour"]
 atlas = ExtResource("2_1jxqw")
@@ -245,6 +248,74 @@ region = Rect2(1280, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a5i73"]
 atlas = ExtResource("9_u1c27")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7swm"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(0, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bobas"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(160, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmuuc"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(320, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6q74"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(480, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhe1y"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(640, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jk4c"]
+atlas = ExtResource("10_op7ga")
+region = Rect2(800, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hr8l"]
+atlas = ExtResource("11_q13i1")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2etn"]
+atlas = ExtResource("11_q13i1")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgqxi"]
+atlas = ExtResource("11_q13i1")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_api4a"]
+atlas = ExtResource("11_q13i1")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o67lt"]
+atlas = ExtResource("11_q13i1")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xvhe"]
+atlas = ExtResource("12_pylmc")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yelk6"]
+atlas = ExtResource("12_pylmc")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3rbc"]
+atlas = ExtResource("12_pylmc")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wr1b"]
+atlas = ExtResource("12_pylmc")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cye81"]
+atlas = ExtResource("12_pylmc")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mftst"]
+atlas = ExtResource("12_pylmc")
 region = Rect2(1600, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6w8y"]
@@ -664,6 +735,72 @@ animations = [{
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7swm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bobas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmuuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6q74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhe1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jk4c")
+}],
+"loop": true,
+"name": &"SwordBackObsidion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hr8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2etn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgqxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_api4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o67lt")
+}],
+"loop": true,
+"name": &"SwordFrontObsidion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xvhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yelk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3rbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wr1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cye81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mftst")
+}],
+"loop": true,
+"name": &"SwordSideObsidion",
+"speed": 10.0
+}, {
+"frames": [{
 "duration": 3.0,
 "texture": SubResource("AtlasTexture_h6w8y")
 }, {
@@ -765,6 +902,11 @@ animations = [{
 "name": &"Swordside",
 "speed": 10.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j5n4i")
@@ -853,10 +995,9 @@ script = ExtResource("1_hqtel")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=965911469]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_bfour")
-animation = &"PickAxeFront"
+animation = &"SwordBackObsidion"
 autoplay = "Front of player"
-frame = 1
-frame_progress = 0.7503145
+frame_progress = 0.6954228
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960748539]
 y_sort_enabled = true

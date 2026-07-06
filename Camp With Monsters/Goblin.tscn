@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://d2h7g1iwwca4v"]
+
+[ext_resource type="Script" uid="uid://n510vkq6bh0s" path="res://goblin.gd" id="1_r0bjo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppcr1"]
+radius = 1619.2844
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2002g"]
+radius = 29.15476
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jayke"]
+radius = 26.076809
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bratd"]
+radius = 907.00055
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1340676939]
+script = ExtResource("1_r0bjo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=146597665]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=400348662]
+shape = SubResource("CircleShape2D_ppcr1")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1697048545]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1182477639]
+shape = SubResource("CircleShape2D_2002g")
+
+[node name="Timer" type="Timer" parent="." unique_id=1831508689]
+wait_time = 7.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=230545298]
+shape = SubResource("CircleShape2D_jayke")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=572841664]
+modulate = Color(18.892157, 0, 0, 1)
+offset_left = -26.0
+offset_top = -55.0
+offset_right = 30.0
+offset_bottom = -28.0
+max_value = 6.0
+show_percentage = false
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=312399342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1352571735]
+shape = SubResource("CircleShape2D_bratd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=852772826]
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = 22.0
+color = Color(0.18039216, 0.47058824, 0.11372549, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1825869526]
+offset_left = -20.0
+offset_top = -27.0
+offset_right = -6.0
+offset_bottom = -12.0
+pivot_offset = Vector2(43, 3)
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1088653619]
+offset_left = 6.0
+offset_top = -27.0
+offset_right = 20.0
+offset_bottom = -12.0
+pivot_offset = Vector2(43, 3)
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_exited" from="Area2D3" to="." method="_on_area_2d_3_body_exited"]
