@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ngnbyouqubi6"]
+
+[ext_resource type="PackedScene" uid="uid://cf2twot6sjqav" path="res://collum.tscn" id="1_dtouc"]
+[ext_resource type="PackedScene" uid="uid://c0r82u1yufeqa" path="res://block of grass.tscn" id="2_gl2gx"]
+
+[node name="Node2D" type="Node2D" unique_id=1127227425]
+z_index = 4
+
+[node name="Node2D" parent="." unique_id=108488086 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="." unique_id=739562135 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1846499210]
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2" unique_id=1205779975 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2" unique_id=1825079012 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="Node2D2" unique_id=1911216018]
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2/Node2D2" unique_id=264137743 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2/Node2D2" unique_id=1276808751 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="Node2D2/Node2D2" unique_id=1897724247]
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2/Node2D2/Node2D2" unique_id=389227950 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2/Node2D2/Node2D2" unique_id=262061038 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="Node2D2/Node2D2/Node2D2" unique_id=1319328406]
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1373287994 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2/Node2D2/Node2D2/Node2D2" unique_id=487513039 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="Node2D2/Node2D2/Node2D2/Node2D2" unique_id=428603185]
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1881754481 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1963293505 instance=ExtResource("2_gl2gx")]
+
+[node name="Node2D2" type="Node2D" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=99637465]
+z_as_relative = false
+position = Vector2(-210, 0)
+
+[node name="Node2D" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=336227692 instance=ExtResource("1_dtouc")]
+position = Vector2(0, 191)
+
+[node name="StaticBody2D" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=66854861 instance=ExtResource("2_gl2gx")]

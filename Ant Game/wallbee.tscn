@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://1fbmy2l1nh7f"]
+
+[ext_resource type="Texture2D" uid="uid://7f4n4b28hkep" path="res://beehivewallbase.svg" id="1_m78ly"]
+[ext_resource type="Texture2D" uid="uid://dljoprlmsj0ui" path="res://tiles/behivewalleverythingelse.svg" id="2_nqijq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q37u1"]
+size = Vector2(419, 400)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1681844016]
+z_as_relative = false
+
+[node name="Beehivewallbase" type="Sprite2D" parent="." unique_id=545366587]
+z_as_relative = false
+texture = ExtResource("1_m78ly")
+
+[node name="Behivewalleverythingelse" type="Sprite2D" parent="." unique_id=1916932681]
+z_index = 1
+z_as_relative = false
+position = Vector2(0, -1)
+texture = ExtResource("2_nqijq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1008456830]
+z_index = -40
+z_as_relative = false
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_q37u1")

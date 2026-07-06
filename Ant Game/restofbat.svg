@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.676579mm"
+   height="54.836422mm"
+   viewBox="0 0 56.676579 54.836422"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="restofbat.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="56.676579"
+       height="54.836422"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch6"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff0606;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch6"
+       id="linearGradient6"
+       x1="84.39286"
+       y1="125.99765"
+       x2="94.643852"
+       y2="125.99765"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-76.918221,-99.736061)">
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       id="path1"
+       cx="105.25651"
+       cy="127.15427"
+       rx="28.338289"
+       ry="27.418215" />
+    <path
+       style="fill:url(#linearGradient6);fill-rule:nonzero;stroke-width:0.265;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 92.152291,120.13219 c 4.796291,6.29598 1.191927,11.73092 1.191927,11.73092 l -8.951361,-4.69033 z"
+       id="path3"
+       inkscape:transform-center-x="-8.3275624"
+       inkscape:transform-center-y="-0.78070897" />
+  </g>
+</svg>

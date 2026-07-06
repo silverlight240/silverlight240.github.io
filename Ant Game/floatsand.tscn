@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b8eruflwfgfcd"]
+
+[ext_resource type="PackedScene" uid="uid://6a7a2p5g32g4" path="res://sandblock.tscn" id="1_ldist"]
+[ext_resource type="Script" uid="uid://cif5gare2qyfu" path="res://floatsand.gd" id="1_yp3pg"]
+
+[sub_resource type="Animation" id="Animation_yp3pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0l3qd"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -33.333), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pf52g"]
+_data = {
+&"RESET": SubResource("Animation_yp3pg"),
+&"float": SubResource("Animation_0l3qd")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1025134236]
+script = ExtResource("1_yp3pg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=397348802]
+libraries/ = SubResource("AnimationLibrary_pf52g")
+autoplay = &"float"
+
+[node name="StaticBody2D" parent="." unique_id=281919222 instance=ExtResource("1_ldist")]
+modulate = Color(0.34509805, 0.34509805, 0.1764706, 1)

@@ -1,0 +1,259 @@
+[gd_scene format=3 uid="uid://bfkt2qq75m3b3"]
+
+[ext_resource type="Texture2D" uid="uid://ctjtbljljo02n" path="res://queenbee.svg" id="1_dys4v"]
+[ext_resource type="Script" uid="uid://5t8tnpsbodym" path="res://queen_bee.gd" id="1_ghgx8"]
+[ext_resource type="Texture2D" uid="uid://da0auo717hotd" path="res://pollen.svg" id="3_0ha5c"]
+
+[sub_resource type="Animation" id="Animation_ghgx8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0ha5c"]
+resource_name = "new_animation"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -150)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7jkj1"]
+_data = {
+&"RESET": SubResource("Animation_ghgx8"),
+&"new_animation": SubResource("Animation_0ha5c")
+}
+
+[sub_resource type="Animation" id="Animation_0mgpo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2/Queenbee:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bnr5k"]
+resource_name = "rotate"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D2/Queenbee:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, -0.34906584]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hauoi"]
+_data = {
+&"RESET": SubResource("Animation_0mgpo"),
+&"rotate": SubResource("Animation_bnr5k")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dys4v"]
+size = Vector2(420, 325)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ghgx8"]
+font_size = 18
+outline_size = 3
+shadow_size = 32
+shadow_color = Color(0.60621303, 0.56454456, 0.1418308, 0.36078432)
+
+[sub_resource type="Animation" id="Animation_7jkj1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hauoi"]
+resource_name = "lable rotate"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033, 0.067),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.01745329251994329, -0.01745329251994329]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lqtjd"]
+_data = {
+&"RESET": SubResource("Animation_7jkj1"),
+&"lable rotate": SubResource("Animation_hauoi")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1268271006]
+z_index = 4
+script = ExtResource("1_ghgx8")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=649170311]
+
+[node name="Queenbee" type="Sprite2D" parent="Node2D2" unique_id=1012044293]
+texture = ExtResource("1_dys4v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=957819485]
+libraries/ = SubResource("AnimationLibrary_7jkj1")
+autoplay = &"new_animation"
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=589626517]
+libraries/ = SubResource("AnimationLibrary_hauoi")
+autoplay = &"rotate"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=500665534]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=451211594]
+position = Vector2(200, -36.5)
+shape = SubResource("RectangleShape2D_dys4v")
+
+[node name="Timer" type="Timer" parent="." unique_id=1176642096]
+wait_time = 5.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=958875909]
+position = Vector2(7, -194)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=810932303]
+z_index = 50
+offset_left = -751.0
+offset_top = -104.0
+offset_right = 752.0
+offset_bottom = -16.0
+text = " I Am Your Queen!"
+label_settings = SubResource("LabelSettings_ghgx8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="." unique_id=462257536]
+libraries/ = SubResource("AnimationLibrary_lqtjd")
+autoplay = &"lable rotate"
+
+[node name="Button" type="Button" parent="." unique_id=398090988]
+offset_left = -149.0
+offset_top = 55.0
+offset_right = -23.0
+offset_bottom = 86.0
+text = "Yes, Sure"
+
+[node name="Button2" type="Button" parent="." unique_id=1818252755]
+offset_left = -25.0
+offset_top = 55.0
+offset_right = 92.0
+offset_bottom = 86.0
+text = "No, It's Mine
+"
+
+[node name="Node2D3" type="Node2D" parent="." unique_id=1473325332]
+
+[node name="Pollen5" type="Sprite2D" parent="Node2D3" unique_id=1048056547]
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+z_index = 1
+position = Vector2(642, 451.59998)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[node name="Pollen4" type="Sprite2D" parent="Node2D3" unique_id=1870578251]
+modulate = Color(1.1291975, 1.1291975, 1.1291975, 1)
+z_index = 1
+position = Vector2(609, 502.59998)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[node name="Pollen6" type="Sprite2D" parent="Node2D3" unique_id=1048865714]
+modulate = Color(1.0845727, 1.0845727, 1.0845727, 1)
+z_index = 1
+position = Vector2(680, 505.59998)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[node name="Pollen" type="Sprite2D" parent="Node2D3" unique_id=1144431600]
+z_index = 1
+position = Vector2(636, 551.6)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[node name="Pollen2" type="Sprite2D" parent="Node2D3" unique_id=486496020]
+z_index = 1
+position = Vector2(698, 550.6)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[node name="Pollen3" type="Sprite2D" parent="Node2D3" unique_id=857661041]
+z_index = 1
+position = Vector2(579, 551.6)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_0ha5c")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

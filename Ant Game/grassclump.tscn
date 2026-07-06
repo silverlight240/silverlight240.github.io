@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ct7i2yt63efgw"]
+
+[ext_resource type="PackedScene" uid="uid://c0ey1ok10eved" path="res://grass.tscn" id="1_pxpsg"]
+
+[node name="Node2D" type="Node2D" unique_id=65466404]
+z_index = -7
+
+[node name="Node2D" parent="." unique_id=1433131803 instance=ExtResource("1_pxpsg")]
+z_index = 0
+z_as_relative = true
+position = Vector2(33, 42)
+
+[node name="Node2D2" parent="." unique_id=2090876312 instance=ExtResource("1_pxpsg")]
+z_index = 0
+z_as_relative = true
+position = Vector2(155, 41)
+
+[node name="Node2D3" parent="." unique_id=742972190 instance=ExtResource("1_pxpsg")]
+z_index = 0
+z_as_relative = true
+position = Vector2(221, 43)
+
+[node name="Node2D4" parent="." unique_id=923899683 instance=ExtResource("1_pxpsg")]
+z_index = 0
+z_as_relative = true
+position = Vector2(191, 47)
+
+[node name="Node2D5" parent="." unique_id=1469852789 instance=ExtResource("1_pxpsg")]
+z_index = 0
+z_as_relative = true
+position = Vector2(106, 41)

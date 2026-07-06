@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://nt15mfbhobyw"]
+
+[ext_resource type="Script" uid="uid://c85eccup1xbue" path="res://enemy.gd" id="1_epg4t"]
+[ext_resource type="Texture2D" uid="uid://wqk8q35vqcnl" path="res://enemyleg.svg" id="1_iifgy"]
+[ext_resource type="Texture2D" uid="uid://c1k6yux1uwyi3" path="res://enemybody.svg" id="2_epg4t"]
+[ext_resource type="Texture2D" uid="uid://uidgovtohxga" path="res://enemyhead.svg" id="3_3yqyl"]
+[ext_resource type="Texture2D" uid="uid://btamiptm0smsw" path="res://bodybackenenmy.svg" id="4_wujgv"]
+
+[sub_resource type="Animation" id="Animation_hb8ge"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Enemyleg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Enemyleg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.4790202]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Enemyhead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-79, -46)]
+}
+
+[sub_resource type="Animation" id="Animation_e1ltt"]
+resource_name = "walk"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node/Enemyleg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, -0.3490658503988659, -0.6981317, -0.34906584]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node/Enemyleg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.4790202, -1.0471976, -0.5235988, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node/Enemyhead:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-79, -46), Vector2(-100, -46), Vector2(-125, -46), Vector2(-80, -46)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dxifv"]
+_data = {
+&"RESET": SubResource("Animation_hb8ge"),
+&"walk": SubResource("Animation_e1ltt")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epg4t"]
+size = Vector2(350, 202)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epg4t"]
+radius = 108.0
+height = 330.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=989004308]
+collision_layer = 2
+script = ExtResource("1_epg4t")
+health = 4
+
+[node name="Node" type="Node2D" parent="." unique_id=1937873101]
+
+[node name="RayCast2D" type="RayCast2D" parent="Node" unique_id=1420654242]
+scale = Vector2(1, 10)
+target_position = Vector2(-448, 0.1875)
+hit_from_inside = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="Node" unique_id=584794269]
+position = Vector2(-131, -13)
+scale = Vector2(20, 20)
+target_position = Vector2(-27.3, 22.849998)
+hit_from_inside = true
+
+[node name="Bodybackenenmy" type="Sprite2D" parent="Node" unique_id=1481898707]
+position = Vector2(260, 25)
+scale = Vector2(0.6908832, 0.6899642)
+texture = ExtResource("4_wujgv")
+
+[node name="Enemyleg" type="Sprite2D" parent="Node" unique_id=2113897193]
+position = Vector2(-12, 135)
+texture = ExtResource("1_iifgy")
+
+[node name="Enemybody" type="Sprite2D" parent="Node" unique_id=534479687]
+position = Vector2(122, -7)
+texture = ExtResource("2_epg4t")
+
+[node name="Enemyhead" type="Sprite2D" parent="Node" unique_id=137064267]
+position = Vector2(-79, -46)
+texture = ExtResource("3_3yqyl")
+
+[node name="Enemyleg2" type="Sprite2D" parent="Node" unique_id=1913953625]
+position = Vector2(195, 123)
+rotation = -1.4790202
+texture = ExtResource("1_iifgy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2027586429]
+libraries/ = SubResource("AnimationLibrary_dxifv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=36806412]
+polygon = PackedVector2Array(-1, -137, -34, -190, -234, -24, -76, 99, -37, 77, 33, 115, 147, 72, 247, 123, 385, 19, 352, -74, 190, -126)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2070928711]
+position = Vector2(72, 91)
+shape = SubResource("RectangleShape2D_epg4t")
+
+[node name="Timer" type="Timer" parent="." unique_id=940732417]
+wait_time = 0.6
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1753452423]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=274974595]
+position = Vector2(85.00001, -5)
+rotation = 1.5669932
+scale = Vector2(1, 1.8004518)
+shape = SubResource("CapsuleShape2D_epg4t")
+
+[node name="Timer2" type="Timer" parent="." unique_id=693658737]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

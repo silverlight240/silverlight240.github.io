@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dtkv6w2x7spqa"]
+
+[ext_resource type="PackedScene" uid="uid://be3xekwwo2t8r" path="res://seaweed.tscn" id="1_k2dnk"]
+
+[node name="Node2D" type="Node2D" unique_id=1796894463]
+modulate = Color(1, 0.54901963, 0.25490198, 1)
+z_index = -10
+
+[node name="Node2D" parent="." unique_id=2083312131 instance=ExtResource("1_k2dnk")]
+position = Vector2(-19, 70)
+
+[node name="Node2D2" parent="." unique_id=1211677879 instance=ExtResource("1_k2dnk")]
+position = Vector2(371, 95)
+
+[node name="Node2D3" parent="." unique_id=1066602764 instance=ExtResource("1_k2dnk")]
+position = Vector2(284, 84)
+
+[node name="Node2D4" parent="." unique_id=633888480 instance=ExtResource("1_k2dnk")]
+position = Vector2(-55, 73)
+
+[node name="Node2D5" parent="." unique_id=321853840 instance=ExtResource("1_k2dnk")]
+position = Vector2(59, 69)
+
+[node name="Node2D6" parent="." unique_id=1745408896 instance=ExtResource("1_k2dnk")]
+position = Vector2(111, 78)
+
+[node name="Node2D7" parent="." unique_id=1686114210 instance=ExtResource("1_k2dnk")]
+position = Vector2(169, 81)

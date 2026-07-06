@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="89.052193mm"
+   height="76.050941mm"
+   viewBox="0 0 89.052193 76.050941"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="nuke.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="89.052193"
+       height="76.050941"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch5"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="swatch4"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="swatch3"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#444444;stop-opacity:1;"
+         offset="0"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient3"
+       x1="73.973961"
+       y1="184.93495"
+       x2="134.33084"
+       y2="184.93495"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient4"
+       x1="98.922623"
+       y1="155.47841"
+       x2="148.2887"
+       y2="155.47841"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch3"
+       id="linearGradient5"
+       x1="59.236492"
+       y1="156.50113"
+       x2="106.20641"
+       y2="156.50113"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-59.236494,-120.47696)">
+    <path
+       style="fill:url(#linearGradient4);fill-opacity:1;stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 98.922624,121.9713 39.761716,-1.49434 c 0,0 -3.14581,23.15939 7.12662,26.92918 10.27243,3.76979 -14.71756,41.82895 -14.71756,41.82895 l -26.14194,1.24477 z"
+       id="path2" />
+    <path
+       style="fill:url(#linearGradient5);fill-opacity:1;stroke-width:0.265311;paint-order:stroke fill markers"
+       d="m 106.20641,121.69226 -39.847859,1.68336 c 0,0 4.986032,22.83493 -4.977969,27.4125 -9.964008,4.57758 18.0338,40.52187 18.0338,40.52187 l 26.219448,-0.84528 z"
+       id="path2-8" />
+    <ellipse
+       style="fill:url(#linearGradient3);fill-opacity:1;stroke-width:0.281826;paint-order:stroke fill markers"
+       id="path3"
+       cx="104.1524"
+       cy="184.93495"
+       rx="30.178438"
+       ry="11.592937" />
+    <path
+       style="fill:#1ecd09;fill-opacity:1;stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 82.070632,157.1487 15.825277,-15.08922 6.256511,10.67286 17.29739,-13.24907 2.94424,9.56877 -20.24163,3.6803 -6.624541,12.14498 13.985131,-0.36803 -7.72862,-11.77695 z"
+       id="path5" />
+    <text
+       xml:space="preserve"
+       style="font-size:18.99px;writing-mode:lr-tb;direction:ltr;fill:#1ecd09;fill-opacity:1;stroke-width:1.58499;paint-order:stroke fill markers"
+       x="67.683777"
+       y="150.28653"
+       id="text5"
+       transform="scale(1.0842885,0.92226377)"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:1.585"
+         x="67.683777"
+         y="150.28653">Newk</tspan></text>
+  </g>
+</svg>

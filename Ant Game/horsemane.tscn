@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://4ws4x7s15iec"]
+
+[ext_resource type="Texture2D" uid="uid://cwne5ik0rrhy8" path="res://horsehair.svg" id="1_3d2ey"]
+[ext_resource type="Script" uid="uid://dj3e5pciu4g6k" path="res://horsemane.gd" id="1_aevo7"]
+
+[sub_resource type="Animation" id="Animation_aevo7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Horsehair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6thrt"]
+resource_name = "move"
+length = 18.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Horsehair:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292, -0.17453292]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dw4q4"]
+_data = {
+&"RESET": SubResource("Animation_aevo7"),
+&"move": SubResource("Animation_6thrt")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1763973404]
+z_index = -5
+script = ExtResource("1_aevo7")
+
+[node name="Horsehair" type="Sprite2D" parent="." unique_id=1803072951]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_3d2ey")
+offset = Vector2(-200, -250)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=63479447]
+libraries/ = SubResource("AnimationLibrary_dw4q4")
+autoplay = &"move"

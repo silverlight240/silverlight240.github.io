@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="19.257488mm"
+   height="18.346661mm"
+   viewBox="0 0 19.257488 18.346661"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="snug head.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="19.257488"
+       height="18.346661"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch5"
+       id="linearGradient5"
+       x1="118.928"
+       y1="137.33972"
+       x2="138.18549"
+       y2="137.33972"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-15.179301,6.9183938)" />
+    <linearGradient
+       id="swatch5"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#288736;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch6"
+       id="linearGradient6"
+       x1="124.26284"
+       y1="139.29149"
+       x2="128.68686"
+       y2="139.29149"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.2903226,-11.796231,-34.236716)" />
+    <linearGradient
+       id="swatch6"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-103.74871,-135.0848)">
+    <ellipse
+       style="fill:url(#linearGradient5);stroke-width:0.264999;paint-order:stroke fill markers"
+       id="path4"
+       cx="113.37744"
+       cy="144.25812"
+       rx="9.6287441"
+       ry="9.1733303" />
+    <ellipse
+       style="fill:url(#linearGradient6);stroke-width:0.301019;paint-order:stroke fill markers"
+       id="path5"
+       cx="114.67862"
+       cy="145.49422"
+       rx="2.2120087"
+       ry="2.6023631" />
+  </g>
+</svg>

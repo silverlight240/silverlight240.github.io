@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://dg4b71phvjiwr"]
+
+[ext_resource type="Texture2D" uid="uid://bygje6bjohps0" path="res://flywing.svg" id="1_g6vth"]
+[ext_resource type="Script" uid="uid://cvi6vurba3ktl" path="res://flynpc.gd" id="1_h76od"]
+[ext_resource type="Texture2D" uid="uid://w265rtfjcevg" path="res://flybody.svg" id="2_h76od"]
+
+[sub_resource type="Animation" id="Animation_wuss7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.7853982]
+}
+
+[sub_resource type="Animation" id="Animation_o7x70"]
+resource_name = "flap"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flywing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, -0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Flywing2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.7853982, 1.7453293]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v25te"]
+_data = {
+&"RESET": SubResource("Animation_wuss7"),
+&"flap": SubResource("Animation_o7x70")
+}
+
+[sub_resource type="FontFile" id="FontFile_g6vth"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_h76od"]
+font = SubResource("FontFile_g6vth")
+font_size = 48
+font_color = Color(1, 1, 0.30588236, 1)
+stacked_outline_count = 2
+stacked_shadow_count = 3
+stacked_outline_0/size = 8
+stacked_outline_1/size = 8
+stacked_outline_1/color = Color(1, 1, 1, 1)
+stacked_shadow_0/offset = Vector2(1, 1)
+stacked_shadow_0/color = Color(0, 0, 0, 0.9764706)
+stacked_shadow_0/outline_size = 10
+stacked_shadow_1/offset = Vector2(1, 1)
+stacked_shadow_1/color = Color(1, 0, 0, 1)
+stacked_shadow_1/outline_size = 20
+stacked_shadow_2/offset = Vector2(1, 1)
+stacked_shadow_2/color = Color(0, 0, 1, 1)
+stacked_shadow_2/outline_size = 30
+
+[sub_resource type="Animation" id="Animation_h76od"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Label:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_v25te"]
+resource_name = "textthing"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Label:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pxefm"]
+_data = {
+&"RESET": SubResource("Animation_h76od"),
+&"textthing": SubResource("Animation_v25te")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuss7"]
+size = Vector2(698, 602)
+
+[node name="Node2D" type="Node2D" unique_id=1041650862]
+script = ExtResource("1_h76od")
+line1 = "Hi I Am A Fly"
+line2 = "Do not die"
+line3 = "If you die this is why"
+line4 = "You did not kick the enemy in the Thigh"
+line5 = "Good luck, What i say is not a Lie, Goodbye."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=899386293]
+libraries/ = SubResource("AnimationLibrary_v25te")
+autoplay = &"flap"
+speed_scale = 0.2
+
+[node name="Flywing2" type="Sprite2D" parent="." unique_id=907963830]
+position = Vector2(90.99999, -90)
+rotation = 0.7853982
+scale = Vector2(1.9999999, 1.9999999)
+texture = ExtResource("1_g6vth")
+
+[node name="Flybody" type="Sprite2D" parent="." unique_id=1862913078]
+position = Vector2(0, -1)
+texture = ExtResource("2_h76od")
+
+[node name="Flywing" type="Sprite2D" parent="." unique_id=1714280419]
+modulate = Color(0.60960835, 0.60960835, 0.60960835, 1)
+z_index = -1
+position = Vector2(47, -126)
+rotation = 0.7853982
+scale = Vector2(2, 2)
+texture = ExtResource("1_g6vth")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=532317839]
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1929504495]
+offset_left = -412.0
+offset_top = -203.0
+offset_right = 415.0
+offset_bottom = -138.0
+text = "Hi I am A fly."
+label_settings = SubResource("LabelSettings_h76od")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." unique_id=224962031]
+libraries/ = SubResource("AnimationLibrary_pxefm")
+autoplay = &"textthing"
+
+[node name="Timer" type="Timer" parent="." unique_id=1898644991]
+wait_time = 2.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=14422515]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1364218323]
+position = Vector2(-337, -37)
+shape = SubResource("RectangleShape2D_wuss7")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

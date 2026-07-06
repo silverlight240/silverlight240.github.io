@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://d1hooxt0p16ff"]
+
+[ext_resource type="Script" uid="uid://cxdxmj28de34c" path="res://yellow_grass_blade.gd" id="1_gdic4"]
+[ext_resource type="Texture2D" uid="uid://bfjv4ixn8wjpo" path="res://yellowgrass.svg" id="2_gmoj2"]
+
+[sub_resource type="Animation" id="Animation_gdic4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(22, 85)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gmoj2"]
+resource_name = "sway"
+length = 24.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 48), Vector2(50, 41), Vector2(-51, 53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 18),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, -0.34906584]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2l487"]
+_data = {
+&"RESET": SubResource("Animation_gdic4"),
+&"sway": SubResource("Animation_gmoj2")
+}
+
+[node name="Node2D" type="Node2D" unique_id=783021445]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_gdic4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1646768913]
+root_node = NodePath("../Yellowgrass")
+libraries/ = SubResource("AnimationLibrary_2l487")
+autoplay = &"sway"
+
+[node name="Yellowgrass" type="Sprite2D" parent="." unique_id=354192023]
+z_index = -4
+position = Vector2(22, 85)
+texture = ExtResource("2_gmoj2")

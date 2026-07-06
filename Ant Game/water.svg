@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="211.31189mm"
+   height="172.90199mm"
+   viewBox="0 0 211.31189 172.90199"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="water.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="211.31189"
+       height="172.90199"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch2"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#0081d2;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="swatch1"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#0082d1;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch2"
+       id="linearGradient1"
+       x1="0"
+       y1="210.91702"
+       x2="209.77695"
+       y2="210.91702"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch1"
+       id="linearGradient2"
+       x1="190.10263"
+       y1="140.33243"
+       x2="210.01071"
+       y2="140.33243"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1.3011816,5.4649628)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-124.46603)">
+    <path
+       style="fill:url(#linearGradient1);stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 0,149.7881 c 0,0 48.211895,-13.98513 56.30855,-23.5539 8.096655,-9.56877 34.226764,22.81784 34.226764,22.81784 0,0 40.851306,-5.15241 53.364316,-18.40148 12.51301,-13.24907 65.87732,14.35316 65.87732,14.35316 V 297.36804 L 0.36802972,296.63196 Z"
+       id="path1" />
+    <path
+       style="fill:url(#linearGradient2);stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 191.40381,141.30832 c 19.38761,4.81437 19.90808,-0.78071 19.90808,-0.78071 l -0.26024,10.53957 z"
+       id="path2" />
+  </g>
+</svg>

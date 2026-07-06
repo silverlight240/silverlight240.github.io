@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://dsu2bl2qr1dqj"]
+
+[ext_resource type="Script" uid="uid://cy8iupcp1ur43" path="res://exploding bee.gd" id="1_pkqls"]
+[ext_resource type="Texture2D" uid="uid://on4124m36abl" path="res://bee.svg" id="2_8mvgx"]
+[ext_resource type="Texture2D" uid="uid://bygje6bjohps0" path="res://flywing.svg" id="3_psil8"]
+[ext_resource type="Texture2D" uid="uid://bxomdgb7f15mi" path="res://exposiion.svg" id="4_b17po"]
+
+[sub_resource type="Animation" id="Animation_t47er"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Bee:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109.00001, -80)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Bee:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Flywing:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.3425539]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Exposiion:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="Animation" id="Animation_1n470"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D/Bee:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1618, 913)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D/Flywing:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(109.00001, -80), Vector2(-425.99997, -1672.9999)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Node2D/Bee:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.1415927, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Flywing:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.3425539, 17.17404]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Node2D/Exposiion:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1, 0.1), Vector2(5, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mijpo"]
+_data = {
+&"RESET": SubResource("Animation_t47er"),
+&"new_animation": SubResource("Animation_1n470")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1v6j"]
+size = Vector2(699.9999, 699.99994)
+
+[node name="Node2D" type="RigidBody2D" unique_id=447300804]
+script = ExtResource("1_pkqls")
+direction = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=834203983]
+libraries/ = SubResource("AnimationLibrary_mijpo")
+speed_scale = 2.0
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1167154958]
+rotation = -3.1415927
+scale = Vector2(0.1, -0.1)
+
+[node name="Exposiion" type="Sprite2D" parent="Node2D" unique_id=1814892122]
+z_index = 30
+z_as_relative = false
+rotation = 3.1415925
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_b17po")
+
+[node name="Flywing2" type="Sprite2D" parent="Node2D" unique_id=2032771512]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+z_index = -45
+position = Vector2(170, -51.000015)
+rotation = -2.3561945
+scale = Vector2(1, -1)
+texture = ExtResource("3_psil8")
+
+[node name="Bee" type="Sprite2D" parent="Node2D" unique_id=10378085]
+z_index = 30
+z_as_relative = false
+scale = Vector2(-1, 1)
+texture = ExtResource("2_8mvgx")
+
+[node name="Flywing" type="Sprite2D" parent="Node2D" unique_id=1090581046]
+z_index = -1
+position = Vector2(109.00001, -80)
+rotation = 1.3425539
+scale = Vector2(0.99999994, 1.8358839)
+texture = ExtResource("3_psil8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1547043747]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=853906545]
+position = Vector2(0, 1.000001)
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_r1v6j")
+
+[node name="Timer" type="Timer" parent="." unique_id=1089304511]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

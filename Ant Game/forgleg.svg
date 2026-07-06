@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50.15519mm"
+   height="54.712376mm"
+   viewBox="0 0 50.15519 54.712376"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="forgleg.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="50.15519"
+       height="54.712376"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#swatch5"
+       id="linearGradient6"
+       x1="0.33065152"
+       y1="196.24956"
+       x2="50.485847"
+       y2="196.24956"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(108.14852,-49.830873)" />
+    <linearGradient
+       id="swatch5"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#80c070;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.47916,-119.0625)">
+    <path
+       style="fill:url(#linearGradient6);stroke-width:0.264999;paint-order:stroke fill markers"
+       d="m 150.82727,119.0625 -26.5441,35.13191 -13.27206,2.34212 c 0,0 -7.28661,17.1756 2.8626,11.4504 10.14922,-5.7252 10.92993,-2.08189 10.92993,-2.08189 0,0 3.64331,10.40945 5.7252,4.16378 2.08189,-6.24567 3.38307,-8.5878 3.38307,-8.5878 0,0 4.68425,19.51773 7.28662,9.36851 2.60236,-10.14922 -6.50591,-20.0382 -6.50591,-20.0382 l 23.94174,-31.48859 z"
+       id="path5" />
+  </g>
+</svg>

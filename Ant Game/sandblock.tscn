@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://6a7a2p5g32g4"]
+
+[ext_resource type="Texture2D" uid="uid://cktash8v737qp" path="res://sandoutside.svg" id="1_be5lf"]
+[ext_resource type="Texture2D" uid="uid://c3qalyjg35hux" path="res://sandinside.svg" id="2_kvnvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05po8"]
+size = Vector2(367, 334)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=281919222]
+z_as_relative = false
+
+[node name="Sandoutside" type="Sprite2D" parent="." unique_id=1676695751]
+z_index = 11
+z_as_relative = false
+texture = ExtResource("1_be5lf")
+
+[node name="Sandinside" type="Sprite2D" parent="." unique_id=1851942219]
+z_index = 12
+z_as_relative = false
+position = Vector2(0, -3.5)
+scale = Vector2(1, 1.0273438)
+texture = ExtResource("2_kvnvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1001358197]
+z_index = -999
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_05po8")

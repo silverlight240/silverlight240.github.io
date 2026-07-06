@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="143.71123mm"
+   height="118.81237mm"
+   viewBox="0 0 143.71123 118.81237"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="crate.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="2.0814334e-21"
+       y="0"
+       width="143.71123"
+       height="118.81237"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(-35.484136,-87.629234)">
+    <rect
+       style="fill:#a8aa62;fill-opacity:1;stroke-width:0.271966;paint-order:stroke fill markers"
+       id="rect1"
+       width="121.44981"
+       height="94.583641"
+       x="46.003716"
+       y="100.10409" />
+    <path
+       style="fill:#999d5f;fill-opacity:1;stroke-width:0.220561;paint-order:stroke fill markers"
+       d="m 99.257298,100.79196 -1.320452,93.76161 13.318864,-1.65833 4.94647,-92.0151 z"
+       id="path2" />
+    <path
+       style="fill:#999d5f;fill-opacity:1;stroke-width:0.220561;paint-order:stroke fill markers"
+       d="m 133.86069,99.917023 -1.32045,93.761607 13.31886,-1.65833 4.94647,-92.0151 z"
+       id="path2-8" />
+    <path
+       style="fill:#999d5f;fill-opacity:1;stroke-width:0.220561;paint-order:stroke fill markers"
+       d="m 68.325503,100.33287 -1.32045,93.76161 13.31886,-1.65833 4.94647,-92.0151 z"
+       id="path2-8-1" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-35.484136,-87.629234)">
+    <path
+       style="fill:#66692d;fill-opacity:1;stroke-width:0.264999;paint-order:stroke fill markers"
+       d="M 52.628252,100.47212 167.0855,184.75093 156.41264,195.05576 45.267657,109.67286 Z"
+       id="path1" />
+    <path
+       style="fill:#66692d;fill-opacity:1;stroke-width:0.264999;paint-order:stroke fill markers"
+       d="M 169.21099,112.38099 48.201917,186.94762 42.643847,173.19236 163.43625,102.11044 Z"
+       id="path1-2" />
+    <path
+       style="fill:#959550;fill-opacity:1;stroke-width:0.232866;paint-order:stroke fill markers"
+       d="M 174.66791,88.371854 179.19537,198.07367 164.49739,196.5161 162.88561,88.297387 Z"
+       id="path1-2-6" />
+    <path
+       style="fill:#959550;fill-opacity:1;stroke-width:0.258782;paint-order:stroke fill markers"
+       d="M 177.71192,202.06864 42.310341,206.4416 44.015687,191.74451 177.62908,190.2854 Z"
+       id="path1-2-6-9" />
+    <path
+       style="fill:#959550;fill-opacity:1;stroke-width:0.239424;paint-order:stroke fill markers"
+       d="m 38.798361,206.39166 -3.31422,-115.927392 14.68331,1.558072 0.41443,114.37727 z"
+       id="path1-2-6-9-2" />
+    <path
+       style="fill:#9a9a53;fill-opacity:1;stroke-width:0.244987;paint-order:stroke fill markers"
+       d="m 46.65811,90.619416 121.48934,-2.99019 -1.99923,14.674424 -119.793366,0.0956 z"
+       id="path1-2-6-1" />
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dtuyfa4luwjn0"]
+
+[ext_resource type="PackedScene" uid="uid://d1hooxt0p16ff" path="res://yellow grass blade.tscn" id="1_x46go"]
+
+[node name="Node2D" type="Node2D" unique_id=402555563]
+z_index = -10
+z_as_relative = false
+
+[node name="Node2D" parent="." unique_id=783021445 instance=ExtResource("1_x46go")]
+position = Vector2(33, -54)
+
+[node name="Node2D2" parent="." unique_id=575237180 instance=ExtResource("1_x46go")]
+position = Vector2(58.000004, -45)
+
+[node name="Node2D3" parent="." unique_id=917569247 instance=ExtResource("1_x46go")]
+position = Vector2(81, -48)
+
+[node name="Node2D4" parent="." unique_id=1486173713 instance=ExtResource("1_x46go")]
+position = Vector2(115, -46)
+
+[node name="Node2D5" parent="." unique_id=771970949 instance=ExtResource("1_x46go")]
+position = Vector2(158, -46)
+
+[node name="Node2D6" parent="." unique_id=280556984 instance=ExtResource("1_x46go")]
+position = Vector2(14, -60)

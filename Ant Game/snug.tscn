@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://fmv0veteix1f"]
+
+[ext_resource type="Texture2D" uid="uid://dowphpj3awtpa" path="res://snug head.svg" id="1_fnboj"]
+[ext_resource type="Script" uid="uid://ci48nifsxp6fd" path="res://snug.gd" id="1_rjyql"]
+[ext_resource type="Texture2D" uid="uid://dt3qstw0m0w63" path="res://snug shell.svg" id="2_rjyql"]
+
+[sub_resource type="Animation" id="Animation_nffnq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SnugShell:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_shvp2"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SnugShell:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gfpe8"]
+_data = {
+&"RESET": SubResource("Animation_nffnq"),
+&"new_animation": SubResource("Animation_shvp2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sx7kc"]
+radius = 80.06248
+
+[node name="Area2D" type="Area2D" unique_id=1544076893]
+collision_mask = 2
+script = ExtResource("1_rjyql")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=365111979]
+libraries/ = SubResource("AnimationLibrary_gfpe8")
+autoplay = &"new_animation"
+
+[node name="SnugHead" type="Sprite2D" parent="." unique_id=985703959]
+z_index = -1
+position = Vector2(79, 46)
+texture = ExtResource("1_fnboj")
+
+[node name="SnugShell" type="Sprite2D" parent="." unique_id=170219656]
+texture = ExtResource("2_rjyql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=646934238]
+shape = SubResource("CircleShape2D_sx7kc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

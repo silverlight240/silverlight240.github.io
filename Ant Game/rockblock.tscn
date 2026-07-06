@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b8r6p427vnca7"]
+
+[ext_resource type="Texture2D" uid="uid://bhxy8tku1bmmx" path="res://tiles/ground thing.svg" id="1_qvwe7"]
+[ext_resource type="Texture2D" uid="uid://dv5hjg7p235q5" path="res://stoneedgething.svg" id="2_dmq8n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fuoj"]
+size = Vector2(430, 380)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=712499536]
+z_as_relative = false
+
+[node name="GroundThing" type="Sprite2D" parent="." unique_id=403188055]
+z_index = 1
+z_as_relative = false
+texture = ExtResource("1_qvwe7")
+
+[node name="Stoneedgething" type="Sprite2D" parent="." unique_id=1152000123]
+z_as_relative = false
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_dmq8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1743887458]
+z_index = -5
+shape = SubResource("RectangleShape2D_6fuoj")

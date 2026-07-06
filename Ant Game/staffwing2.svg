@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="19.859043mm"
+   height="17.833658mm"
+   viewBox="0 0 19.859043 17.833658"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="staffwing2.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="19.859043"
+       height="17.833658"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-92.110924,-110.75506)">
+    <ellipse
+       style="fill:#cdc8bb;fill-opacity:1;stroke-width:0.247777"
+       id="path4-5-4"
+       cx="33.327717"
+       cy="149.48914"
+       rx="6.0182433"
+       ry="11.911592"
+       transform="matrix(-0.50087377,0.86552034,0.79426121,0.60757643,0,0)" />
+  </g>
+</svg>
