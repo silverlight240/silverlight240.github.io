@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://w265rtfjcevg"
 path.s3tc="res://.godot/imported/flybody.svg-0a918635aef63b741e4609eab5c2ab09.s3tc.ctex"
-path.etc2="res://.godot/imported/flybody.svg-0a918635aef63b741e4609eab5c2ab09.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://flybody.svg"
-dest_files=["res://.godot/imported/flybody.svg-0a918635aef63b741e4609eab5c2ab09.s3tc.ctex", "res://.godot/imported/flybody.svg-0a918635aef63b741e4609eab5c2ab09.etc2.ctex"]
+dest_files=["res://.godot/imported/flybody.svg-0a918635aef63b741e4609eab5c2ab09.s3tc.ctex"]
 
 [params]
 

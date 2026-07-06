@@ -62,7 +62,7 @@ font_color = Color(0.24646659, 0.07033492, 0, 1)
 metadata/_edit_vertical_guides_ = [83751.0]
 
 [node name="CharacterBody2D" parent="." unique_id=530856967 instance=ExtResource("1_h2yge")]
-position = Vector2(28222, -574)
+position = Vector2(-1701, -329)
 forms = ["ant", "fly"]
 
 [node name="Node2D" parent="." unique_id=1127227425 instance=ExtResource("2_1bvp3")]

@@ -4,16 +4,15 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bygje6bjohps0"
 path.s3tc="res://.godot/imported/flywing.svg-b27e9ba830389b6607a0bfc90e6c1598.s3tc.ctex"
-path.etc2="res://.godot/imported/flywing.svg-b27e9ba830389b6607a0bfc90e6c1598.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://flywing.svg"
-dest_files=["res://.godot/imported/flywing.svg-b27e9ba830389b6607a0bfc90e6c1598.s3tc.ctex", "res://.godot/imported/flywing.svg-b27e9ba830389b6607a0bfc90e6c1598.etc2.ctex"]
+dest_files=["res://.godot/imported/flywing.svg-b27e9ba830389b6607a0bfc90e6c1598.s3tc.ctex"]
 
 [params]
 
