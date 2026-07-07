@@ -219,3 +219,9 @@ func DropItem(x:String,y:int):
 			$Control.inventory.items[slot].amount = y
 			print($Control.inventory.items)
 			return false
+
+
+func _on_text_edit_text_submitted(new_text: String) -> void:
+	$TextEdit.clear()
+	if new_text.begins_with("/GiveItem "):
+		DropItem(new_text.replace("/GiveItem ", ""), 1)

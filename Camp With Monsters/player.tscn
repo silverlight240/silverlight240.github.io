@@ -1134,7 +1134,7 @@ y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_bfour")
 animation = &"IronSwordSide"
 autoplay = "Front of player"
-frame_progress = 0.112318635
+frame_progress = 0.37341192
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960748539]
 y_sort_enabled = true
@@ -1167,5 +1167,12 @@ offset_bottom = -143.0
 max_value = 20.0
 show_percentage = false
 
+[node name="TextEdit" type="LineEdit" parent="." unique_id=1833349196]
+offset_left = -947.0
+offset_top = 311.0
+offset_right = -478.0
+offset_bottom = 371.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="text_submitted" from="TextEdit" to="." method="_on_text_edit_text_submitted"]
