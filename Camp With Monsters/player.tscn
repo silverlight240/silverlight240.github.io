@@ -1134,7 +1134,7 @@ y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_bfour")
 animation = &"IronSwordSide"
 autoplay = "Front of player"
-frame_progress = 0.11327057
+frame_progress = 0.112318635
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960748539]
 y_sort_enabled = true

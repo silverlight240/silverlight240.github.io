@@ -30,6 +30,8 @@ func _on_button_pressed(button: TextureButton):
 		get_parent().item = "furnace"
 	if item.name == "PurpleSword":
 		get_parent().item = "Purplesword"
+	if item.name == "IronSword":
+		get_parent().item = "IronSword"
 func _on_timer_timeout() -> void:
 	for i in $NinePatchRect/GridContainer.get_children():
 		if i.get_child(0) != null:
