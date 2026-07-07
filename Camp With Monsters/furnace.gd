@@ -22,8 +22,8 @@ func _on_button_pressed(recipe: Recipe):
 	get_tree().get_first_node_in_group("player").DropItem(recipe.item.name,recipe.item.amount)
 	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount -= recipe.Require[0].QuantityWanted
 	for i in $ScrollContainer/VBoxContainer.get_children():
-		i.queue_free()
-	CreateButtons()
+		if get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount <= (recipe.Require[0].QuantityWanted):
+			i.queue_free()
 func FindItem(recipe):
 			var thingeee: int = -1
 			for i in get_tree().get_first_node_in_group("player").get_child(5).inventory.items:
