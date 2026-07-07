@@ -837,6 +837,9 @@ texture = ExtResource("12_yaehf")
 position = Vector2(-2721, -173)
 rotation = -1.5707964
 
+[node name="CharacterBody2D7" parent="Surface" unique_id=664983709 instance=ExtResource("1_ig7tw")]
+position = Vector2(-33, -194)
+
 [node name="Cave" type="Node2D" parent="." unique_id=611788970]
 z_index = -5
 
@@ -875,6 +878,24 @@ position = Vector2(-7178, 3)
 [node name="StaticBody2D2" parent="Cave" unique_id=1134613113 instance=ExtResource("17_074og")]
 position = Vector2(-4800, -1996)
 
+[node name="CharacterBody2D" parent="Cave" unique_id=939259565 instance=ExtResource("18_cegan")]
+position = Vector2(-6971, -1071)
+
+[node name="CharacterBody2D2" parent="Cave" unique_id=426181366 instance=ExtResource("18_cegan")]
+position = Vector2(-6841, -1048)
+
+[node name="CharacterBody2D3" parent="Cave" unique_id=816757673 instance=ExtResource("18_cegan")]
+position = Vector2(-6952, -1240)
+
+[node name="CharacterBody2D4" parent="Cave" unique_id=1763441579 instance=ExtResource("18_cegan")]
+position = Vector2(-6762, -1241)
+
+[node name="CharacterBody2D5" parent="Cave" unique_id=1477275737 instance=ExtResource("18_cegan")]
+position = Vector2(-6869, -1418)
+
+[node name="CharacterBody2D6" parent="Cave" unique_id=220004437 instance=ExtResource("18_cegan")]
+position = Vector2(-6565, -1373)
+
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=117308820]
 energy = 0.0
 blend_mode = 1
@@ -887,26 +908,5 @@ autoplay = &"240"
 [node name="Timer" type="Timer" parent="DirectionalLight2D" unique_id=1134331928]
 wait_time = 12.0
 one_shot = true
-
-[node name="CharacterBody2D" parent="." unique_id=939259565 instance=ExtResource("18_cegan")]
-position = Vector2(-6971, -1071)
-
-[node name="CharacterBody2D2" parent="." unique_id=426181366 instance=ExtResource("18_cegan")]
-position = Vector2(-6841, -1048)
-
-[node name="CharacterBody2D3" parent="." unique_id=816757673 instance=ExtResource("18_cegan")]
-position = Vector2(-6952, -1240)
-
-[node name="CharacterBody2D4" parent="." unique_id=1763441579 instance=ExtResource("18_cegan")]
-position = Vector2(-6762, -1241)
-
-[node name="CharacterBody2D5" parent="." unique_id=1477275737 instance=ExtResource("18_cegan")]
-position = Vector2(-6869, -1418)
-
-[node name="CharacterBody2D6" parent="." unique_id=220004437 instance=ExtResource("18_cegan")]
-position = Vector2(-6565, -1373)
-
-[node name="CharacterBody2D7" parent="." unique_id=664983709 instance=ExtResource("1_ig7tw")]
-position = Vector2(-33, -194)
 
 [connection signal="timeout" from="DirectionalLight2D/Timer" to="DirectionalLight2D" method="_on_timer_timeout"]
