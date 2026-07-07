@@ -120,10 +120,10 @@ animations = [{
 radius = 1053.2355
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_shwth"]
-radius = 52.95281
+radius = 32.06244
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_goorx"]
-radius = 74.431175
+radius = 38.013157
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=939259565]
 script = ExtResource("1_a043v")
@@ -132,7 +132,7 @@ SPEED = 100
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872782765]
 sprite_frames = SubResource("SpriteFrames_h2cqs")
 autoplay = "default"
-frame_progress = 0.103667796
+frame_progress = 0.24391778
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1833636793]
 

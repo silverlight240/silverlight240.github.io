@@ -15,22 +15,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		for i in $ScrollContainer/VBoxContainer.get_children():
 			i.queue_free()
+		CreateButtons()
 		$ScrollContainer.show()
-		var thing: int = 0
-		for recipe in recipes:
-			if body.get_child(5).inventory.items[FindItem(recipe)] != null:
-				if body.get_child(5).inventory.items[FindItem(recipe)].amount >= (recipe.Require[0].QuantityWanted):
-					$ScrollContainer/VBoxContainer.add_child(TextureButton.new())
-					$ScrollContainer/VBoxContainer.get_child(thing).texture_normal = recipe.item.texture
-					$ScrollContainer/VBoxContainer.get_child(thing).pressed.connect(_on_button_pressed.bind(recipe))
-					$ScrollContainer/VBoxContainer.get_child(thing).z_index = 9999
-					thing += 1
 func _on_button_pressed(recipe: Recipe):
 	print(recipe)
 	get_tree().get_first_node_in_group("player").DropItem(recipe.item.name,recipe.item.amount)
 	get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount -= recipe.Require[0].QuantityWanted
 	for i in $ScrollContainer/VBoxContainer.get_children():
 		i.queue_free()
+	CreateButtons()
 func FindItem(recipe):
 			var thingeee: int = -1
 			for i in get_tree().get_first_node_in_group("player").get_child(5).inventory.items:
@@ -46,3 +39,13 @@ func FindEmptySlot():
 				if i == null:
 					break
 			return thingeee
+func CreateButtons():
+		var thing: int = 0
+		for recipe in recipes:
+			if get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)] != null:
+				if get_tree().get_first_node_in_group("player").get_child(5).inventory.items[FindItem(recipe)].amount >= (recipe.Require[0].QuantityWanted):
+					$ScrollContainer/VBoxContainer.add_child(TextureButton.new())
+					$ScrollContainer/VBoxContainer.get_child(thing).texture_normal = recipe.item.texture
+					$ScrollContainer/VBoxContainer.get_child(thing).pressed.connect(_on_button_pressed.bind(recipe))
+					$ScrollContainer/VBoxContainer.get_child(thing).z_index = 9999
+					thing += 1
