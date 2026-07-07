@@ -222,6 +222,9 @@ func DropItem(x:String,y:int):
 
 
 func _on_text_edit_text_submitted(new_text: String) -> void:
-	$TextEdit.clear()
 	if new_text.begins_with("/GiveItem "):
-		DropItem(new_text.replace("/GiveItem ", ""), 1)
+		print(new_text.strip_edges()[-1])
+		var thing = new_text.replace("/GiveItem ", "")
+		thing = thing.trim_suffix(" " + new_text.strip_edges()[-1])
+		DropItem(thing,int((" " + new_text.strip_edges()[-1])))
+	$TextEdit.clear()
