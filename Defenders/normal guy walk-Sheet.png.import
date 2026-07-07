@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7rn6jgwq6vbb"
-path="res://.godot/imported/normal guy walk-Sheet.png-1d8a49fb363e41948d2ba43a5131da48.ctex"
+path="res://.godot/imported/normal guy walk-Sheet.png-ac8fc0c7aa6be7b37643b6d120bc5614.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/normal guy walk-Sheet.png"
-dest_files=["res://.godot/imported/normal guy walk-Sheet.png-1d8a49fb363e41948d2ba43a5131da48.ctex"]
+source_file="res://normal guy walk-Sheet.png"
+dest_files=["res://.godot/imported/normal guy walk-Sheet.png-ac8fc0c7aa6be7b37643b6d120bc5614.ctex"]
 
 [params]
 

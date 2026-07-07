@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c25nott2oiksw"
-path="res://.godot/imported/enemy_cactuswalk-Sheet-export.png-e45416b89b1f648427195b7fc807e6dc.ctex"
+path="res://.godot/imported/enemy_cactuswalk-Sheet-export.png-d4088ae0c90a95657df813de249b6762.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/enemy_cactuswalk-Sheet-export.png"
-dest_files=["res://.godot/imported/enemy_cactuswalk-Sheet-export.png-e45416b89b1f648427195b7fc807e6dc.ctex"]
+source_file="res://enemy_cactuswalk-Sheet-export.png"
+dest_files=["res://.godot/imported/enemy_cactuswalk-Sheet-export.png-d4088ae0c90a95657df813de249b6762.ctex"]
 
 [params]
 

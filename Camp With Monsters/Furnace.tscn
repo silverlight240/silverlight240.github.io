@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="3_3rs31"]
 [ext_resource type="Resource" uid="uid://bf562qglma4ca" path="res://Wood.tres" id="4_xb8x1"]
 [ext_resource type="Resource" uid="uid://dedkxs6fy3jm1" path="res://Charcoal.tres" id="5_8mtv3"]
+[ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="6_sulq5"]
+[ext_resource type="Texture2D" uid="uid://bjwy7hhdjtlwp" path="res://Iron BAR.png" id="7_b34pu"]
+[ext_resource type="Resource" uid="uid://bdoqm2kklr1sl" path="res://Iron Ingot.tres" id="7_sulq5"]
 
 [sub_resource type="Resource" id="Resource_tj2ga"]
 script = ExtResource("3_3rs31")
@@ -17,6 +20,24 @@ metadata/_custom_type_script = "uid://cyfaun4p1yli5"
 script = ExtResource("2_qeamr")
 item = ExtResource("5_8mtv3")
 Require = Array[ExtResource("3_3rs31")]([SubResource("Resource_tj2ga")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
+
+[sub_resource type="Resource" id="Resource_68xxp"]
+script = ExtResource("6_sulq5")
+name = "Iron Bar"
+texture = ExtResource("7_b34pu")
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"
+
+[sub_resource type="Resource" id="Resource_b34pu"]
+script = ExtResource("3_3rs31")
+QuantityWanted = 1
+item = SubResource("Resource_68xxp")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_c0xnj"]
+script = ExtResource("2_qeamr")
+item = ExtResource("7_sulq5")
+Require = Array[ExtResource("3_3rs31")]([SubResource("Resource_b34pu")])
 metadata/_custom_type_script = "uid://4bxyxbclcpy5"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qeamr"]
@@ -53,7 +74,7 @@ animations = [{
 
 [node name="Area2D" type="Area2D" unique_id=2000401127]
 script = ExtResource("1_f8tgt")
-recipes = Array[ExtResource("2_qeamr")]([SubResource("Resource_sulq5")])
+recipes = Array[ExtResource("2_qeamr")]([SubResource("Resource_sulq5"), SubResource("Resource_c0xnj")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1298865013]
 shape = SubResource("CircleShape2D_qeamr")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bmohn7a6tdoua"]
+
+[ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="1_pcif4"]
+[ext_resource type="Texture2D" uid="uid://h1eky4h5ulgl" path="res://IronSword.png" id="2_qgfh3"]
+
+[resource]
+script = ExtResource("1_pcif4")
+name = "IronSword"
+texture = ExtResource("2_qgfh3")
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"

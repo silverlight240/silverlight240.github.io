@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cne8t4yq1hk2g" path="res://axeside.png" id="4_b26j0"]
 [ext_resource type="Texture2D" uid="uid://0wbwxemiwp3a" path="res://pickaxeFront.png" id="7_bwjto"]
 [ext_resource type="Texture2D" uid="uid://cnn8g7etgu4gh" path="res://playerswordfront.png" id="7_nvl01"]
+[ext_resource type="Texture2D" uid="uid://c1k30n5fsidr0" path="res://IronSwordBack.png" id="7_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://pgmwcatvlo7" path="res://IronSwordFront.png" id="8_5tmop"]
 [ext_resource type="Texture2D" uid="uid://c7vunnwyb24ly" path="res://backPickaxe.png" id="8_606se"]
 [ext_resource type="Texture2D" uid="uid://bhv1yil2l5r6n" path="res://Swordside.png" id="8_ivps1"]
+[ext_resource type="Texture2D" uid="uid://brkeyc38dkid0" path="res://IronSwordSide.png" id="9_7ahtn"]
 [ext_resource type="PackedScene" uid="uid://cgrdkswm2k73h" path="res://InventoryUi.tscn" id="9_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://d1ul5yr777b64" path="res://SidePickaxe.png" id="9_u1c27"]
 [ext_resource type="Texture2D" uid="uid://ccejt7wite8k7" path="res://swordback.png" id="9_urp6f"]
@@ -177,6 +180,74 @@ region = Rect2(1920, 0, 160, 320)
 [sub_resource type="AtlasTexture" id="AtlasTexture_iruf7"]
 atlas = ExtResource("2_hqtel")
 region = Rect2(2080, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd4eq"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(0, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ot5"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(160, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pskma"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(320, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sdik"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(480, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkvgp"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(640, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siwmy"]
+atlas = ExtResource("7_pbfsw")
+region = Rect2(800, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djlqh"]
+atlas = ExtResource("8_5tmop")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nure8"]
+atlas = ExtResource("8_5tmop")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doy3c"]
+atlas = ExtResource("8_5tmop")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jhu"]
+atlas = ExtResource("8_5tmop")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5ler"]
+atlas = ExtResource("8_5tmop")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rk5q0"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xmk7"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmmdq"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhxi5"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4itt3"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3a0q"]
+atlas = ExtResource("9_7ahtn")
+region = Rect2(1600, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6o2m3"]
 atlas = ExtResource("7_bwjto")
@@ -667,6 +738,72 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_sd4eq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ot5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pskma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sdik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkvgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_siwmy")
+}],
+"loop": true,
+"name": &"IronSwordBack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djlqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nure8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doy3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4jhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5ler")
+}],
+"loop": true,
+"name": &"IronSwordFront",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rk5q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xmk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmmdq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhxi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4itt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3a0q")
+}],
+"loop": true,
+"name": &"IronSwordSide",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_6o2m3")
 }, {
 "duration": 1.0,
@@ -995,9 +1132,9 @@ script = ExtResource("1_hqtel")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=965911469]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_bfour")
-animation = &"SwordBackObsidion"
+animation = &"IronSwordSide"
 autoplay = "Front of player"
-frame_progress = 0.6954228
+frame_progress = 0.11327057
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=960748539]
 y_sort_enabled = true

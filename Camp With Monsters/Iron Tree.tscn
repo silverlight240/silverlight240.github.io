@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://y7ja7aev4hph"]
+
+[ext_resource type="Script" uid="uid://dejcw723xqu7o" path="res://tree.gd" id="1_fjsfg"]
+[ext_resource type="Texture2D" uid="uid://hafrm47acg5i" path="res://Iron Tree.png" id="2_aijfq"]
+
+[sub_resource type="Animation" id="Animation_4q5ni"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IronTree:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xhywb"]
+resource_name = "Sway"
+length = 18.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IronTree:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.34906584, -0.34906584]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qqx6v"]
+_data = {
+&"RESET": SubResource("Animation_4q5ni"),
+&"Sway": SubResource("Animation_xhywb")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aijfq"]
+radius = 77.05842
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2141517177]
+script = ExtResource("1_fjsfg")
+hp = 40
+group = "Iron Tree"
+
+[node name="IronTree" type="Sprite2D" parent="." unique_id=530859221]
+texture = ExtResource("2_aijfq")
+offset = Vector2(0, -160)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1264466865]
+libraries/ = SubResource("AnimationLibrary_qqx6v")
+autoplay = &"Sway"
+speed_scale = 0.33
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=838192891]
+offset_left = -105.0
+offset_top = -302.0
+offset_right = 110.0
+offset_bottom = -275.0
+max_value = 40.0
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=916181598]
+position = Vector2(3, -35)
+shape = SubResource("CircleShape2D_aijfq")

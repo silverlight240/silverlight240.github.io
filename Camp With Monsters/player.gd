@@ -129,10 +129,22 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					if body.hp < 1:
 						DropItem("Wood",1)
 						body.queue_free()
+				if body.is_in_group("Iron Tree"):
+					body.hp -= 2
+					if body.hp < 1:
+						DropItem("Iron Bar",3)
+						body.queue_free()
 				if body.is_in_group("slime"):
 					body.hp -= 1
 					if body.hp < 1:
 						DropItem("Slimeball",1)
+						body.queue_free()
+				if body.is_in_group("Shadow"):
+					body.hp -= 1
+					if body.hp < 1:
+						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
 						body.queue_free()
 				if body.is_in_group("Rock"):
 					body.hp -= 1
@@ -147,8 +159,30 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 						if body.is_in_group("queenslime"):
 							DropItem("PurpleJelly", 5)
 						body.queue_free()
+				if body.is_in_group("Shadow"):
+					body.hp -= 2
+					if body.hp < 1:
+						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
+						body.queue_free()
 			if item == "Purplesword":
 				if body.is_in_group("slime"):
+					body.hp -= 5
+					if body.hp < 1:
+						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
+						body.queue_free()
+			if item == "IronSword":
+				if body.is_in_group("slime"):
+					body.hp -= 5
+					if body.hp < 1:
+						DropItem("Slimeball", 1)
+						if body.is_in_group("queenslime"):
+							DropItem("PurpleJelly", 5)
+						body.queue_free()
+				if body.is_in_group("Shadow"):
 					body.hp -= 5
 					if body.hp < 1:
 						DropItem("Slimeball", 1)

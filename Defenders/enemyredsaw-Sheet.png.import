@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwx1etcw2vnge"
-path="res://.godot/imported/enemyredsaw-Sheet.png-9b17730c51e71b4438a58804a73304e4.ctex"
+path="res://.godot/imported/enemyredsaw-Sheet.png-e7d8d090cb97b43f434f552296ed5a8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/enemyredsaw-Sheet.png"
-dest_files=["res://.godot/imported/enemyredsaw-Sheet.png-9b17730c51e71b4438a58804a73304e4.ctex"]
+source_file="res://enemyredsaw-Sheet.png"
+dest_files=["res://.godot/imported/enemyredsaw-Sheet.png-e7d8d090cb97b43f434f552296ed5a8e.ctex"]
 
 [params]
 

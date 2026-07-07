@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tguoj8ery7l2"
-path="res://.godot/imported/sanddune.png-b0e52f9ddd49f77ff3df5518830d67dd.ctex"
+path="res://.godot/imported/sanddune.png-2bb78f3c329ab0152506c90b62785fb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/sanddune.png"
-dest_files=["res://.godot/imported/sanddune.png-b0e52f9ddd49f77ff3df5518830d67dd.ctex"]
+source_file="res://sanddune.png"
+dest_files=["res://.godot/imported/sanddune.png-2bb78f3c329ab0152506c90b62785fb2.ctex"]
 
 [params]
 

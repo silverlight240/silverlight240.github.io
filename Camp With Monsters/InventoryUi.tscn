@@ -65,7 +65,7 @@ slot = 4
 
 [node name="TextureButton6" parent="Panel/GridContainer" unique_id=598778517 instance=ExtResource("9_d3j2i")]
 layout_mode = 2
-slot = 4
+slot = 5
 
 [node name="TextureButton7" parent="Panel/GridContainer" unique_id=2043251365 instance=ExtResource("9_d3j2i")]
 layout_mode = 2

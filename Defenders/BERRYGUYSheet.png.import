@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://co17jwdhkaqa3"
-path="res://.godot/imported/BERRYGUYSheet.png-64a6d5b70bb13d3bdc3b78b8de329165.ctex"
+path="res://.godot/imported/BERRYGUYSheet.png-64d1afbb73e00f360773ecb0c343c54d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/BERRYGUYSheet.png"
-dest_files=["res://.godot/imported/BERRYGUYSheet.png-64a6d5b70bb13d3bdc3b78b8de329165.ctex"]
+source_file="res://BERRYGUYSheet.png"
+dest_files=["res://.godot/imported/BERRYGUYSheet.png-64d1afbb73e00f360773ecb0c343c54d.ctex"]
 
 [params]
 

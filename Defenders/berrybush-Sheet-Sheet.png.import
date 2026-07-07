@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3ts5kjq0hych"
-path="res://.godot/imported/berrybush-Sheet-Sheet.png-07f190503b9341ff8e37bfbe9aaf77d6.ctex"
+path="res://.godot/imported/berrybush-Sheet-Sheet.png-b7aa6086d2fa895b5bf84577b6236ab3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/berrybush-Sheet-Sheet.png"
-dest_files=["res://.godot/imported/berrybush-Sheet-Sheet.png-07f190503b9341ff8e37bfbe9aaf77d6.ctex"]
+source_file="res://berrybush-Sheet-Sheet.png"
+dest_files=["res://.godot/imported/berrybush-Sheet-Sheet.png-b7aa6086d2fa895b5bf84577b6236ab3.ctex"]
 
 [params]
 

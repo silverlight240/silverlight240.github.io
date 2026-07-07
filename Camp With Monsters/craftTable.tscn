@@ -3,12 +3,48 @@
 [ext_resource type="Script" uid="uid://by5tbpvowed8c" path="res://craft_table.gd" id="1_ekoch"]
 [ext_resource type="Texture2D" uid="uid://c8uol7o68wssc" path="res://ScienceTable.png" id="1_wtj3c"]
 [ext_resource type="Script" uid="uid://4bxyxbclcpy5" path="res://Recipe.gd" id="2_gpql4"]
-[ext_resource type="Resource" uid="uid://d3hfa5y3o35yg" path="res://WoodSwordRecipe.tres" id="2_liku3"]
-[ext_resource type="Resource" uid="uid://bwemifvcmv6v2" path="res://Wodd Pickacks Recype.tres" id="4_n3lx2"]
-[ext_resource type="Resource" uid="uid://dmw5bani318ln" path="res://FurnaceRecipe.tres" id="5_cpit6"]
+[ext_resource type="Resource" uid="uid://dkfvyag41a8n1" path="res://WoodIngredient.tres" id="4_jidw8"]
+[ext_resource type="Resource" uid="uid://brgve5yk4rx41" path="res://Wood Sword.tres" id="5_pv152"]
+[ext_resource type="Resource" uid="uid://bf562qglma4ca" path="res://Wood.tres" id="6_1q7h4"]
 [ext_resource type="Script" uid="uid://cyfaun4p1yli5" path="res://RecipeRequire.gd" id="6_dx17x"]
 [ext_resource type="Resource" uid="uid://daj8l5k7yycle" path="res://PurpleJelly.tres" id="7_2m2hr"]
+[ext_resource type="Resource" uid="uid://d2edya6urackj" path="res://Wood Pickaxe.tres" id="7_67by8"]
 [ext_resource type="Resource" uid="uid://dqu8raxx18b4l" path="res://PurpleSword.tres" id="8_nja46"]
+[ext_resource type="Resource" uid="uid://d2x71i4sbp26x" path="res://Stone.tres" id="8_tx4qi"]
+[ext_resource type="Resource" uid="uid://5livwhg8yh0j" path="res://Furnace.tres" id="9_66ojb"]
+[ext_resource type="Script" uid="uid://cxms7vrodb3wi" path="res://item.gd" id="12_67by8"]
+[ext_resource type="Resource" uid="uid://bmohn7a6tdoua" path="res://IronSword.tres" id="13_67by8"]
+[ext_resource type="Texture2D" uid="uid://br3m55e5s12qf" path="res://Iron Ingot.png" id="13_tx4qi"]
+
+[sub_resource type="Resource" id="Resource_x1bwd"]
+script = ExtResource("2_gpql4")
+item = ExtResource("5_pv152")
+Require = Array[ExtResource("6_dx17x")]([ExtResource("4_jidw8")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
+
+[sub_resource type="Resource" id="Resource_5d2xl"]
+script = ExtResource("6_dx17x")
+QuantityWanted = 4
+item = ExtResource("6_1q7h4")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_udfm3"]
+script = ExtResource("2_gpql4")
+item = ExtResource("7_67by8")
+Require = Array[ExtResource("6_dx17x")]([SubResource("Resource_5d2xl")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
+
+[sub_resource type="Resource" id="Resource_ysng3"]
+script = ExtResource("6_dx17x")
+QuantityWanted = 15
+item = ExtResource("8_tx4qi")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_vfeky"]
+script = ExtResource("2_gpql4")
+item = ExtResource("9_66ojb")
+Require = Array[ExtResource("6_dx17x")]([SubResource("Resource_ysng3")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
 
 [sub_resource type="Resource" id="Resource_jidw8"]
 script = ExtResource("6_dx17x")
@@ -20,6 +56,24 @@ metadata/_custom_type_script = "uid://cyfaun4p1yli5"
 script = ExtResource("2_gpql4")
 item = ExtResource("8_nja46")
 Require = Array[ExtResource("6_dx17x")]([SubResource("Resource_jidw8")])
+metadata/_custom_type_script = "uid://4bxyxbclcpy5"
+
+[sub_resource type="Resource" id="Resource_pkult"]
+script = ExtResource("12_67by8")
+name = "Iron Ingot"
+texture = ExtResource("13_tx4qi")
+metadata/_custom_type_script = "uid://cxms7vrodb3wi"
+
+[sub_resource type="Resource" id="Resource_tx4qi"]
+script = ExtResource("6_dx17x")
+QuantityWanted = 6
+item = SubResource("Resource_pkult")
+metadata/_custom_type_script = "uid://cyfaun4p1yli5"
+
+[sub_resource type="Resource" id="Resource_66ojb"]
+script = ExtResource("2_gpql4")
+item = ExtResource("13_67by8")
+Require = Array[ExtResource("6_dx17x")]([SubResource("Resource_tx4qi")])
 metadata/_custom_type_script = "uid://4bxyxbclcpy5"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekoch"]
@@ -101,7 +155,7 @@ size = Vector2(229, 134)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1799246534]
 script = ExtResource("1_ekoch")
-recipes = Array[ExtResource("2_gpql4")]([ExtResource("2_liku3"), ExtResource("4_n3lx2"), ExtResource("5_cpit6"), SubResource("Resource_pv152")])
+recipes = Array[ExtResource("2_gpql4")]([SubResource("Resource_x1bwd"), SubResource("Resource_udfm3"), SubResource("Resource_vfeky"), SubResource("Resource_pv152"), SubResource("Resource_66ojb")])
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1832808069]
 
@@ -125,10 +179,10 @@ offset_bottom = -26.0
 text = "CRAFTING"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1909943694]
-offset_left = -347.0
-offset_top = -152.0
+offset_left = -532.0
+offset_top = -301.0
 offset_right = -120.0
-offset_bottom = 369.0
+offset_bottom = 583.0
 mouse_filter = 2
 follow_focus = true
 

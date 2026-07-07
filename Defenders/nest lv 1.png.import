@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4um2c8txik5f"
-path="res://.godot/imported/nest lv 1.png-3beb94d6a714db74d178dc46bb0c487d.ctex"
+path="res://.godot/imported/nest lv 1.png-3407078a3c79f5e3320bf3ed48fd2a84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/nest lv 1.png"
-dest_files=["res://.godot/imported/nest lv 1.png-3beb94d6a714db74d178dc46bb0c487d.ctex"]
+source_file="res://nest lv 1.png"
+dest_files=["res://.godot/imported/nest lv 1.png-3407078a3c79f5e3320bf3ed48fd2a84.ctex"]
 
 [params]
 

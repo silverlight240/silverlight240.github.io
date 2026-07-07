@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://wfps1v3hqroa"]
+
+[ext_resource type="Script" uid="uid://di1exirrpve8n" path="res://armed_shadow.gd" id="1_te1e1"]
+[ext_resource type="Texture2D" uid="uid://y5ne01ostj66" path="res://Living Rock.png" id="2_4fkw6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01r4r"]
+atlas = ExtResource("2_4fkw6")
+region = Rect2(0, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdbe3"]
+atlas = ExtResource("2_4fkw6")
+region = Rect2(160, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgd53"]
+atlas = ExtResource("2_4fkw6")
+region = Rect2(320, 0, 160, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2scit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01r4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdbe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgd53")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_shwth"]
+radius = 32.06244
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_goorx"]
+radius = 38.013157
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_optst"]
+radius = 428.00467
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=939259565]
+script = ExtResource("1_te1e1")
+hp = 30
+SPEED = 300
+group = "Rock"
+fliph = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872782765]
+position = Vector2(-17, 68)
+sprite_frames = SubResource("SpriteFrames_2scit")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.05209457
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=435250871]
+position = Vector2(-8, 118)
+shape = SubResource("CircleShape2D_shwth")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1362226250]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1789411288]
+position = Vector2(-8, 117)
+shape = SubResource("CircleShape2D_goorx")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=378328574]
+modulate = Color(18.892157, 0, 0, 1)
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+offset_left = -56.0
+offset_top = -119.0
+offset_right = 67.0
+offset_bottom = -92.0
+max_value = 30.0
+show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1818571850]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1162927988]
+shape = SubResource("CircleShape2D_optst")
+
+[node name="Timer" type="Timer" parent="." unique_id=612551607]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

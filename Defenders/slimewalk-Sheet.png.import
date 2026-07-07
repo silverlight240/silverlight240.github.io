@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyf5naor62tu8"
-path="res://.godot/imported/slimewalk-Sheet.png-36bd24275e45e0d16a9827ce0374a43f.ctex"
+path="res://.godot/imported/slimewalk-Sheet.png-0dedee8e99deb565100dc91516936e98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://everything else/slimewalk-Sheet.png"
-dest_files=["res://.godot/imported/slimewalk-Sheet.png-36bd24275e45e0d16a9827ce0374a43f.ctex"]
+source_file="res://slimewalk-Sheet.png"
+dest_files=["res://.godot/imported/slimewalk-Sheet.png-0dedee8e99deb565100dc91516936e98.ctex"]
 
 [params]
 
