@@ -340,10 +340,10 @@ script = ExtResource("11_efxa6")
 
 [node name="GridContainer" type="GridContainer" parent="TileMapLayer5" unique_id=2084812297]
 z_index = 9
-offset_left = 52746.0
-offset_top = -4713.0
-offset_right = 53517.0
-offset_bottom = -4345.0
+offset_left = 52708.0
+offset_top = -4257.0
+offset_right = 53479.0
+offset_bottom = -3889.0
 scale = Vector2(2, 2)
 columns = 3
 
