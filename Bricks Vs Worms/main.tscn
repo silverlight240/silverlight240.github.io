@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ceewsw3afp6ba" path="res://BrickthingCrackable.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://88hul83lfxwd" path="res://Portal.tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://cgkjycut56ll4" path="res://label.gd" id="11_efxa6"]
+[ext_resource type="FontFile" uid="uid://dcql07funqk2k" path="res://GeistPixel-Regular-VariableFont_ELSH.ttf" id="11_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://b60c0mk20gr7v" path="res://Golem.tscn" id="12_dg77c"]
 
 [sub_resource type="Environment" id="Environment_0xm2m"]
@@ -148,46 +149,10 @@ pattern_5 = SubResource("TileMapPattern_4c57u")
 pattern_6 = SubResource("TileMapPattern_efxa6")
 pattern_7 = SubResource("TileMapPattern_dg77c")
 
-[sub_resource type="FontFile" id="FontFile_dg77c"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/128/0/ascent = 0.0
-cache/0/128/0/descent = 0.0
-cache/0/128/0/underline_position = 0.0
-cache/0/128/0/underline_thickness = 0.0
-cache/0/128/0/scale = 1.0
-cache/0/100/0/ascent = 0.0
-cache/0/100/0/descent = 0.0
-cache/0/100/0/underline_position = 0.0
-cache/0/100/0/underline_thickness = 0.0
-cache/0/100/0/scale = 1.0
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-
 [sub_resource type="LabelSettings" id="LabelSettings_ycdy4"]
-font = SubResource("FontFile_dg77c")
+font = ExtResource("11_ycdy4")
 font_size = 100
-font_color = Color(0.69099766, 0.69099766, 0.69099766, 1)
+font_color = Color(0.34746692, 0.34746692, 0.34746692, 1)
 outline_size = 2
 outline_color = Color(12.645613, 0, 0, 1)
 
