@@ -6,8 +6,11 @@
 script = ExtResource("1_ykjgt")
 
 [node name="Button" type="Button" parent="." unique_id=299329563]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 667.0
+offset_top = 441.0
+offset_right = 773.0
+offset_bottom = 472.0
+scale = Vector2(4, 4)
 text = "START Game"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
