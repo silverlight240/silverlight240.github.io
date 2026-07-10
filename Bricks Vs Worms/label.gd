@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	text = "You Have Collected: " + str(get_tree().get_first_node_in_group("player").points) + "/30 Shiny Bricks"
+	text = "You Have Collected: " + str(get_tree().get_first_node_in_group("player").points) + "/37 Shiny Bricks"
