@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cixrutkpl7tnk"]
+
+[ext_resource type="Texture2D" uid="uid://bhfnh5busuh6w" path="res://BrickPoint.png" id="1_exf6f"]
+[ext_resource type="Script" uid="uid://btqe17wxvtj0i" path="res://point.gd" id="1_ggm1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsteb"]
+size = Vector2(200, 99)
+
+[sub_resource type="Animation" id="Animation_ggm1s"]
+resource_name = "FloatBrick"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrickPoint:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 90), Vector2(0, 45), Vector2(0, 0), Vector2(0, -45), Vector2(0, -90)]
+}
+
+[sub_resource type="Animation" id="Animation_jsteb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BrickPoint:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_npfmy"]
+_data = {
+&"FloatBrick": SubResource("Animation_ggm1s"),
+&"RESET": SubResource("Animation_jsteb")
+}
+
+[node name="Node2D" type="Node2D" unique_id=2091340488]
+modulate = Color(1.5720325, 1.5720325, 1.5720325, 1)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ggm1s")
+
+[node name="BrickPoint" type="Sprite2D" parent="." unique_id=738245080]
+modulate = Color(1.353256, 1.353256, 1.353256, 1)
+texture = ExtResource("1_exf6f")
+
+[node name="Area2D" type="Area2D" parent="BrickPoint" unique_id=2076875244]
+position = Vector2(0, 123.44136)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrickPoint/Area2D" unique_id=1890767043]
+position = Vector2(0, -123.5)
+shape = SubResource("RectangleShape2D_jsteb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=798216231]
+libraries/ = SubResource("AnimationLibrary_npfmy")
+autoplay = &"FloatBrick"
+
+[connection signal="body_entered" from="BrickPoint/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dioqxle5pibaf"]
+
+[ext_resource type="Texture2D" uid="uid://dhwtk6nn3ehjo" path="res://RealBricks.png" id="1_x43hc"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ho1hi"]
+tile_data = PackedInt32Array(0, 65537, 0, 1, 1, 0)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_bhfem"]
+tile_data = PackedInt32Array(0, 65537, 0, 65536, 65537, 1, 1, 1, 0, 65537, 1, 1)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_bh3bc"]
+tile_data = PackedInt32Array(0, 65538, 0, 65536, 65538, 1, 1, 2, 0, 65537, 2, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bquo4"]
+texture = ExtResource("1_x43hc")
+texture_region_size = Vector2i(50, 50)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bquo4"]
+tile_size = Vector2i(50, 50)
+sources/2 = SubResource("TileSetAtlasSource_bquo4")
+pattern_0 = SubResource("TileMapPattern_ho1hi")
+pattern_1 = SubResource("TileMapPattern_bhfem")
+pattern_2 = SubResource("TileMapPattern_bh3bc")
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=878659230]
+tile_set = SubResource("TileSet_bquo4")
+metadata/_edit_horizontal_guides_ = [-158.0]
