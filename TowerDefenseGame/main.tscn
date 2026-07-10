@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://kys14lgwox34" path="res://path_2d.gd" id="2_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cg3sacufjx0yy" path="res://tilemap.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bovujxplsjirn" path="res://player controller.tscn" id="4_7mycd"]
+[ext_resource type="AudioStream" uid="uid://bapbdnetqahle" path="res://AmbianceTest.wav" id="6_7mycd"]
 
 [sub_resource type="Curve2D" id="Curve2D_1bvp3"]
 _data = {
@@ -60,6 +61,12 @@ tile_map_data = PackedByteArray("AAACAAcAAAABAAAAAAADAAcAAAAAAAAAAAAEAAcAAAAAAAA
 [node name="Node2D" parent="." unique_id=855197034 instance=ExtResource("4_7mycd")]
 position = Vector2(-775, -142)
 scale = Vector2(1.5, 1.5)
+
+[node name="AmbianceTest" type="AudioStreamPlayer" parent="." unique_id=2073694815]
+stream = ExtResource("6_7mycd")
+volume_db = -2.0
+pitch_scale = 0.8
+autoplay = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Area2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

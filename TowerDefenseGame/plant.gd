@@ -14,8 +14,9 @@ func _process(delta: float) -> void:
 	$AnimatedSprite2D.frame = $"../Path2D".wave - startingwave
 	value = 20
 	for i in $"../Path2D".wave - startingwave:
-		value *= 1.08
-		value += 0.5 * (i + 1)
+		if i < $AnimatedSprite2D.frame:
+			value *= 1.08
+			value += 0.5 * (i + 1)
 
 func _on_button_pressed() -> void:
 	$Panel.hide()
