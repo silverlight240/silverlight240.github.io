@@ -192,7 +192,7 @@ metadata/_edit_horizontal_guides_ = [-397.0]
 [node name="StaticBody2D" parent="." unique_id=885357811 instance=ExtResource("1_0xm2m")]
 
 [node name="CharacterBody2D" parent="." unique_id=68859130 instance=ExtResource("2_h2yge")]
-position = Vector2(13103, 2199)
+position = Vector2(-253, -314)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1451798483]
 environment = SubResource("Environment_0xm2m")

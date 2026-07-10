@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c7ysen4d3el0y"]
+
+[ext_resource type="Script" uid="uid://bd8lnjmds3qqp" path="res://dieBullet.gd" id="1_2swm2"]
+
+[node name="Bullet" type="CharacterBody2D" unique_id=49003313]
+script = ExtResource("1_2swm2")
+metadata/_custom_type_script = "uid://bh886cc747xtm"

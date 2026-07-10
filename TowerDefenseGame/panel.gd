@@ -29,3 +29,10 @@ func _on_button_3_pressed() -> void:
 		get_parent().cash -= 5
 		get_parent().lookingforclicks = true
 		get_parent().spawnobject = "res://bluetower.tscn"
+
+
+func _on_button_4_pressed() -> void:
+	if get_parent().cash > 19:
+		get_parent().cash -= 20
+		get_parent().lookingforclicks = true
+		get_parent().spawnobject = "res://Plant.tscn"

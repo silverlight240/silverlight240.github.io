@@ -43,7 +43,7 @@ min_value = -5.0
 max_value = 5.0
 
 [node name="Panel" parent="." unique_id=162870458 instance=ExtResource("3_l8xe5")]
-offset_left = -43.0
-offset_top = 65.0
-offset_right = 27.0
-offset_bottom = 244.0
+offset_left = -49.0
+offset_top = 66.0
+offset_right = 21.0
+offset_bottom = 291.0
