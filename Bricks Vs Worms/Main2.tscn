@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bxembhtnww7k8"]
+
+[ext_resource type="Script" uid="uid://bifu7g4xbjdcy" path="res://main_2.gd" id="1_ykjgt"]
+
+[node name="Node2D" type="Node2D" unique_id=227922453]
+script = ExtResource("1_ykjgt")
+
+[node name="Button" type="Button" parent="." unique_id=299329563]
+offset_left = 667.0
+offset_top = 441.0
+offset_right = 773.0
+offset_bottom = 472.0
+scale = Vector2(4, 4)
+text = "START Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
