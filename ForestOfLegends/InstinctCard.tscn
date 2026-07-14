@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://biwec2600xrnh"]
+
+[ext_resource type="Script" uid="uid://bfb7ubmpy7s5w" path="res://Instinct.gd" id="1_1xela"]
+
+[node name="TextureRect" type="TextureRect" unique_id=1582852831]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1xela")

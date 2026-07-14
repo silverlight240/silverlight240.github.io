@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clsmgmvx2p882"]
+
+[ext_resource type="Texture2D" uid="uid://dswa8fqs7xqad" path="res://Card.png" id="1_dd2wi"]
+[ext_resource type="Script" uid="uid://cnuajrc6wg7yb" path="res://card.gd" id="2_21rx5"]
+
+[node name="TextureButton" type="TextureButton" unique_id=389063494]
+offset_left = -60.0
+offset_top = -53.0
+offset_right = 420.0
+offset_bottom = 587.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("1_dd2wi")
+script = ExtResource("2_21rx5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

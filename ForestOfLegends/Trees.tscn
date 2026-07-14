@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bjhmn0x66c2rs"]
+
+[ext_resource type="Texture2D" uid="uid://cx45dib7ltckn" path="res://Trees.png" id="1_nho41"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixh8d"]
+atlas = ExtResource("1_nho41")
+region = Rect2(6, 0, 157, 340)
+
+[node name="Node2D" type="Node2D" unique_id=193360927]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-76, -63)
+
+[node name="Trees" type="Sprite2D" parent="." unique_id=153487941]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(1, -2)
+texture = SubResource("AtlasTexture_ixh8d")
+
+[node name="Trees2" type="Sprite2D" parent="." unique_id=1906782849]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(146, -1)
+texture = SubResource("AtlasTexture_ixh8d")
+
+[node name="Trees3" type="Sprite2D" parent="." unique_id=1974120610]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(2, 76)
+texture = SubResource("AtlasTexture_ixh8d")
+
+[node name="Trees4" type="Sprite2D" parent="." unique_id=1843269281]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(147, 85)
+texture = SubResource("AtlasTexture_ixh8d")

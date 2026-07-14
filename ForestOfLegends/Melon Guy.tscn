@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bjy50vh7gakj6"]
+
+[ext_resource type="Script" uid="uid://b3n2es61f1gy0" path="res://Enemy.gd" id="1_4vsee"]
+[ext_resource type="Texture2D" uid="uid://c2f78m8l2sbuj" path="res://MeolonElementalIdle.png" id="1_x6wff"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vsee"]
+size = Vector2(80, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwu8h"]
+atlas = ExtResource("1_x6wff")
+region = Rect2(0, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhy35"]
+atlas = ExtResource("1_x6wff")
+region = Rect2(160, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks684"]
+atlas = ExtResource("1_x6wff")
+region = Rect2(320, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix4vd"]
+atlas = ExtResource("1_x6wff")
+region = Rect2(480, 0, 160, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0cd"]
+atlas = ExtResource("1_x6wff")
+region = Rect2(640, 0, 160, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_chbjx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwu8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhy35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks684")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ix4vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk0cd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1841119408]
+z_index = -1
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_4vsee")
+MaxHealth = 9
+AttackSpeed = 1.25
+Damage = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1274742881]
+shape = SubResource("RectangleShape2D_4vsee")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=903898889]
+sprite_frames = SubResource("SpriteFrames_chbjx")
+autoplay = "default"
+frame_progress = 0.9629104
