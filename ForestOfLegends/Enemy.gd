@@ -22,4 +22,5 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout():
-	player.Health -= Damage
+	player.Health -= clamp((Damage - player.Block),0,9999)
+	player.Block = clamp((player.Block - Damage),0,9999)

@@ -3,6 +3,7 @@ var InCombat = false
 @export var MaxHealth: int
 @export var Health: int = 0
 @export var speed = 1
+var Block = 0
 var enemy: StaticBody2D = null
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +11,7 @@ func _ready() -> void:
 	add_to_group("Player")
 	$Control.hide()
 var Oncooldown = false
-
+@onready var timer2 = $Timer2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -43,3 +44,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	Oncooldown = false
+
+
+func _on_timer_2_timeout() -> void:
+	Block = 0

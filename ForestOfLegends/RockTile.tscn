@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://o15fijbpfgi0"]
+
+[ext_resource type="Script" uid="uid://cn6gyfygt8bv4" path="res://trees.gd" id="1_xbhrl"]
+[ext_resource type="Texture2D" uid="uid://d3kw2nqixl26y" path="res://RockTileSetRock.png" id="2_8m8yy"]
+[ext_resource type="PackedScene" uid="uid://htpsbjlh88se" path="res://Sand Elemental.tscn" id="2_fgl0x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbhrl"]
+atlas = ExtResource("2_8m8yy")
+region = Rect2(120, 110, 50, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m8yy"]
+atlas = ExtResource("2_8m8yy")
+region = Rect2(220, 100, 50, 49.875458)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgl0x"]
+atlas = ExtResource("2_8m8yy")
+region = Rect2(20, 90, 50, 60)
+
+[node name="Tile" type="Node2D" unique_id=827340685]
+modulate = Color(0.45262197, 0.45262197, 0.45262197, 1)
+position = Vector2(-24, -102)
+script = ExtResource("1_xbhrl")
+enemy = ExtResource("2_fgl0x")
+metadata/_custom_type_script = "uid://cn6gyfygt8bv4"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1970878073]
+texture = SubResource("AtlasTexture_xbhrl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1251898738]
+position = Vector2(68, 27)
+texture = SubResource("AtlasTexture_8m8yy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=668772801]
+position = Vector2(-70, 21)
+texture = SubResource("AtlasTexture_fgl0x")

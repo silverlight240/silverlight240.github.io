@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://htpsbjlh88se"]
+
+[ext_resource type="Script" uid="uid://b3n2es61f1gy0" path="res://Enemy.gd" id="1_qtlj4"]
+[ext_resource type="Texture2D" uid="uid://b753b5mdrpe4" path="res://SandElemental.png" id="2_wflgk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rue7"]
+size = Vector2(236, 257)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pb3i"]
+atlas = ExtResource("2_wflgk")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qq1ip"]
+atlas = ExtResource("2_wflgk")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4touu"]
+atlas = ExtResource("2_wflgk")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52a6o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pb3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qq1ip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4touu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Enemy" type="StaticBody2D" unique_id=2035469472]
+script = ExtResource("1_qtlj4")
+MaxHealth = 40
+AttackSpeed = 4.0
+Damage = 4
+metadata/_custom_type_script = "uid://b3n2es61f1gy0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1124494364]
+position = Vector2(-9, 19.5)
+shape = SubResource("RectangleShape2D_0rue7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=414026093]
+sprite_frames = SubResource("SpriteFrames_52a6o")
+autoplay = "default"
+frame_progress = 0.55793864

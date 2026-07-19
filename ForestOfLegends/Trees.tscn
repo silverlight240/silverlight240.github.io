@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjhmn0x66c2rs"]
 
+[ext_resource type="Script" uid="uid://cn6gyfygt8bv4" path="res://trees.gd" id="1_ixh8d"]
 [ext_resource type="Texture2D" uid="uid://cx45dib7ltckn" path="res://Trees.png" id="1_nho41"]
+[ext_resource type="PackedScene" uid="uid://bjy50vh7gakj6" path="res://Melon Guy.tscn" id="2_rbs6x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixh8d"]
 atlas = ExtResource("1_nho41")
@@ -10,6 +12,8 @@ region = Rect2(6, 0, 157, 340)
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(-76, -63)
+script = ExtResource("1_ixh8d")
+enemy = ExtResource("2_rbs6x")
 
 [node name="Trees" type="Sprite2D" parent="." unique_id=153487941]
 z_as_relative = false

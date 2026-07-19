@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://no2exabv6tai"]
+
+[ext_resource type="Script" uid="uid://cox1k0qhx4t0o" path="res://Camp.gd" id="1_py83b"]
+[ext_resource type="Texture2D" uid="uid://dsveyb00enfh0" path="res://Camp.png" id="2_t4qib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbrsy"]
+size = Vector2(272, 136)
+
+[node name="Area2D" type="Area2D" unique_id=1913944727]
+collision_mask = 128
+script = ExtResource("1_py83b")
+
+[node name="Camp" type="Sprite2D" parent="." unique_id=697824187]
+position = Vector2(0, -1)
+texture = ExtResource("2_t4qib")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554251495]
+position = Vector2(-8, 84)
+shape = SubResource("RectangleShape2D_vbrsy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

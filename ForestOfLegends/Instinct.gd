@@ -4,9 +4,10 @@ class_name InstinctCard
 @onready var player = get_tree().get_first_node_in_group("Player")
 @export var texturee: CompressedTexture2D
 @export_group("Stats")
-@export var DoesDamage: bool
 @export var Cooldown: float
 @export var Damage: int
+@export var Sheild: int
+@export var SheildDuration: float
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("Player")
@@ -31,8 +32,10 @@ func _process(delta: float) -> void:
 	get_child(2).value = get_child(1).time_left
 func on_timer_timeout():
 	if player.InCombat:
-		if DoesDamage:
-			player.enemy.Health -= Damage
-			if player.enemy.Health <= 0:
-				player.enemy.queue_free()
-				player.InCombat = false
+		get_child(1).start()
+		player.enemy.Health -= Damage
+		if player.enemy.Health <= 0:
+			player.enemy.queue_free()
+			player.InCombat = false
+		player.Block += Sheild
+		player.timer2.start()

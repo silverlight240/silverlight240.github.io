@@ -54,7 +54,7 @@ z_index = -1
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_4vsee")
-MaxHealth = 9
+MaxHealth = 8
 AttackSpeed = 1.25
 Damage = 1
 
