@@ -37,10 +37,10 @@ func _on_button_4_pressed() -> void:
 
 
 func _on_button_5_pressed() -> void:
-	if playercontroller.cash >= 480:
-		playercontroller.cash -= 480
-		value += 480
-		ShootTimes += 10
+	if playercontroller.cash >= 680:
+		playercontroller.cash -= 680
+		value += 680
+		ShootTimes += 4
 		$Timer.wait_time -= 0.65
 		$Timer.start()
 		$Panel/Button5.hide()

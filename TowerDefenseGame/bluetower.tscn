@@ -75,7 +75,6 @@ autoplay = "default"
 frame_progress = 0.93288016
 
 [node name="Panel" type="Panel" parent="." unique_id=331414878]
-visible = false
 z_index = 999
 offset_left = 41.666664
 offset_top = -245.0
@@ -150,8 +149,6 @@ text = "sell
 
 [node name="Bullet" parent="." unique_id=983899243 instance=ExtResource("2_2kje1")]
 z_index = 1
-pierce = 0
-speed = 700
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed"]
